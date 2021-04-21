@@ -4,7 +4,7 @@
  *
  * Mostly we're activating and deactivating modules/features.
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @since 2.0
  */
 

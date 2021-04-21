@@ -6,7 +6,7 @@
  *
  * @see AIOSEOP_Notice::display_remote_notice();
  * @uses $remote_notice in AIOSEOP_Notice::remote_notices
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @subpackage AIOSEOP_Notices
  */
 

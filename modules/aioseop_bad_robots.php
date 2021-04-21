@@ -17,18 +17,18 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Bad_Robots' ) ) {
 		 * All_in_One_SEO_Pack_Bad_Robots constructor.
 		 */
 		function __construct() {
-			$this->name   = __( 'Bad Bot Blocker', 'all-in-one-seo-pack' );    // Human-readable name of the plugin.
+			$this->name   = __( 'Bad Bot Blocker', 'DH-SEO-pack' );    // Human-readable name of the plugin.
 			$this->prefix = 'aiosp_bad_robots_';                        // Option prefix.
 			$this->file   = __FILE__;                                    // The current file.
 			parent::__construct();
 
 			$this->default_options = array(
-				'block_bots'   => array( 'name' => __( 'Block Bad Bots using HTTP', 'all-in-one-seo-pack' ) ),
-				'block_refer'  => array( 'name' => __( 'Block Referral Spam using HTTP', 'all-in-one-seo-pack' ) ),
-				'track_blocks' => array( 'name' => __( 'Track Blocked Bots', 'all-in-one-seo-pack' ) ),
-				'edit_blocks'  => array( 'name' => __( 'Use Custom Blocklists', 'all-in-one-seo-pack' ) ),
+				'block_bots'   => array( 'name' => __( 'Block Bad Bots using HTTP', 'DH-SEO-pack' ) ),
+				'block_refer'  => array( 'name' => __( 'Block Referral Spam using HTTP', 'DH-SEO-pack' ) ),
+				'track_blocks' => array( 'name' => __( 'Track Blocked Bots', 'DH-SEO-pack' ) ),
+				'edit_blocks'  => array( 'name' => __( 'Use Custom Blocklists', 'DH-SEO-pack' ) ),
 				'blocklist'    => array(
-					'name'     => __( 'User Agent Blocklist', 'all-in-one-seo-pack' ),
+					'name'     => __( 'User Agent Blocklist', 'DH-SEO-pack' ),
 					'type'     => 'textarea',
 					'rows'     => 5,
 					'cols'     => 120,
@@ -36,7 +36,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Bad_Robots' ) ) {
 					'default'  => join( "\n", $this->default_bad_bots() ),
 				),
 				'referlist'    => array(
-					'name'     => __( 'Referer Blocklist', 'all-in-one-seo-pack' ),
+					'name'     => __( 'Referer Blocklist', 'DH-SEO-pack' ),
 					'type'     => 'textarea',
 					'rows'     => 5,
 					'cols'     => 120,
@@ -47,8 +47,8 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Bad_Robots' ) ) {
 					'default'  => join( "\n", $this->default_bad_referers() ),
 				),
 				'blocked_log'  => array(
-					'name'     => __( 'Log Of Blocked Bots', 'all-in-one-seo-pack' ),
-					'default'  => __( 'No requests yet.', 'all-in-one-seo-pack' ),
+					'name'     => __( 'Log Of Blocked Bots', 'DH-SEO-pack' ),
+					'default'  => __( 'No requests yet.', 'DH-SEO-pack' ),
 					'type'     => 'esc_html',
 					'disabled' => 'disabled',
 					'save'     => false,
@@ -77,13 +77,13 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Bad_Robots' ) ) {
 					status_header( 503 );
 					$ip         = $this->validate_ip( $_SERVER['REMOTE_ADDR'] );
 					$user_agent = $_SERVER['HTTP_USER_AGENT'];
-					$this->blocked_message( sprintf( __( 'Blocked bot with IP %1$s -- matched user agent %2$s found in blocklist.', 'all-in-one-seo-pack' ), $ip, $user_agent ) );
+					$this->blocked_message( sprintf( __( 'Blocked bot with IP %1$s -- matched user agent %2$s found in blocklist.', 'DH-SEO-pack' ), $ip, $user_agent ) );
 					exit();
 				} elseif ( $this->option_isset( 'block_refer' ) && $this->is_bad_referer() ) {
 					status_header( 503 );
 					$ip      = $this->validate_ip( $_SERVER['REMOTE_ADDR'] );
 					$referer = $_SERVER['HTTP_REFERER'];
-					$this->blocked_message( sprintf( __( 'Blocked bot with IP %1$s -- matched referer %2$s found in blocklist.', 'all-in-one-seo-pack' ), $ip, $referer ) );
+					$this->blocked_message( sprintf( __( 'Blocked bot with IP %1$s -- matched referer %2$s found in blocklist.', 'DH-SEO-pack' ), $ip, $referer ) );
 				}
 			}
 		}

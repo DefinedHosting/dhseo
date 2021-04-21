@@ -3,7 +3,7 @@
  *
  * @since 3.3.0
  * 
- * @package all-in-one-seo-pack
+ * @package DH-SEO-pack
  * @package xregexp
  */
 

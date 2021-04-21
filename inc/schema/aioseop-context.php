@@ -633,20 +633,20 @@ class AIOSEOP_Context {
 				break;
 
 			case 'var_search':
-				$display_name = sprintf( __( 'Search results for \'%s\'', 'all-in-one-seo-pack' ), esc_html( get_search_query() ) );
+				$display_name = sprintf( __( 'Search results for \'%s\'', 'DH-SEO-pack' ), esc_html( get_search_query() ) );
 				break;
 
 			case 'var_date_year':
-				$display_name = sprintf( __( 'Year: %s', 'all-in-one-seo-pack' ), get_the_date( 'Y' ) );
+				$display_name = sprintf( __( 'Year: %s', 'DH-SEO-pack' ), get_the_date( 'Y' ) );
 				break;
 
 			case 'var_date_month':
-				$display_name = sprintf( __( 'Month: %s', 'all-in-one-seo-pack' ), get_the_date( 'F Y' ) );
+				$display_name = sprintf( __( 'Month: %s', 'DH-SEO-pack' ), get_the_date( 'F Y' ) );
 				break;
 
 			case 'var_date_day':
 			case 'var_date':
-				$display_name = sprintf( __( 'Day: %s', 'all-in-one-seo-pack' ), get_the_date( 'F j, Y' ) );
+				$display_name = sprintf( __( 'Day: %s', 'DH-SEO-pack' ), get_the_date( 'F j, Y' ) );
 				break;
 		}
 

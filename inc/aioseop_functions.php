@@ -4,7 +4,7 @@
  *
  * Contains all general functions that are used throughout the plugin.
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @version 2.3.13
  */
 
@@ -224,10 +224,10 @@ if ( ! function_exists( 'aioseop_mrt_pcolumns' ) ) {
 	 */
 	function aioseop_mrt_pcolumns( $aioseopc ) {
 		global $aioseop_options;
-		$aioseopc['seotitle'] = __( 'SEO Title', 'all-in-one-seo-pack' );
-		$aioseopc['seodesc']  = __( 'SEO Description', 'all-in-one-seo-pack' );
+		$aioseopc['seotitle'] = __( 'SEO Title', 'DH-SEO-pack' );
+		$aioseopc['seodesc']  = __( 'SEO Description', 'DH-SEO-pack' );
 		if ( empty( $aioseop_options['aiosp_togglekeywords'] ) ) {
-			$aioseopc['seokeywords'] = __( 'SEO Keywords', 'all-in-one-seo-pack' );
+			$aioseopc['seokeywords'] = __( 'SEO Keywords', 'DH-SEO-pack' );
 		}
 
 		return $aioseopc;
@@ -287,20 +287,20 @@ if ( ! function_exists( 'aioseop_admin_head' ) ) {
 				pluginUrl: "<?php print AIOSEOP_PLUGIN_URL; ?>",
 				requestUrl: "<?php print WP_ADMIN_URL . '/admin-ajax.php'; ?>",
 				imgUrl: "<?php print AIOSEOP_PLUGIN_IMAGES_URL; ?>",
-				Edit: "<?php _e( 'Edit', 'all-in-one-seo-pack' ); ?>",
-				Post: "<?php _e( 'Post', 'all-in-one-seo-pack' ); ?>",
-				Save: "<?php _e( 'Save', 'all-in-one-seo-pack' ); ?>",
-				Cancel: "<?php _e( 'Cancel', 'all-in-one-seo-pack' ); ?>",
+				Edit: "<?php _e( 'Edit', 'DH-SEO-pack' ); ?>",
+				Post: "<?php _e( 'Post', 'DH-SEO-pack' ); ?>",
+				Save: "<?php _e( 'Save', 'DH-SEO-pack' ); ?>",
+				Cancel: "<?php _e( 'Cancel', 'DH-SEO-pack' ); ?>",
 				postType: "post",
-				pleaseWait: "<?php _e( 'Please wait...', 'all-in-one-seo-pack' ); ?>",
-				slugEmpty: "<?php _e( 'Slug may not be empty!', 'all-in-one-seo-pack' ); ?>",
-				Revisions: "<?php _e( 'Revisions', 'all-in-one-seo-pack' ); ?>",
-				Time: "<?php _e( 'Insert time', 'all-in-one-seo-pack' ); ?>",
+				pleaseWait: "<?php _e( 'Please wait...', 'DH-SEO-pack' ); ?>",
+				slugEmpty: "<?php _e( 'Slug may not be empty!', 'DH-SEO-pack' ); ?>",
+				Revisions: "<?php _e( 'Revisions', 'DH-SEO-pack' ); ?>",
+				Time: "<?php _e( 'Insert time', 'DH-SEO-pack' ); ?>",
 				i18n: {
-					save: "<?php _e( 'Save', 'all-in-one-seo-pack' ); ?>",
-					cancel: "<?php _e( 'Cancel', 'all-in-one-seo-pack' ); ?>",
-					wait: "<?php _e( 'Please wait...', 'all-in-one-seo-pack' ); ?>",
-					noValue: "<?php _e( 'No value', 'all-in-one-seo-pack' ); ?>"
+					save: "<?php _e( 'Save', 'DH-SEO-pack' ); ?>",
+					cancel: "<?php _e( 'Cancel', 'DH-SEO-pack' ); ?>",
+					wait: "<?php _e( 'Please wait...', 'DH-SEO-pack' ); ?>",
+					noValue: "<?php _e( 'No value', 'DH-SEO-pack' ); ?>"
 				}
 			}
 			//]]>
@@ -408,7 +408,7 @@ if ( ! function_exists( 'aioseop_ajax_init' ) ) {
 			}
 
 			if ( ! wp_verify_nonce( $_POST['nonce-aioseop'], 'aioseop-nonce' ) ) {
-				die( sprintf( AIOSEOP_AJAX_MSG_TMPL, __( 'Unauthorized access; try reloading the page.', 'all-in-one-seo-pack' ) ) );
+				die( sprintf( AIOSEOP_AJAX_MSG_TMPL, __( 'Unauthorized access; try reloading the page.', 'DH-SEO-pack' ) ) );
 			}
 		} else {
 			die( 0 );
@@ -453,7 +453,7 @@ if ( ! function_exists( 'aioseop_ajax_save_url' ) ) {
 					$valid = false;
 				} elseif ( 'aiosp_sitemap_addl_url' === $k && ! aiosp_common::is_url_valid( $v ) ) {
 					$valid       = false;
-					$invalid_msg = __( 'Please provide absolute URLs (including http or https).', 'all-in-one-seo-pack' );
+					$invalid_msg = __( 'Please provide absolute URLs (including http or https).', 'DH-SEO-pack' );
 				}
 				if ( ! $valid ) {
 					break;
@@ -500,7 +500,7 @@ if ( ! function_exists( 'aioseop_ajax_save_url' ) ) {
 			if ( $invalid_msg ) {
 				$output = $invalid_msg;
 			} else {
-				$output = __( 'All values are mandatory.', 'all-in-one-seo-pack' );
+				$output = __( 'All values are mandatory.', 'DH-SEO-pack' );
 			}
 		}
 		die( sprintf( AIOSEOP_AJAX_MSG_TMPL, $output ) );
@@ -556,7 +556,7 @@ if ( ! function_exists( 'aioseop_ajax_delete_url' ) ) {
 			$output  = str_replace( "\n", '\n', $output );
 		} else {
 			/* translators: %s is a placeholder and will be replaced with a number. */
-			$output = sprintf( __( 'Row %s not found; no rows were deleted.', 'all-in-one-seo-pack' ), esc_attr( $options ) );
+			$output = sprintf( __( 'Row %s not found; no rows were deleted.', 'DH-SEO-pack' ), esc_attr( $options ) );
 		}
 		die( sprintf( AIOSEOP_AJAX_MSG_TMPL, $output ) );
 	}
@@ -626,7 +626,7 @@ if ( ! function_exists( 'aioseop_ajax_scan_header' ) ) {
 							foreach ( $metadata[ $type ] as $tk => $tv ) {
 								if ( $m[ $tags['name'] ] == $tv ) {
 									/* This message is shown when a duplicate meta tag is found. %s is a placeholder and will be replaced with the name of the relevant meta tag. */
-									$meta .= "<tr><th style='color:red;'>" . sprintf( __( 'Duplicate %s Meta', 'all-in-one-seo-pack' ), ucwords( $type ) ) . '</th><td>' . ucwords( $tk ) . "</td><td>{$m[$tags['name']]}</td><td>{$m[$tags['value']]}</td></tr>\n";
+									$meta .= "<tr><th style='color:red;'>" . sprintf( __( 'Duplicate %s Meta', 'DH-SEO-pack' ), ucwords( $type ) ) . '</th><td>' . ucwords( $tk ) . "</td><td>{$m[$tags['name']]}</td><td>{$m[$tags['value']]}</td></tr>\n";
 								}
 							}
 						}
@@ -635,15 +635,15 @@ if ( ! function_exists( 'aioseop_ajax_scan_header' ) ) {
 			}
 		}
 		if ( empty( $meta ) ) {
-			$meta = '<span style="color:green;">' . __( 'No duplicate meta tags found.', 'all-in-one-seo-pack' ) . '</span>';
+			$meta = '<span style="color:green;">' . __( 'No duplicate meta tags found.', 'DH-SEO-pack' ) . '</span>';
 		} else {
 			$meta  = "<table cellspacing=0 cellpadding=0 width=80% class='aioseop_table'><tr class='aioseop_table_header'><th>Meta For Site</th><th>Kind of Meta</th><th>Element Name</th><th>Element Value</th></tr>" . $meta . '</table>';
 			$meta .=
-				"<p><div class='aioseop_meta_info'><h3 style='padding:5px;margin-bottom:0px;'>" . __( 'What Does This Mean?', 'all-in-one-seo-pack' ) . "</h3><div style='padding:5px;padding-top:0px;'>"
+				"<p><div class='aioseop_meta_info'><h3 style='padding:5px;margin-bottom:0px;'>" . __( 'What Does This Mean?', 'DH-SEO-pack' ) . "</h3><div style='padding:5px;padding-top:0px;'>"
 				/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
-				. '<p>' . sprintf( __( '%s has detected that a plugin(s) or theme is also outputting social meta tags on your site. You can view this social meta in the source code of your site (check your browser help for instructions on how to view source code).', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME )
-				. '</p><p>' . __( 'You may prefer to use the social meta tags that are being output by the other plugin(s) or theme. If so, then you should deactivate this Social Meta feature in the Feature Manager.', 'all-in-one-seo-pack' )
-				. '</p><p>' . __( 'You should avoid duplicate social meta tags. You can use these free tools from Facebook and Twitter to validate your social meta and check for errors:', 'all-in-one-seo-pack' ) . '</p>';
+				. '<p>' . sprintf( __( '%s has detected that a plugin(s) or theme is also outputting social meta tags on your site. You can view this social meta in the source code of your site (check your browser help for instructions on how to view source code).', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME )
+				. '</p><p>' . __( 'You may prefer to use the social meta tags that are being output by the other plugin(s) or theme. If so, then you should deactivate this Social Meta feature in the Feature Manager.', 'DH-SEO-pack' )
+				. '</p><p>' . __( 'You should avoid duplicate social meta tags. You can use these free tools from Facebook and Twitter to validate your social meta and check for errors:', 'DH-SEO-pack' ) . '</p>';
 
 			foreach (
 				array(
@@ -653,7 +653,7 @@ if ( ! function_exists( 'aioseop_ajax_scan_header' ) ) {
 			) {
 				$meta .= "<a href='{$link}' target='_blank'>{$link}</a><br />";
 			}
-			$meta .= '<p>' . __( 'Please refer to the document for each tool for help in using these to debug your social meta.', 'all-in-one-seo-pack' ) . '</div></div>';
+			$meta .= '<p>' . __( 'Please refer to the document for each tool for help in using these to debug your social meta.', 'DH-SEO-pack' ) . '</div></div>';
 		}
 		$output = $meta;
 		$output = str_replace( "'", "\'", $output );
@@ -688,9 +688,9 @@ if ( ! function_exists( 'aioseop_ajax_save_settings' ) ) {
 		$output = $module->handle_settings_updates( $_POST['location'] );
 
 		if ( DHSEOPRO ) {
-			$output = '<div id="aioseop_settings_header"><div id="message" class="updated fade"><p>' . $output . '</p></div></div><style>body.all-in-one-seo_page_all-in-one-seo-pack-pro-aioseop_feature_manager .aioseop_settings_left { margin-top: 45px !important; }</style>';
+			$output = '<div id="aioseop_settings_header"><div id="message" class="updated fade"><p>' . $output . '</p></div></div><style>body.DH-SEO_page_DH-SEO-pack-pro-aioseop_feature_manager .aioseop_settings_left { margin-top: 45px !important; }</style>';
 		} else {
-			$output = '<div id="aioseop_settings_header"><div id="message" class="updated fade"><p>' . $output . '</p></div></div><style>body.all-in-one-seo_page_all-in-one-seo-pack-aioseop_feature_manager .aioseop_settings_left { margin-top: 45px !important; }</style>';
+			$output = '<div id="aioseop_settings_header"><div id="message" class="updated fade"><p>' . $output . '</p></div></div><style>body.DH-SEO_page_DH-SEO-pack-aioseop_feature_manager .aioseop_settings_left { margin-top: 45px !important; }</style>';
 		}
 
 		if ( defined( 'AIOSEOP_UNIT_TESTING' ) ) {
@@ -811,27 +811,27 @@ if ( ! function_exists( 'render_seo_column' ) ) {
 
 		switch ( $column_name ) {
 			case 'seotitle': {
-				$name  = __( 'title', 'all-in-one-seo-pack' );
+				$name  = __( 'title', 'DH-SEO-pack' );
 				$value = get_post_meta( $post_id, '_aioseop_title', true );
 				break;
 			}
 			case 'seodesc': {
-				$name  = __( 'description', 'all-in-one-seo-pack' );
+				$name  = __( 'description', 'DH-SEO-pack' );
 				$value = get_post_meta( $post_id, '_aioseop_description', true );
 				break;
 			}
 			case 'seokeywords': {
-				$name  = __( 'keywords', 'all-in-one-seo-pack' );
+				$name  = __( 'keywords', 'DH-SEO-pack' );
 				$value = get_post_meta( $post_id, '_aioseop_keywords', true );
 				break;
 			}
 			case 'image_title': {
-				$name  = __( 'image_title', 'all-in-one-seo-pack' );
+				$name  = __( 'image_title', 'DH-SEO-pack' );
 				$value = get_the_title( get_post( $post_id ) );
 				break;
 			}
 			case 'image_alt_tag': {
-				$name  = __( 'image_alt_tag', 'all-in-one-seo-pack' );
+				$name  = __( 'image_alt_tag', 'DH-SEO-pack' );
 				$value = get_post_meta( $post_id, '_wp_attachment_image_alt', true );
 				break;
 			}
@@ -842,7 +842,7 @@ if ( ! function_exists( 'render_seo_column' ) ) {
 
 		$value = aioseop_sanitize( $value );
 		if ( empty( $value ) ) {
-			$value = sprintf( '<strong>%s</strong>', sprintf( __( 'No value', 'all-in-one-seo-pack' ), str_replace( '_', ' ', $name ) ) );
+			$value = sprintf( '<strong>%s</strong>', sprintf( __( 'No value', 'DH-SEO-pack' ), str_replace( '_', ' ', $name ) ) );
 		}
 
 		$span  = "<span id='aioseop_{$column_name}_{$post_id}_value'>" . $value . '</span>';
@@ -854,7 +854,7 @@ if ( ! function_exists( 'render_seo_column' ) ) {
 				class="dashicons dashicons-edit aioseop-quickedit-pencil" 
 				href="javascript:void(0);"
 				onclick="<?php printf( 'aioseopQuickEdit.aioseop_ajax_edit_meta_form(%s, \'%s\', \'%s\'); return false;', $post_id, $column_name, $nonce ); ?>"
-				title="<?php _e( 'Edit', 'all-in-one-seo-pack' ); ?>"
+				title="<?php _e( 'Edit', 'DH-SEO-pack' ); ?>"
 			>
 			</a><?php echo $span; ?></div>
 		<?php
@@ -1450,19 +1450,19 @@ if ( ! function_exists( 'aioseop_get_admin_screens' ) ) {
 	function aioseop_get_admin_screens() {
 		return array(
 			'General Settings'   => 'toplevel_page_' . DHSEO_PLUGIN_DIRNAME . '/aioseop_class',
-			'Performance'        => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_performance',
-			'XML Sitemap'        => DHSEOPRO ? 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/class-aioseop-pro-sitemap' : 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_sitemap',
-			'Social Meta'        => 'all-in-one-seo_page_aiosp_opengraph',
-			'Robots Generator'   => 'all-in-one-seo_page_aiosp_robots_generator',
-			'Robots.txt'         => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_robots',
-			'File Editor'        => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_file_editor',
-			'Importer/Exporter'  => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_importer_exporter',
-			'Bad Robots Blocker' => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_bad_robots',
-			'Feature Manager'    => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_feature_manager',
-			'Video Sitemap'      => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/video_sitemap',
-			'Image SEO'          => 'all-in-one-seo_page_aiosp_image_seo',
-			'About Us'           => 'all-in-one-seo_page_aioseop-about',
-			'Local Business SEO' => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/modules/class-aioseop-schema-local-business',
+			'Performance'        => 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_performance',
+			'XML Sitemap'        => DHSEOPRO ? 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/class-aioseop-pro-sitemap' : 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_sitemap',
+			'Social Meta'        => 'DH-SEO_page_aiosp_opengraph',
+			'Robots Generator'   => 'DH-SEO_page_aiosp_robots_generator',
+			'Robots.txt'         => 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_robots',
+			'File Editor'        => 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_file_editor',
+			'Importer/Exporter'  => 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_importer_exporter',
+			'Bad Robots Blocker' => 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_bad_robots',
+			'Feature Manager'    => 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_feature_manager',
+			'Video Sitemap'      => 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/video_sitemap',
+			'Image SEO'          => 'DH-SEO_page_aiosp_image_seo',
+			'About Us'           => 'DH-SEO_page_aioseop-about',
+			'Local Business SEO' => 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/modules/class-aioseop-schema-local-business',
 		);
 	}
 }
@@ -1486,7 +1486,7 @@ if ( ! function_exists( 'aioseop_get_utm_url' ) ) {
 			$campaign = ( DHSEOPRO ) ? 'proplugin' : 'liteplugin';
 		}
 
-		$href = 'https://semperplugins.com/all-in-one-seo-pack-pro-version/';
+		$href = 'https://semperplugins.com/DH-SEO-pack-pro-version/';
 
 		$href = add_query_arg(
 			array(
@@ -1514,7 +1514,7 @@ if ( ! function_exists('aioseop_add_url_utm') ) {
 	 */
 	function aioseop_add_url_utm( $href = '', $args = array() ) {
 		if ( empty( $href ) ) {
-			$href = 'https://semperplugins.com/all-in-one-seo-pack-pro-version/';
+			$href = 'https://semperplugins.com/DH-SEO-pack-pro-version/';
 		}
 
 	    $default_args = array(

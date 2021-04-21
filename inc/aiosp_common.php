@@ -98,7 +98,7 @@ class aiosp_common {
 		$affiliate_id = apply_filters( 'aiosp_aff_id', $affiliate_id );
 
 		// build URL.
-		$url = 'https://semperplugins.com/all-in-one-seo-pack-pro-version/';
+		$url = 'https://semperplugins.com/DH-SEO-pack-pro-version/';
 		if ( $location ) {
 			$url .= '?loc=' . $location;
 		}

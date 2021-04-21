@@ -3,7 +3,7 @@
  * Loads the Image SEO class file.
  *
  * @since   3.4.0
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  */
 
 if ( DHSEOPRO ) {

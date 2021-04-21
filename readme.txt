@@ -15,7 +15,7 @@ The original WordPress SEO plugin, downloaded over 65,000,000 times since 2007.
 
 Use **DH SEO Pack** to optimize your WordPress site for SEO. It's easy and works out of the box for beginners, and has advanced features and an API for developers.
 
-**[Upgrade to Pro Version](https://semperplugins.com/all-in-one-seo-pack-pro-version/?loc=readme_utpv)**
+**[Upgrade to Pro Version](https://semperplugins.com/DH-SEO-pack-pro-version/?loc=readme_utpv)**
 
 [Premium Support](http://semperplugins.com/support/?loc=readme_ps)
 
@@ -48,7 +48,7 @@ https://www.youtube.com/watch?v=46MR4FboMaA
 
 == Changelog ==
 
-DH SEO Pack [Changelog](https://semperplugins.com/all-in-one-seo-pack-changelog/)
+DH SEO Pack [Changelog](https://semperplugins.com/DH-SEO-pack-changelog/)
 
 == Frequently Asked Questions ==
 

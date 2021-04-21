@@ -3,7 +3,7 @@
  *
  * @since 3.3.4
  * 
- * @package all-in-one-seo-pack
+ * @package DH-SEO-pack
  */
 
 (function () { 'use strict'; }());

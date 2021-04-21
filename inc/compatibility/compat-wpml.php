@@ -11,7 +11,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Wpml' ) ) {
 	 * Compatibility with WPML - WordPress Multilingual Plugin
 	 *
 	 * @link https://wpml.org/
-	 * @package All-in-One-SEO-Pack
+	 * @package DH-SEO-Pack
 	 * @author Alejandro Mostajo
 	 * @copyright DH SEO <https://semperplugins.com/>
 	 * @version 2.3.13

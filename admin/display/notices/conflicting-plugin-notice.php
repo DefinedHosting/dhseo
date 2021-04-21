@@ -4,7 +4,7 @@
  *
  * @since   3.4.0
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @subpackage AIOSEOP_Notices
  */
 
@@ -28,7 +28,7 @@ function aioseop_conflicting_plugin_notice() {
 				'time'    => 0,
 				'link'    => '#',
 				'new_tab' => false,
-				'text'    => __( 'Deactivate plugins', 'all-in-one-seo-pack' ),
+				'text'    => __( 'Deactivate plugins', 'DH-SEO-pack' ),
 				'dismiss' => false,
 				'class'   => 'button-primary',
 			),

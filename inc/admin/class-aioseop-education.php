@@ -139,7 +139,7 @@ class AIOSEOP_Education {
 	 * @since   3.4.0
 	 */
 	private static function enqueue_video_sitemap_upsell_script() {
-		if ( 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_sitemap' !== get_current_screen()->id ) {
+		if ( 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_sitemap' !== get_current_screen()->id ) {
 			return;
 		}
 
@@ -160,8 +160,8 @@ class AIOSEOP_Education {
 	 */
 	private static function enqueue_news_sitemap_upsell_script() {
 		if (
-			'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_sitemap' !== get_current_screen()->id &&
-			'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/class-aioseop-pro-sitemap' !== get_current_screen()->id
+			'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_sitemap' !== get_current_screen()->id &&
+			'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/class-aioseop-pro-sitemap' !== get_current_screen()->id
 		) {
 			return;
 		}
@@ -265,29 +265,29 @@ class AIOSEOP_Education {
 		check_ajax_referer( 'license-box', '_ajax_nonce' );
 
 		/* translators: %s: "DH SEO Pack" */
-		$link_title = sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
+		$link_title = sprintf( __( 'Upgrade to %s', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 
 		$link = sprintf(
 			'<a href="%1$s" target="_blank" title="%2$s">%3$s</a>',
 			aioseop_get_utm_url( 'license-box' ),
 			$link_title,
 			/* translators: The full sentence reads as: "To unlock more features consider upgrading to Pro." */
-			__( 'upgrading to PRO', 'all-in-one-seo-pack' )
+			__( 'upgrading to PRO', 'DH-SEO-pack' )
 		);
 
 		$span = sprintf(
 			"<span class='aioseop-upsell-discount-amount'>%s</span>",
 			/* translators: This refers to a discount. The full sentence reads as: "As a valued user you receive 30% off, automatically applied at checkout!" */
-			__( '30% off', 'all-in-one-seo-pack' )
+			__( '30% off', 'DH-SEO-pack' )
 		);
 
 		$license_box_content = array(
 			/* translators: %s: "DH SEO Pack" */
-			'p1' => sprintf( __( "You're using %s - no license needed. Enjoy! 🙂", 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Lite' ),
+			'p1' => sprintf( __( "You're using %s - no license needed. Enjoy! 🙂", 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Lite' ),
 			/* translators: %s: "upgrading to Pro" */
-			'p2' => sprintf( __( 'To unlock more features consider %s', 'all-in-one-seo-pack' ), $link ),
+			'p2' => sprintf( __( 'To unlock more features consider %s', 'DH-SEO-pack' ), $link ),
 			/* translators: %1$s: "DH SEO Pack" - %2$s: "30% off" */
-			'p3' => sprintf( __( 'As a valued %1$s user you receive %2$s, automatically applied at checkout!', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME, $span ),
+			'p3' => sprintf( __( 'As a valued %1$s user you receive %2$s, automatically applied at checkout!', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME, $span ),
 		);
 
 		printf(
@@ -323,19 +323,19 @@ class AIOSEOP_Education {
 		}
 
 		/* translators: %s: "DH SEO Pack" */
-		$link_title = sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
+		$link_title = sprintf( __( 'Upgrade to %s', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 
 		$link = sprintf(
 			'<a href="%1$s" target="_blank" title="%2$s">%3$s</a>',
 			aioseop_get_utm_url( 'notice-bar' ),
 			$link_title,
 			/* translators: The full sentence reads as: "To unlock more features consider upgrading to Pro." */
-			__( 'upgrading to PRO', 'all-in-one-seo-pack' )
+			__( 'upgrading to PRO', 'DH-SEO-pack' )
 		);
 
 		$message = sprintf(
 			/* translators: %1$s: "DH SEO Pack" - %2$s: "upgrading to Pro" */
-			__( 'You’re using %1$s. To unlock more features consider %2$s.', 'all-in-one-seo-pack' ),
+			__( 'You’re using %1$s. To unlock more features consider %2$s.', 'DH-SEO-pack' ),
 			AIOSEOP_PLUGIN_NAME . '&nbsp;Lite',
 			$link
 		);
@@ -346,7 +346,7 @@ class AIOSEOP_Education {
 				<button type="button" class="dismiss" title="%2$s" />
 			</div>',
 			$message,
-			__( 'Dismiss this message.', 'all-in-one-seo-pack' )
+			__( 'Dismiss this message.', 'DH-SEO-pack' )
 		);
 
 		wp_die();
@@ -371,7 +371,7 @@ class AIOSEOP_Education {
 		}
 
 		/* translators: %s: "DH SEO Pack" */
-		$header = sprintf( __( 'Get %s and Unlock all the Powerful Features', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
+		$header = sprintf( __( 'Get %s and Unlock all the Powerful Features', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 		$p1     = sprintf(
 			'Thanks for being a loyal %1$s user. Did you know that our premium version also supports video sitemaps?
              Upgrade to %2$s to unlock all the awesome features and experience why %3$s is considered the best WordPress SEO plugin.',
@@ -380,21 +380,21 @@ class AIOSEOP_Education {
 			AIOSEOP_PLUGIN_NAME
 		);
 		$p2     = sprintf(
-			__( 'We know that you will truly love %1$s. It has over 300+ five star ratings (%2$s) and is active on over 2 million websites.', 'all-in-one-seo-pack' ),
+			__( 'We know that you will truly love %1$s. It has over 300+ five star ratings (%2$s) and is active on over 2 million websites.', 'DH-SEO-pack' ),
 			AIOSEOP_PLUGIN_NAME,
 			str_repeat( '<span class="dashicons dashicons-star-filled aioseop-rating-star"></span>', 5 )
 		);
 		$p3     = sprintf(
-			__( 'Bonus: %1$s users get %2$s the regular price, automatically applied at checkout.', 'all-in-one-seo-pack' ),
+			__( 'Bonus: %1$s users get %2$s the regular price, automatically applied at checkout.', 'DH-SEO-pack' ),
 			AIOSEOP_PLUGIN_NAME . '&nbsp;Lite',
 			sprintf(
 				'<span class="aioseop-upsell-discount-amount">%s</span>',
-				__( '30% off', 'all-in-one-seo-pack' )
+				__( '30% off', 'DH-SEO-pack' )
 			)
 		);
 
 		/* translators: %s: "DH SEO Pack" */
-		$link_title = sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
+		$link_title = sprintf( __( 'Upgrade to %s', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 
 		$link = sprintf(
 			'<a href="%1$s" target="_blank" title="%2$s">%3$s</a>',
@@ -425,11 +425,11 @@ class AIOSEOP_Education {
 // --- removed by RC --- //
 		// check_ajax_referer( 'news-sitemap-upsell', '_ajax_nonce' );
 		//
-		// $message = __( 'Did you know that we also support Google News sitemaps?&nbsp;', 'all-in-one-seo-pack' );
-		// $link    = __( 'Upgrade to Pro to unlock this feature.', 'all-in-one-seo-pack' );
+		// $message = __( 'Did you know that we also support Google News sitemaps?&nbsp;', 'DH-SEO-pack' );
+		// $link    = __( 'Upgrade to Pro to unlock this feature.', 'DH-SEO-pack' );
 		// if( DHSEOPRO && !aioseop_is_addon_allowed('news_sitemap') ) {
-		// 	$message = __( 'Did you know that Business & Agency plan users also have access to Google News sitemaps?&nbsp;', 'all-in-one-seo-pack' );
-		// 	$link    = __( 'Upgrade to our Business or Agency plans to unlock this feature.', 'all-in-one-seo-pack' );
+		// 	$message = __( 'Did you know that Business & Agency plan users also have access to Google News sitemaps?&nbsp;', 'DH-SEO-pack' );
+		// 	$link    = __( 'Upgrade to our Business or Agency plans to unlock this feature.', 'DH-SEO-pack' );
 		// }
 		//
 		// printf(
@@ -437,7 +437,7 @@ class AIOSEOP_Education {
 		// 	$message,
 		// 	aioseop_get_utm_url( 'news-sitemap-upsell' ),
 		// 	/* translators: %s: "DH SEO Pack Pro" */
-		// 	sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
+		// 	sprintf( __( 'Upgrade to %s', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
 		// 	$link
 		// );
 		//
@@ -483,8 +483,8 @@ class AIOSEOP_Education {
 		// 	'<a class="aioseop-sitemap-prio-upsell" href="%1$s" title="%2$s" target="_blank">%3$s</a>',
 		// 	aioseop_get_utm_url( 'sitemap-prio-upsell' ),
 		// 	/* translators: %s: "DH SEO Pack Pro" */
-		// 	sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
-		// 	__( 'Upgrade to Pro to unlock this feature.', 'all-in-one-seo-pack' )
+		// 	sprintf( __( 'Upgrade to %s', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
+		// 	__( 'Upgrade to Pro to unlock this feature.', 'DH-SEO-pack' )
 		// );
 		//
 		// die();
@@ -605,7 +605,7 @@ class AIOSEOP_Education {
 			array(
 				'id'     => 'aioseop-external-tools',
 				'parent' => DHSEO_PLUGIN_DIRNAME,
-				'title'  => __( 'Analyze this page', 'all-in-one-seo-pack' ),
+				'title'  => __( 'Analyze this page', 'DH-SEO-pack' ),
 			)
 		);
 
@@ -614,52 +614,52 @@ class AIOSEOP_Education {
 		$submenu_items = array(
 			array(
 				'id'    => 'aioseop-external-tools-inlinks',
-				'title' => __( 'Check links to this URL', 'all-in-one-seo-pack' ),
+				'title' => __( 'Check links to this URL', 'DH-SEO-pack' ),
 				'href'  => 'https://search.google.com/search-console/links/drilldown?resource_id=' . urlencode( get_option( 'siteurl' ) ) . '&type=EXTERNAL&target=' . $url . '&domain=',
 			),
 			array(
 				'id'    => 'aioseop-external-tools-cache',
-				'title' => __( 'Check Google Cache', 'all-in-one-seo-pack' ),
+				'title' => __( 'Check Google Cache', 'DH-SEO-pack' ),
 				'href'  => '//webcache.googleusercontent.com/search?strip=1&q=cache:' . $url,
 			),
 			array(
 				'id'    => 'aioseop-external-tools-structureddata',
-				'title' => __( 'Google Structured Data Test', 'all-in-one-seo-pack' ),
+				'title' => __( 'Google Structured Data Test', 'DH-SEO-pack' ),
 				'href'  => 'https://search.google.com/test/rich-results?url=' . $url,
 			),
 			array(
 				'id'    => 'aioseop-external-tools-facebookdebug',
-				'title' => __( 'Facebook Debugger', 'all-in-one-seo-pack' ),
+				'title' => __( 'Facebook Debugger', 'DH-SEO-pack' ),
 				'href'  => 'https://developers.facebook.com/tools/debug/?q=' . $url,
 			),
 			array(
 				'id'    => 'aioseop-external-tools-pinterestvalidator',
-				'title' => __( 'Pinterest Rich Pins Validator', 'all-in-one-seo-pack' ),
+				'title' => __( 'Pinterest Rich Pins Validator', 'DH-SEO-pack' ),
 				'href'  => 'https://developers.pinterest.com/tools/url-debugger/?link=' . $url,
 			),
 			array(
 				'id'    => 'aioseop-external-tools-htmlvalidation',
-				'title' => __( 'HTML Validator', 'all-in-one-seo-pack' ),
+				'title' => __( 'HTML Validator', 'DH-SEO-pack' ),
 				'href'  => '//validator.w3.org/check?uri=' . $url,
 			),
 			array(
 				'id'    => 'aioseop-external-tools-cssvalidation',
-				'title' => __( 'CSS Validator', 'all-in-one-seo-pack' ),
+				'title' => __( 'CSS Validator', 'DH-SEO-pack' ),
 				'href'  => '//jigsaw.w3.org/css-validator/validator?uri=' . $url,
 			),
 			array(
 				'id'    => 'aioseop-external-tools-pagespeed',
-				'title' => __( 'Google Page Speed Test', 'all-in-one-seo-pack' ),
+				'title' => __( 'Google Page Speed Test', 'DH-SEO-pack' ),
 				'href'  => '//developers.google.com/speed/pagespeed/insights/?url=' . $url,
 			),
 			array(
 				'id'    => 'aioseop-external-tools-google-mobile-friendly',
-				'title' => __( 'Mobile-Friendly Test', 'all-in-one-seo-pack' ),
+				'title' => __( 'Mobile-Friendly Test', 'DH-SEO-pack' ),
 				'href'  => 'https://www.google.com/webmasters/tools/mobile-friendly/?url=' . $url,
 			),
 			array(
 				'id'    => 'aioseo-external-tools-linkedin-post-inspector',
-				'title' => __( 'LinkedIn Post Inspector', 'all-in-one-seo-pack' ),
+				'title' => __( 'LinkedIn Post Inspector', 'DH-SEO-pack' ),
 				'href'  => "https://www.linkedin.com/post-inspector/inspect/$url"
 			)
 		);
@@ -689,23 +689,23 @@ class AIOSEOP_Education {
 			return;
 		}
 
-		$href = 'https://wordpress.org/support/plugin/all-in-one-seo-pack/reviews/?filter=5#new-post';
+		$href = 'https://wordpress.org/support/plugin/DH-SEO-pack/reviews/?filter=5#new-post';
 
 		$link1 = sprintf(
 			'<a href="%1$s" target="_blank" title="%2$s">&#9733;&#9733;&#9733;&#9733;&#9733;</a>',
 			$href,
-			__( 'Give us a 5-star rating!', 'all-in-one-seo-pack' )
+			__( 'Give us a 5-star rating!', 'DH-SEO-pack' )
 		);
 
 		$link2 = sprintf(
 			'<a href="%1$s" target="_blank" title="%2$s">WordPress.org</a>',
 			$href,
-			__( 'Give us a 5-star rating!', 'all-in-one-seo-pack' )
+			__( 'Give us a 5-star rating!', 'DH-SEO-pack' )
 		);
 
 		printf(
 			/* translators: %1$s: "DH SEO Pack" - %2$s: This placeholder will be replaced with star icons. - %3$s: "WordPress.org" - %4$s: "DH SEO Pack" */
-			__( 'Please rate %1$s %2$s on %3$s to help us spread the word. Thank you from the %4$s team!', 'all-in-one-seo-pack' ),
+			__( 'Please rate %1$s %2$s on %3$s to help us spread the word. Thank you from the %4$s team!', 'DH-SEO-pack' ),
 			sprintf( '<strong>%s</strong>', AIOSEOP_PLUGIN_NAME ),
 			$link1,
 			$link2,
@@ -788,7 +788,7 @@ class AIOSEOP_Education {
 		$conflicting_sitemap_plugins = self::get_conflicting_plugins( 'sitemap' );
 
 		if ( ! empty( $conflicting_seo_plugins ) ) {
-			$list_header = sprintf( '<strong>%s</strong>', __( 'SEO Plugins', 'all-in-one-seo-pack' ) );
+			$list_header = sprintf( '<strong>%s</strong>', __( 'SEO Plugins', 'DH-SEO-pack' ) );
 
 			$list = '';
 			foreach ( $conflicting_seo_plugins as $plugin_name => $plugin_path ) {
@@ -803,7 +803,7 @@ class AIOSEOP_Education {
 			// This value does not exist if user has never (de)activated a module before.
 			( ! isset( $aioseop_options['modules']['aiosp_feature_manager_options'] ) || ! empty( $aioseop_options['modules']['aiosp_feature_manager_options']['aiosp_feature_manager_enable_sitemap'] ) )
 		) {
-			$list_header = sprintf( '<strong>%s</strong>', __( 'Sitemap Plugins', 'all-in-one-seo-pack' ) );
+			$list_header = sprintf( '<strong>%s</strong>', __( 'Sitemap Plugins', 'DH-SEO-pack' ) );
 
 			$list = '';
 			foreach ( $conflicting_sitemap_plugins as $plugin_name => $plugin_path ) {
@@ -820,7 +820,7 @@ class AIOSEOP_Education {
 		sprintf(
 			__(
 				'<strong>Warning</strong>: %s has detected other active SEO or sitemap plugins. We recommend that you deactivate the following plugins to prevent any conflicts:',
-				'all-in-one-seo-pack'
+				'DH-SEO-pack'
 			),
 			AIOSEOP_PLUGIN_NAME
 		) .
@@ -897,7 +897,7 @@ class AIOSEOP_Education {
 	 * @return  string                          The taxonomies upsell modal markup.
 	 */
 	private static function get_taxonomies_upsell_modal_markup( $page_id, $is_woocommerce_page = false ) {
-		$header = ( $is_woocommerce_page ) ? __( 'Unlock SEO for WooCommerce Product Categories & Product Tags', 'all-in-one-seo-pack' ) : __( 'Unlock SEO for Categories, Tags and Custom Taxonomies', 'all-in-one-seo-pack' );
+		$header = ( $is_woocommerce_page ) ? __( 'Unlock SEO for WooCommerce Product Categories & Product Tags', 'DH-SEO-pack' ) : __( 'Unlock SEO for Categories, Tags and Custom Taxonomies', 'DH-SEO-pack' );
 
 		return
 		'<div class="aioseop-taxonomies-upsell-modal">
@@ -905,31 +905,31 @@ class AIOSEOP_Education {
             <h2>' . $header . '</h2>
             <p>
                 <strong>' .
-				__( 'This feature is exclusive to our premium version.', 'all-in-one-seo-pack' ) .
+				__( 'This feature is exclusive to our premium version.', 'DH-SEO-pack' ) .
 				'</strong><br>' .
 				/* translators: %s: "DH SEO Pack Pro" */
-				sprintf( __( 'Once you upgrade to %s, you will gain access to all of our exclusive premium features, providing you with even more control over your SEO.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ) .
+				sprintf( __( 'Once you upgrade to %s, you will gain access to all of our exclusive premium features, providing you with even more control over your SEO.', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ) .
 				'
             </p>
             <div>
                 <ul class="left">
-                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'SEO and Social Meta for Taxonomies', 'all-in-one-seo-pack' ) . '</li>
-                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Advanced support for WooCommerce', 'all-in-one-seo-pack' ) . '</li>
-                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Video Sitemap Module', 'all-in-one-seo-pack' ) . '</li>
-                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Image SEO Module', 'all-in-one-seo-pack' ) . '</li>
+                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'SEO and Social Meta for Taxonomies', 'DH-SEO-pack' ) . '</li>
+                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Advanced support for WooCommerce', 'DH-SEO-pack' ) . '</li>
+                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Video Sitemap Module', 'DH-SEO-pack' ) . '</li>
+                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Image SEO Module', 'DH-SEO-pack' ) . '</li>
                 </ul>
                 <ul class="right">
-                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Support for Google Tag Manager', 'all-in-one-seo-pack' ) . '</li>
-                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Advanced Google Analytics tracking', 'all-in-one-seo-pack' ) . '</li>
-                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Access to Premium Support', 'all-in-one-seo-pack' ) . '</li>
-                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Ad free (no banner adverts)', 'all-in-one-seo-pack' ) . '</li>
+                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Support for Google Tag Manager', 'DH-SEO-pack' ) . '</li>
+                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Advanced Google Analytics tracking', 'DH-SEO-pack' ) . '</li>
+                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Access to Premium Support', 'DH-SEO-pack' ) . '</li>
+                    <li><span class="dashicons dashicons-yes aioseop-modal-checkmark"></span>' . __( 'Ad free (no banner adverts)', 'DH-SEO-pack' ) . '</li>
                 </ul>
             </div>
         </div>
         <div class="aioseop-taxonomies-upsell-modal-button">
             <a href="' . aioseop_get_utm_url( "taxonomies-upsell-{$page_id}" ) . '" class="button button-primary button-hero" target="_blank" rel="noopener noreferrer">' .
 			/* translators: %s: "DH SEO Pack Pro"  */
-			sprintf( __( 'Upgrade to %s Now', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ) .
+			sprintf( __( 'Upgrade to %s Now', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ) .
 			'</a>
         </div>
     </div>';
@@ -1062,7 +1062,7 @@ class AIOSEOP_Education {
 	}
 
 	public static function hide_notices() {
-		if ( 'all-in-one-seo_page_aioseop-about' !== get_current_screen()->id ) {
+		if ( 'DH-SEO_page_aioseop-about' !== get_current_screen()->id ) {
 			return;
 		}
 

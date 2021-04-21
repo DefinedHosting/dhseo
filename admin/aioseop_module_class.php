@@ -2,7 +2,7 @@
 /**
  * AIOSEOP Module Class
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @version 2.3.12.2
  */
 
@@ -266,7 +266,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 			if ( AIOSEOP_PHP_Functions::strpos( $name, 'display_settings_page_' ) === 0 ) {
 				return $this->display_settings_page( AIOSEOP_PHP_Functions::substr( $name, 22 ) );
 			}
-			$error = sprintf( __( "Method %s doesn't exist", 'all-in-one-seo-pack' ), $name );
+			$error = sprintf( __( "Method %s doesn't exist", 'DH-SEO-pack' ), $name );
 			if ( class_exists( 'BadMethodCallException' ) ) {
 				throw new BadMethodCallException( $error );
 			}
@@ -942,7 +942,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 		function get_post_type_titles( $args = array() ) {
 			$object_labels = $this->get_object_labels( get_post_types( $args, 'objects' ) );
 			if ( isset( $object_labels['attachment'] ) ) {
-				$object_labels['attachment'] = __( 'Media / Attachments', 'all-in-one-seo-pack' );
+				$object_labels['attachment'] = __( 'Media / Attachments', 'DH-SEO-pack' );
 			}
 			return $object_labels;
 		}
@@ -1309,9 +1309,9 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 		 */
 		function save_file( $filename, $contents ) {
 			/* translators: %s is a placeholder and will be replaced with the name of the relevant file. */
-			$failed_str = sprintf( __( 'Failed to write file %s!', 'all-in-one-seo-pack' ) . "\n", $filename );
+			$failed_str = sprintf( __( 'Failed to write file %s!', 'DH-SEO-pack' ) . "\n", $filename );
 			/* translators: %s is a placeholder and will be replaced with the name of the relevant file. */
-			$readonly_str = sprintf( __( 'File %s isn\'t writable!', 'all-in-one-seo-pack' ) . "\n", $filename );
+			$readonly_str = sprintf( __( 'File %s isn\'t writable!', 'DH-SEO-pack' ) . "\n", $filename );
 
 			$wpfs = $this->get_filesystem_object();
 			if ( is_object( $wpfs ) ) {
@@ -1343,13 +1343,13 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 				if ( $wpfs->exists( $filename ) ) {
 					if ( $wpfs->delete( $filename ) === false ) {
 						/* translators: %s is a placeholder and will be replaced with the name of the relevant file. */
-						$this->output_error( sprintf( __( 'Failed to delete file %s!', 'all-in-one-seo-pack' ) . "\n", $filename ) );
+						$this->output_error( sprintf( __( 'Failed to delete file %s!', 'DH-SEO-pack' ) . "\n", $filename ) );
 					} else {
 						return true;
 					}
 				} else {
 					/* translators: %s is a placeholder and will be replaced with the name of the relevant file. */
-					$this->output_error( sprintf( __( "File %s doesn't exist!", 'all-in-one-seo-pack' ) . "\n", $filename ) );
+					$this->output_error( sprintf( __( "File %s doesn't exist!", 'DH-SEO-pack' ) . "\n", $filename ) );
 				}
 			}
 
@@ -1372,17 +1372,17 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 				if ( $file_exists && ! $newfile_exists ) {
 					if ( $wpfs->move( $filename, $newname ) === false ) {
 						/* translators: %s is a placeholder and will be replaced with the name of the relevant file. */
-						$this->output_error( sprintf( __( 'Failed to rename file %s!', 'all-in-one-seo-pack' ) . "\n", $filename ) );
+						$this->output_error( sprintf( __( 'Failed to rename file %s!', 'DH-SEO-pack' ) . "\n", $filename ) );
 					} else {
 						return true;
 					}
 				} else {
 					if ( ! $file_exists ) {
 						/* translators: %s is a placeholder and will be replaced with the name of the relevant file. */
-						$this->output_error( sprintf( __( "File %s doesn't exist!", 'all-in-one-seo-pack' ) . "\n", $filename ) );
+						$this->output_error( sprintf( __( "File %s doesn't exist!", 'DH-SEO-pack' ) . "\n", $filename ) );
 					} elseif ( $newfile_exists ) {
 						/* translators: %s is a placeholder and will be replaced with the name of the relevant file. */
-						$this->output_error( sprintf( __( 'File %s already exists!', 'all-in-one-seo-pack' ) . "\n", $newname ) );
+						$this->output_error( sprintf( __( 'File %s already exists!', 'DH-SEO-pack' ) . "\n", $newname ) );
 					}
 				}
 			}
@@ -2278,7 +2278,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 								if ( ! empty( $v['help_link'] ) ) {
 									$title .= "<a class='aioseop_help_text_link aioseop_meta_box_help' target='_blank' href='" . $lopts['help_link'] . "'><span>" .
 									/* translators: This string is used as an action link which users can click on to view the relevant documentation on our website. */
-									__( 'Help', 'all-in-one-seo-pack' ) . '</span></a>';
+									__( 'Help', 'DH-SEO-pack' ) . '</span></a>';
 								}
 								add_meta_box(
 									$v['prefix'] . $k,
@@ -2551,15 +2551,15 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 					$value = wp_parse_args( $value, $address_defaults );
 
 					$buf .= '
-						<label for="' . $name . '_street_address" class="aioseop_label_street_address">' . __( 'Street Address', 'all-in-one-seo-pack' ) . '</label>
+						<label for="' . $name . '_street_address" class="aioseop_label_street_address">' . __( 'Street Address', 'DH-SEO-pack' ) . '</label>
 						<input name="' . $name . '_street_address" class="aioseop_input_street_address" type="text" ' . $attr . ' value="' . $value['street_address'] . '" />
-						<label for="' . $name . '_address_locality" class="aioseop_label_address_locality">' . __( 'City', 'all-in-one-seo-pack' ) . '</label>
+						<label for="' . $name . '_address_locality" class="aioseop_label_address_locality">' . __( 'City', 'DH-SEO-pack' ) . '</label>
 						<input name="' . $name . '_address_locality" class="aioseop_input_address_locality" type="text" ' . $attr . ' value="' . $value['address_locality'] . '" />
-						<label for="' . $name . '_address_region" class="aioseop_label_address_region">' . __( 'State', 'all-in-one-seo-pack' ) . '</label>
+						<label for="' . $name . '_address_region" class="aioseop_label_address_region">' . __( 'State', 'DH-SEO-pack' ) . '</label>
 						<input name="' . $name . '_address_region" class="aioseop_input_address_region" type="text" ' . $attr . ' value="' . $value['address_region'] . '" />
-						<label for="' . $name . '_postal_code" class="aioseop_label_postal_code">' . __( 'Zip code', 'all-in-one-seo-pack' ) . '</label>
+						<label for="' . $name . '_postal_code" class="aioseop_label_postal_code">' . __( 'Zip code', 'DH-SEO-pack' ) . '</label>
 						<input name="' . $name . '_postal_code" class="aioseop_input_postal_code" type="text" ' . $attr . ' value="' . $value['postal_code'] . '" />
-						<label for="' . $name . '_address_country" class="aioseop_label_address_country">' . __( 'Country', 'all-in-one-seo-pack' ) . '</label>
+						<label for="' . $name . '_address_country" class="aioseop_label_address_country">' . __( 'Country', 'DH-SEO-pack' ) . '</label>
 						<input name="' . $name . '_address_country" class="aioseop_input_address_country" type="text" ' . $attr . ' value="' . $value['address_country'] . '" />
 						';
 					$buf = '<div class="aioseop_postal_address">' . $buf . '</div>';
@@ -2567,7 +2567,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 				case 'image':
 					$buf .= '<input class="aioseop_upload_image_checker" type="hidden" name="' . $name . '_checker" value="0">' .
 							"<input class='aioseop_upload_image_button button-primary' type='button' value='";
-					$buf .= __( 'Upload Image', 'all-in-one-seo-pack' );
+					$buf .= __( 'Upload Image', 'DH-SEO-pack' );
 					$buf .= "' />" .
 							"<input class='aioseop_upload_image_label' name='" . esc_attr( $name ) . "' type='text' " . esc_html( $attr ) . " value='" . esc_attr( $value ) . "' size=57 style='float:left;clear:left;'>\n";
 					break;
@@ -2609,7 +2609,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 					$count_desc = $options['count_desc'];
 				} else {
 					/* translators: %1$s and %2$s are placeholders and should not be translated. %1$s is replaced with a number, %2$s is replaced with the name of an meta tag field (e.g; "Title", "Description", etc.). */
-					$count_desc = __( ' characters. Most search engines use a maximum of %1$s chars for the %2$s.', 'all-in-one-seo-pack' );
+					$count_desc = __( ' characters. Most search engines use a maximum of %1$s chars for the %2$s.', 'DH-SEO-pack' );
 				}
 				$buf .= "<br /><input readonly tabindex='-1' type='text' name='{$prefix}length$n' size='3' maxlength='3' style='width:53px;height:23px;margin:0px;padding:0px 0px 0px 10px;' value='" . AIOSEOP_PHP_Functions::strlen( $value ) . "' />"
 						. sprintf( $count_desc, $size, trim( AIOSEOP_PHP_Functions::strtolower( $options['name'] ), ':' ) );
@@ -2693,7 +2693,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 				$help_link = $meta_args['callback_args']['help_link'];
 			}
 			if ( ! empty( $help_link ) ) {
-				echo "<a class='aioseop_help_text_link aioseop_meta_box_help' target='_blank' href='" . $help_link . "'><span>" . __( 'Help', 'all-in-one-seo-pack' ) . '</span></a>';
+				echo "<a class='aioseop_help_text_link aioseop_meta_box_help' target='_blank' href='" . $help_link . "'><span>" . __( 'Help', 'DH-SEO-pack' ) . '</span></a>';
 			}
 
 			if ( ! isset( $location_settings[ $prefix ] ) ) {
@@ -2910,11 +2910,11 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 			) {
 				$nonce = $_POST['nonce-aioseop'];
 				if ( ! wp_verify_nonce( $nonce, 'aioseop-nonce' ) ) {
-					die( __( 'Security Check - If you receive this in error, log out and back in to WordPress', 'all-in-one-seo-pack' ) );
+					die( __( 'Security Check - If you receive this in error, log out and back in to WordPress', 'DH-SEO-pack' ) );
 				}
 				if ( isset( $_POST['Submit_Default'] ) || isset( $_POST['Submit_All_Default'] ) ) {
 					/* translators: This message confirms that the options have been reset. */
-					$message = __( 'Options Reset.', 'all-in-one-seo-pack' );
+					$message = __( 'Options Reset.', 'DH-SEO-pack' );
 					if ( isset( $_POST['Submit_All_Default'] ) ) {
 						$this->reset_options( $location, true );
 						do_action( 'aioseop_options_reset' );
@@ -2924,7 +2924,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 				}
 				if ( ! empty( $_POST['Submit'] ) ) {
 					/* translators: %s is a placeholder and will be replace with the name of the plugin. */
-					$message         = sprintf( __( '%s Options Updated.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME );
+					$message         = sprintf( __( '%s Options Updated.', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME );
 					$default_options = $this->default_options( $location );
 					$prefix          = $this->prefix;
 					foreach ( $this->default_options as $k => $option_arr ) {
@@ -3027,13 +3027,13 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 							'Submit'         => array(
 								'type'  => 'submit',
 								'class' => 'aioseop_update_options_button button-primary',
-								'value' => __( 'Update Options', 'all-in-one-seo-pack' ) . ' &raquo;',
+								'value' => __( 'Update Options', 'DH-SEO-pack' ) . ' &raquo;',
 							),
 							'Submit_Default' => array(
 								'type'  => 'submit',
 								'class' => 'aioseop_reset_settings_button button-secondary',
 								/* translators: This is a button users can click to reset the settings of a specific module to their default values. %s is a placeholder and will be replaced with the name of a settings menu (e.g. "Performance"). */
-								'value' => sprintf( __( 'Reset %s Settings to Defaults', 'all-in-one-seo-pack' ), $name ) . ' &raquo;',
+								'value' => sprintf( __( 'Reset %s Settings to Defaults', 'DH-SEO-pack' ), $name ) . ' &raquo;',
 							),
 						);
 						$submit_options = apply_filters( "{$this->prefix}submit_options", $submit_options, $location );
@@ -3067,7 +3067,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 								if ( ! isset( $lopts['tab'] ) || ( $this->current_tab == $lopts['tab'] ) ) {
 									$title = $lopts['name'];
 									if ( ! empty( $lopts['help_link'] ) ) {
-										$title .= "<a class='aioseop_help_text_link aioseop_meta_box_help' target='_blank' href='" . $lopts['help_link'] . "'><span>" . __( 'Help', 'all-in-one-seo-pack' ) . '</span></a>';
+										$title .= "<a class='aioseop_help_text_link aioseop_meta_box_help' target='_blank' href='" . $lopts['help_link'] . "'><span>" . __( 'Help', 'DH-SEO-pack' ) . '</span></a>';
 									}
 									add_meta_box(
 										$this->get_prefix( $location ) . $l . '_metabox',

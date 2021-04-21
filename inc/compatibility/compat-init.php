@@ -4,7 +4,7 @@
  *
  * Eventually we'll have subclasses for each.
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @since   2.3.13
  */
 

@@ -4,7 +4,7 @@
  *
  * @since 3.0.0
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @subpackage AIOSEOP_Notices
  */
 
@@ -21,7 +21,7 @@ function aioseop_notice_pro_promo_woocommerce() {
 		'slug'           => 'woocommerce_detected',
 		'delay_time'     => 0,
 		/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the premium version of the plugin, DH SEO Pack Pro. */
-		'message'        => sprintf( __( 'We have detected you are running WooCommerce. Upgrade to %s to unlock our advanced eCommerce SEO features, including SEO for Product Categories and more.', 'all-in-one-seo-pack' ), 'DH SEO Pack Pro' ),
+		'message'        => sprintf( __( 'We have detected you are running WooCommerce. Upgrade to %s to unlock our advanced eCommerce SEO features, including SEO for Product Categories and more.', 'DH-SEO-pack' ), 'DH SEO Pack Pro' ),
 
 		'class'          => 'notice-info',
 		'target'         => 'site',
@@ -29,7 +29,7 @@ function aioseop_notice_pro_promo_woocommerce() {
 		'action_options' => array(
 			array(
 				'time'    => 0,
-				'text'    => __( 'Upgrade to Pro', 'all-in-one-seo-pack' ),
+				'text'    => __( 'Upgrade to Pro', 'DH-SEO-pack' ),
 				'link'    => aioseop_get_utm_url( 'woocommerce-upsell-notice' ),
 				'dismiss' => false,
 				'class'   => 'button-primary button-orange',

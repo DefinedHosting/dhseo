@@ -160,7 +160,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 		 */
 		public function __construct() {
 			if ( get_class( $this ) === 'All_in_One_SEO_Pack_Sitemap' ) { // Set this up only when instantiated as this class.
-				$this->name           = __( 'XML Sitemap', 'all-in-one-seo-pack' ); // Human-readable name of the plugin.
+				$this->name           = __( 'XML Sitemap', 'DH-SEO-pack' ); // Human-readable name of the plugin.
 				$this->prefix         = 'aiosp_sitemap_';                          // Option prefix.
 				$this->file           = __FILE__;                                      // The current file.
 				$this->extra_sitemaps = array();
@@ -172,22 +172,22 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 
 			$this->default_options = array(
 				'daily_cron'  => array(
-					'name'            => __( 'Schedule Updates', 'all-in-one-seo-pack' ),
+					'name'            => __( 'Schedule Updates', 'DH-SEO-pack' ),
 					'type'            => 'select',
 					'initial_options' => array(
-						0         => __( 'No Schedule', 'all-in-one-seo-pack' ),
-						'daily'   => __( 'Daily', 'all-in-one-seo-pack' ),
-						'weekly'  => __( 'Weekly', 'all-in-one-seo-pack' ),
-						'monthly' => __( 'Monthly', 'all-in-one-seo-pack' ),
+						0         => __( 'No Schedule', 'DH-SEO-pack' ),
+						'daily'   => __( 'Daily', 'DH-SEO-pack' ),
+						'weekly'  => __( 'Weekly', 'DH-SEO-pack' ),
+						'monthly' => __( 'Monthly', 'DH-SEO-pack' ),
 					),
 					'default'         => 0,
 				),
 				'indexes'     => array(
-					'name'    => __( 'Enable Sitemap Indexes', 'all-in-one-seo-pack' ),
+					'name'    => __( 'Enable Sitemap Indexes', 'DH-SEO-pack' ),
 					'default' => 'on',
 				),
 				'max_posts'   => array(
-					'name'     => __( 'Maximum Posts Per Sitemap Page', 'all-in-one-seo-pack' ),
+					'name'     => __( 'Maximum Posts Per Sitemap Page', 'DH-SEO-pack' ),
 					'type'     => 'number',
 					'default'  => 1000,
 					'condshow' => array(
@@ -196,20 +196,20 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 					),
 				),
 				'posttypes'   => array(
-					'name'    => __( 'Post Types', 'all-in-one-seo-pack' ),
+					'name'    => __( 'Post Types', 'DH-SEO-pack' ),
 					'type'    => 'multicheckbox',
 					'default' => 'all',
 				),
 				'taxonomies'  => array(
-					'name'    => __( 'Taxonomies', 'all-in-one-seo-pack' ),
+					'name'    => __( 'Taxonomies', 'DH-SEO-pack' ),
 					'type'    => 'multicheckbox',
 					'default' => 'all',
 				),
-				'archive'     => array( 'name' => __( 'Include Date Archive Pages', 'all-in-one-seo-pack' ) ),
-				'author'      => array( 'name' => __( 'Include Author Pages', 'all-in-one-seo-pack' ) ),
-				'images'      => array( 'name' => __( 'Exclude Images', 'all-in-one-seo-pack' ) ),
+				'archive'     => array( 'name' => __( 'Include Date Archive Pages', 'DH-SEO-pack' ) ),
+				'author'      => array( 'name' => __( 'Include Author Pages', 'DH-SEO-pack' ) ),
+				'images'      => array( 'name' => __( 'Exclude Images', 'DH-SEO-pack' ) ),
 				'rewrite'     => array(
-					'name'    => __( 'Dynamically Generate Sitemap', 'all-in-one-seo-pack' ),
+					'name'    => __( 'Dynamically Generate Sitemap', 'DH-SEO-pack' ),
 					'default' => 'On',
 				),
 			);
@@ -225,7 +225,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 
 			$this->layout = array(
 				'status'  => array(
-					'name'      => __( 'Sitemap Overview', 'all-in-one-seo-pack' ),
+					'name'      => __( 'Sitemap Overview', 'DH-SEO-pack' ),
 					'help_link' => 'https://semperplugins.com/documentation/xml-sitemaps-module/#sitemap-overview',
 					'options'   => array_keys( $status_options ),
 				),
@@ -241,8 +241,8 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 				$str          = sprintf( '%0.1f', $i / 10.0 );
 				$prio[ $str ] = $str;
 			}
-			$arr_no         = array( 'no' => __( 'Do Not Override', 'all-in-one-seo-pack' ) );
-			$arr_sel        = array( 'sel' => __( 'Select Individual', 'all-in-one-seo-pack' ) );
+			$arr_no         = array( 'no' => __( 'Do Not Override', 'DH-SEO-pack' ) );
+			$arr_sel        = array( 'sel' => __( 'Select Individual', 'DH-SEO-pack' ) );
 			$this->prio_sel = array_merge( $arr_no, $arr_sel, $prio );
 			$this->prio     = array_merge( $arr_no, $prio );
 
@@ -255,19 +255,19 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 
 			foreach (
 				array(
-					'prio' => __( 'priority', 'all-in-one-seo-pack' ),
-					'freq' => __( 'frequency', 'all-in-one-seo-pack' ),
+					'prio' => __( 'priority', 'DH-SEO-pack' ),
+					'freq' => __( 'frequency', 'DH-SEO-pack' ),
 				) as $k => $v
 			) {
 				$s  = "{$k}_options";
 				$$s = array();
 				foreach (
 					array(
-						'homepage'   => __( 'homepage', 'all-in-one-seo-pack' ),
-						'post'       => __( 'posts', 'all-in-one-seo-pack' ),
-						'taxonomies' => __( 'taxonomies', 'all-in-one-seo-pack' ),
-						'archive'    => __( 'archive pages', 'all-in-one-seo-pack' ),
-						'author'     => __( 'author pages', 'all-in-one-seo-pack' ),
+						'homepage'   => __( 'homepage', 'DH-SEO-pack' ),
+						'post'       => __( 'posts', 'DH-SEO-pack' ),
+						'taxonomies' => __( 'taxonomies', 'DH-SEO-pack' ),
+						'archive'    => __( 'archive pages', 'DH-SEO-pack' ),
+						'author'     => __( 'author pages', 'DH-SEO-pack' ),
 					) as $opt => $val
 				) {
 					$arr = $$s;
@@ -291,7 +291,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 			}
 
 			$addl_sitemap_options = array(
-				'rss_sitemap' => array( 'name' => __( 'Create RSS Sitemap', 'all-in-one-seo-pack' ) ),
+				'rss_sitemap' => array( 'name' => __( 'Create RSS Sitemap', 'DH-SEO-pack' ) ),
 			);
 
 			/**
@@ -303,13 +303,13 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 			 */
 			if ( apply_filters( 'aioseo_news_sitemap_enabled', true ) ) {
 				$addl_sitemap_options['publication_name'] = array(
-					'name'    => __( 'Google News Publication Name', 'all-in-one-seo-pack' ),
+					'name'    => __( 'Google News Publication Name', 'DH-SEO-pack' ),
 					'type'    => 'text',
 					'default' => get_bloginfo( 'name' ) ? get_bloginfo( 'name' ) : "",
 				);
 
 				$addl_sitemap_options['posttypes_news'] = array(
-					'name'    => __( 'Google News Sitemap Post Types', 'all-in-one-seo-pack' ),
+					'name'    => __( 'Google News Sitemap Post Types', 'DH-SEO-pack' ),
 					'type'    => 'multicheckbox',
 					'default' => array( 'post' ),
 				);
@@ -317,44 +317,44 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 
 			$addl_pages_options = array(
 				'addl_instructions' => array(
-					'default' => '<div>' . __( 'Enter information below for any additional links for your sitemap not already managed through WordPress.', 'all-in-one-seo-pack' ) . '</div><br />',
+					'default' => '<div>' . __( 'Enter information below for any additional links for your sitemap not already managed through WordPress.', 'DH-SEO-pack' ) . '</div><br />',
 					'type'    => 'html',
 					'label'   => 'none',
 					'save'    => false,
 				),
 				'addl_url'          => array(
-					'name' => __( 'Page URL', 'all-in-one-seo-pack' ),
+					'name' => __( 'Page URL', 'DH-SEO-pack' ),
 					'type' => 'url',
 					'save' => false,
 				),
 				'addl_prio'         => array(
-					'name'            => __( 'Page Priority', 'all-in-one-seo-pack' ),
+					'name'            => __( 'Page Priority', 'DH-SEO-pack' ),
 					'type'            => 'select',
 					'initial_options' => $prio,
 					'save'            => false,
 				),
 				'addl_freq'         => array(
-					'name'            => __( 'Page Frequency', 'all-in-one-seo-pack' ),
+					'name'            => __( 'Page Frequency', 'DH-SEO-pack' ),
 					'type'            => 'select',
 					'initial_options' => $freq,
 					'save'            => false,
 				),
 				'addl_mod'          => array(
-					'name'        => __( 'Last Modified', 'all-in-one-seo-pack' ),
+					'name'        => __( 'Last Modified', 'DH-SEO-pack' ),
 					'type'        => 'date',
 					'save'        => false,
 					'placeholder' => 'yyyy-mm-dd',
 					'class'       => 'aiseop-date',
 				),
 				'addl_pages'        => array(
-					'name' => __( 'Additional Pages', 'all-in-one-seo-pack' ),
+					'name' => __( 'Additional Pages', 'DH-SEO-pack' ),
 					'type' => 'custom',
 					'save' => true,
 				),
 				'Submit'            => array(
 					'type'  => 'submit',
 					'class' => 'button-primary',
-					'name'  => __( 'Add URL', 'all-in-one-seo-pack' ) . ' &raquo;',
+					'name'  => __( 'Add URL', 'DH-SEO-pack' ) . ' &raquo;',
 					'style' => 'margin-left: 20px;',
 					'label' => 'none',
 					'save'  => false,
@@ -364,43 +364,43 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 
 			$excl_options = array(
 				'excl_terms' => array(
-					'name'  => __( 'Excluded Terms', 'all-in-one-seo-pack' ),
+					'name'  => __( 'Excluded Terms', 'DH-SEO-pack' ),
 					'type'  => 'multiselect',
 					'class' => 'aioseop-exclude-terms',
 				),
 				'excl_pages' => array(
-					'name' => __( 'Excluded Pages', 'all-in-one-seo-pack' ),
+					'name' => __( 'Excluded Pages', 'DH-SEO-pack' ),
 					'type' => 'text',
 				),
 			);
 
 			$this->layout['addl_sitemaps'] = array(
-				'name'      => __( 'Additional Sitemaps', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Additional Sitemaps', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/xml-sitemaps-module/#additional-sitemaps',
 				'options'   => array_keys( $addl_sitemap_options ),
 			);
 
 			$this->layout['addl_pages'] = array(
-				'name'      => __( 'Additional Pages', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Additional Pages', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/xml-sitemaps-module/#additional-pages',
 				'options'   => array_keys( $addl_pages_options ),
 			);
 
 			$this->layout['excl_pages'] = array(
-				'name'      => __( 'Excluded Items', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Excluded Items', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/xml-sitemaps-module/#excluded-items',
 				'options'   => array_keys( $excl_options ),
 			);
 
 			$this->layout['priorities'] = array(
-				'name'      => __( 'Priorities', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Priorities', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/xml-sitemaps-module/#priorities-and-frequencies',
 				// TODO Fix undefined variable.
 				'options'   => array_keys( $prio_options ),
 			);
 
 			$this->layout['frequencies'] = array(
-				'name'      => __( 'Frequencies', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Frequencies', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/xml-sitemaps-module/#priorities-and-frequencies',
 				// TODO Fix undefined variable.
 				'options'   => array_keys( $freq_options ),
@@ -547,11 +547,11 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 		public function add_cron_schedules( $schedules ) {
 			$schedules['weekly']  = array(
 				'interval' => 604800, // 1 week in seconds.
-				'display'  => __( 'Once Weekly', 'all-in-one-seo-pack' ),
+				'display'  => __( 'Once Weekly', 'DH-SEO-pack' ),
 			);
 			$schedules['monthly'] = array(
 				'interval' => 2629740, // 1 month in seconds.
-				'display'  => __( 'Once Monthly', 'all-in-one-seo-pack' ),
+				'display'  => __( 'Once Monthly', 'DH-SEO-pack' ),
 			);
 
 			return $schedules;
@@ -578,7 +578,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 			$last_run = get_option( $this->prefix . 'cron_last_run' );
 			if ( empty( $last_run ) || ( time() - $last_run > 23.5 * 60 * 60 ) ) {
 				// Sanity check.
-				$this->do_sitemaps( __( 'Daily scheduled sitemap check has finished.', 'all-in-one-seo-pack' ) );
+				$this->do_sitemaps( __( 'Daily scheduled sitemap check has finished.', 'DH-SEO-pack' ) );
 			}
 			$last_run = time();
 			update_option( $this->prefix . 'cron_last_run', $last_run );
@@ -730,7 +730,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 						if ( is_object( $v ) ) {
 							$v = (array) $v;
 						}
-						$buf .= "\t<tr><td><a href='#' title='$k' class='dashicons dashicons-trash aiosp_delete_url' aria-label='" . __( 'Delete this additional URL', 'all-in-one-seo-pack' ) . "'></a></td><td>{$k}</td><td>{$v['prio']}</td><td>{$v['freq']}</td><td>{$v['mod']}</td></tr>\n";
+						$buf .= "\t<tr><td><a href='#' title='$k' class='dashicons dashicons-trash aiosp_delete_url' aria-label='" . __( 'Delete this additional URL', 'DH-SEO-pack' ) . "'></a></td><td>{$k}</td><td>{$v['prio']}</td><td>{$v['freq']}</td><td>{$v['mod']}</td></tr>\n";
 					}
 					$buf .= "</table>\n";
 				}
@@ -764,10 +764,10 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 			$post_type_titles = $this->get_post_type_titles( array( 'public' => true ) );
 			$taxonomy_titles  = $this->get_taxonomy_titles( array( 'public' => true ) );
 			if ( isset( $post_type_titles['attachment'] ) ) {
-				$post_type_titles['attachment'] = __( 'Media / Attachments', 'all-in-one-seo-pack' );
+				$post_type_titles['attachment'] = __( 'Media / Attachments', 'DH-SEO-pack' );
 			}
-			$this->default_options['posttypes']['initial_options']  = array_merge( array( 'all' => __( 'All Post Types', 'all-in-one-seo-pack' ) ), $post_type_titles );
-			$this->default_options['taxonomies']['initial_options'] = array_merge( array( 'all' => __( 'All Taxonomies', 'all-in-one-seo-pack' ) ), $taxonomy_titles );
+			$this->default_options['posttypes']['initial_options']  = array_merge( array( 'all' => __( 'All Post Types', 'DH-SEO-pack' ) ), $post_type_titles );
+			$this->default_options['taxonomies']['initial_options'] = array_merge( array( 'all' => __( 'All Taxonomies', 'DH-SEO-pack' ) ), $taxonomy_titles );
 			$this->default_options['posttypes']['default']          = array_keys( $this->default_options['posttypes']['initial_options'] );
 			$this->default_options['taxonomies']['default']         = array_keys( $this->default_options['taxonomies']['initial_options'] );
 
@@ -822,8 +822,8 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 			}
 			$this->default_options['excl_terms']['initial_options'] = $excl_terms_init_opts;
 
-			$post_name = ' ' . __( 'Post Type', 'all-in-one-seo-pack' );
-			$tax_name  = ' ' . __( 'Taxonomy', 'all-in-one-seo-pack' );
+			$post_name = ' ' . __( 'Post Type', 'DH-SEO-pack' );
+			$tax_name  = ' ' . __( 'Taxonomy', 'DH-SEO-pack' );
 
 			foreach ( $post_type_titles as $k => $v ) {
 				$key                                      = 'prio_post_' . $k;
@@ -918,7 +918,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 		 * @return mixed
 		 */
 		public function filter_submit( $submit ) {
-			$submit['Submit']['value'] = __( 'Update Sitemap', 'all-in-one-seo-pack' ) . ' &raquo;';
+			$submit['Submit']['value'] = __( 'Update Sitemap', 'DH-SEO-pack' ) . ' &raquo;';
 
 			return $submit;
 		}
@@ -1015,15 +1015,15 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 			}
 			
 			$url = aioseop_home_url( '/' . 'sitemap.xml' );
-			$options[ $this->prefix . 'link' ] = '<p>' . __( 'You can navigate to your sitemap(s) using the links below:', 'all-in-one-seo-pack' ) . '<ul>';
+			$options[ $this->prefix . 'link' ] = '<p>' . __( 'You can navigate to your sitemap(s) using the links below:', 'DH-SEO-pack' ) . '<ul>';
 
 			$url = aioseop_home_url( '/' . 'sitemap.xml' );
-			$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'XML Sitemap', 'all-in-one-seo-pack' ) . '</a></li>';
+			$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'XML Sitemap', 'DH-SEO-pack' ) . '</a></li>';
 
 			if ( ! empty( $options[ "{$this->prefix}rss_sitemap" ] ) ) {
 				$url = aioseop_home_url( '/' . $this->get_filename() . '.rss' );
 				/* translators: Link to sitemap within current site. */
-				$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'RSS Sitemap', 'all-in-one-seo-pack' ) . '</a></li>';
+				$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'RSS Sitemap', 'DH-SEO-pack' ) . '</a></li>';
 			}
 
 			if ( 
@@ -1032,19 +1032,19 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 				apply_filters( 'aioseo_news_sitemap_enabled', true )
 			) {
 				$url = aioseop_home_url( '/news-sitemap.xml' );
-				$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'Google News Sitemap', 'all-in-one-seo-pack' ) . '</a><br/><i class="aioseop-msg-small">(' . __( 'This will lead to a 404 Not Found page if no posts have been published in the last 48 hours.', 'all-in-one-seo-pack' ) . ')</i></li>';
+				$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'Google News Sitemap', 'DH-SEO-pack' ) . '</a><br/><i class="aioseop-msg-small">(' . __( 'This will lead to a 404 Not Found page if no posts have been published in the last 48 hours.', 'DH-SEO-pack' ) . ')</i></li>';
 			}
 
 			if ( DHSEOPRO && ! empty( $aioseop_options['modules']['aiosp_feature_manager_options']['aiosp_feature_manager_enable_video_sitemap'] ) ) {
 				$url = aioseop_home_url( '/video-sitemap.xml' );
-				$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'Video Sitemap', 'all-in-one-seo-pack' ) . '</a></li>';
+				$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'Video Sitemap', 'DH-SEO-pack' ) . '</a></li>';
 			}
 
 
 			$options[ $this->prefix . 'link' ] .= '</ul>';
 
 			if ( '0' !== get_option( 'blog_public' ) ) {
-				$options[ $this->prefix . 'link' ] .= '<p>' . __( 'Any changes are automatically submitted to search engines.', 'all-in-one-seo-pack' ) . '</p>';
+				$options[ $this->prefix . 'link' ] .= '<p>' . __( 'Any changes are automatically submitted to search engines.', 'DH-SEO-pack' ) . '</p>';
 			}
 
 			if ( $this->option_isset( 'rewrite' ) ) {
@@ -1065,14 +1065,14 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 					$rule  = $this->get_rewrite_url( $url );
 					$rules = $this->get_rewrite_rules();
 					if ( ! in_array( $rule, $rules, true ) ) {
-						$options[ $this->prefix . 'link' ] .= '<strong>' . __( 'Dynamic sitemap generation does not appear to be using the correct rewrite rules; please disable any other sitemap plugins or functionality on your site and reset your permalinks.', 'all-in-one-seo-pack' ) . '</strong>';
+						$options[ $this->prefix . 'link' ] .= '<strong>' . __( 'Dynamic sitemap generation does not appear to be using the correct rewrite rules; please disable any other sitemap plugins or functionality on your site and reset your permalinks.', 'DH-SEO-pack' ) . '</strong>';
 					}
 				}
 			}
 			if ( ! get_option( 'blog_public' ) ) {
-				$privacy_link = '<a href="options-reading.php">' . __( 'Reading Settings', 'all-in-one-seo-pack' ) . '</a>';
+				$privacy_link = '<a href="options-reading.php">' . __( 'Reading Settings', 'DH-SEO-pack' ) . '</a>';
 				/* translators: Link to settings to disable "Discourage search engines from indexing this site". */
-				$options[ $this->prefix . 'link' ] .= '<p class="aioseop_error_notice">' . sprintf( __( 'Warning: your privacy settings are configured to ask search engines to not index your site; you can change this under %s for your site.', 'all-in-one-seo-pack' ), $privacy_link );
+				$options[ $this->prefix . 'link' ] .= '<p class="aioseop_error_notice">' . sprintf( __( 'Warning: your privacy settings are configured to ask search engines to not index your site; you can change this under %s for your site.', 'DH-SEO-pack' ), $privacy_link );
 			}
 
 			$excl_terms = array();
@@ -1294,14 +1294,14 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 		public function do_sitemap_scan() {
 			$msg = '';
 			if ( ! empty( $this->options[ "{$this->prefix}rewrite" ] ) && ( get_option( 'permalink_structure' ) === '' ) ) {
-				$msg = '<p>' . __( 'Warning: dynamic sitemap generation must have permalinks enabled.', 'all-in-one-seo-pack' ) . '</p>';
+				$msg = '<p>' . __( 'Warning: dynamic sitemap generation must have permalinks enabled.', 'DH-SEO-pack' ) . '</p>';
 			}
 			if ( ! empty( $_POST['aioseop_sitemap_rename_files'] ) || ! empty( $_POST['aioseop_sitemap_delete_files'] ) ) {
 				// TODO Add/Change to filter_input().
 				$nonce = $_POST['nonce-aioseop'];
 				if ( ! wp_verify_nonce( $nonce, 'aioseop-nonce' ) ) {
 					// TODO Change to wp_die().
-					die( __( 'Security Check - If you receive this in error, log out and back in to WordPress', 'all-in-one-seo-pack' ) );
+					die( __( 'Security Check - If you receive this in error, log out and back in to WordPress', 'DH-SEO-pack' ) );
 				}
 				if ( ! empty( $_POST['aioseop_sitemap_conflict'] ) ) {
 					$files = $this->scan_match_files();
@@ -1315,7 +1315,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 							if ( ! empty( $_POST['aioseop_sitemap_delete_files'] ) ) {
 								if ( $this->delete_file( $ren_file ) ) {
 									/* translators: Shows which sitemap files have been deleted. */
-									$msg .= '<p>' . sprintf( __( 'Deleted %s.', 'all-in-one-seo-pack' ), $ren_file ) . '</p>';
+									$msg .= '<p>' . sprintf( __( 'Deleted %s.', 'DH-SEO-pack' ), $ren_file ) . '</p>';
 								}
 								continue;
 							}
@@ -1326,17 +1326,17 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 							} while ( $this->file_exists( $ren_to ) && ( $count < 1000 ) );
 							if ( $count >= 1000 ) {
 								/* translators: Shows which sitemap files couldn't be renamed. */
-								$msg .= '<p>' . sprintf( __( "Couldn't rename file %s!", 'all-in-one-seo-pack' ), $ren_file ) . '</p>';
+								$msg .= '<p>' . sprintf( __( "Couldn't rename file %s!", 'DH-SEO-pack' ), $ren_file ) . '</p>';
 							} else {
 								$ren = $this->rename_file( $ren_file, $ren_to );
 								if ( $ren ) {
 									/* translators: Shows which sitemap files were renamed. */
-									$msg .= '<p>' . sprintf( __( 'Renamed %1$s to %2$s.', 'all-in-one-seo-pack' ), $ren_file, $ren_to ) . '</p>';
+									$msg .= '<p>' . sprintf( __( 'Renamed %1$s to %2$s.', 'DH-SEO-pack' ), $ren_file, $ren_to ) . '</p>';
 								}
 							}
 						} else {
 							/* translators: Shows which sitemap files couldn't be found. */
-							$msg .= '<p>' . sprintf( __( "Couldn't find file %s!", 'all-in-one-seo-pack' ), $ren_file ) . '</p>';
+							$msg .= '<p>' . sprintf( __( "Couldn't find file %s!", 'DH-SEO-pack' ), $ren_file ) . '</p>';
 						}
 					}
 				}
@@ -1428,7 +1428,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 							if ( ! empty( $this->options[ "{$this->prefix}rewrite" ] ) ) {
 								/* translators: %1$s, %2$s, etc. are placeholders and should not be translated. %1$s expands to the name of a sitemap file, %2$s to the name of the plugin, DH SEO Pack, %3$s is replaced with the plugin version number and %4$s with a date. */
 								$msg .= '<p>' . sprintf(
-									__( "Warning: a static sitemap '%1\$s' generated by %2\$s %3\$s on %4\$s already exists that may conflict with dynamic sitemap generation.", 'all-in-one-seo-pack' ),
+									__( "Warning: a static sitemap '%1\$s' generated by %2\$s %3\$s on %4\$s already exists that may conflict with dynamic sitemap generation.", 'DH-SEO-pack' ),
 									$f,
 									AIOSEOP_PLUGIN_NAME,
 									$matches[2],
@@ -1439,13 +1439,13 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 							}
 						} else {
 							/* translators: Shows which 'unknown' file is conflicting with the current sitemap settings. */
-							$msg .= '<p>' . sprintf( __( 'Potential conflict with unknown file %s.', 'all-in-one-seo-pack' ), $f ) . "</p>\n";
+							$msg .= '<p>' . sprintf( __( 'Potential conflict with unknown file %s.', 'DH-SEO-pack' ), $f ) . "</p>\n";
 
 							$problem_files[] = $f;
 						}
 					} else {
 						/* translators: Shows which files were removed. */
-						$msg .= '<p>' . sprintf( __( 'Removed empty file %s.', 'all-in-one-seo-pack' ), $f ) . "</p>\n";
+						$msg .= '<p>' . sprintf( __( 'Removed empty file %s.', 'DH-SEO-pack' ), $f ) . "</p>\n";
 
 						$problem_files[] = $f;
 
@@ -1485,8 +1485,8 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 					$msg .= "<input type='hidden' name='aioseop_sitemap_conflict[]' value='" . esc_attr( basename( realpath( $p ) ) ) . "'>\n";
 				}
 				$msg .= "<input type='hidden' name='nonce-aioseop' value='" . wp_create_nonce( 'aioseop-nonce' ) . "'>\n";
-				$msg .= "<input type='submit' name='aioseop_sitemap_delete_files' class='aioseop_delete_files_button button-primary' value='" . __( 'Delete Conflicting Files', 'all-in-one-seo-pack' ) . "' aria-label='" . __( 'Delete Conflicting Files', 'all-in-one-seo-pack' ) . "'>";
-				$msg .= "<input type='submit' name='aioseop_sitemap_rename_files' class='aioseop_rename_files_button button-secondary' value='" . __( 'Rename Conflicting Files', 'all-in-one-seo-pack' ) . "' aria-label='" . __( 'Rename Conflicting Files', 'all-in-one-seo-pack' ) . "'> ";
+				$msg .= "<input type='submit' name='aioseop_sitemap_delete_files' class='aioseop_delete_files_button button-primary' value='" . __( 'Delete Conflicting Files', 'DH-SEO-pack' ) . "' aria-label='" . __( 'Delete Conflicting Files', 'DH-SEO-pack' ) . "'>";
+				$msg .= "<input type='submit' name='aioseop_sitemap_rename_files' class='aioseop_rename_files_button button-secondary' value='" . __( 'Rename Conflicting Files', 'DH-SEO-pack' ) . "' aria-label='" . __( 'Rename Conflicting Files', 'DH-SEO-pack' ) . "'> ";
 
 				$msg = '<form action="" method="post">' . $msg . '</form>';
 			}
@@ -1646,9 +1646,9 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 			$sitemap_memory_usage = $end_memory_usage - $this->start_memory_usage;
 			$end_memory_usage     = $end_memory_usage / 1024.0 / 1024.0;
 			$sitemap_memory_usage = $sitemap_memory_usage / 1024.0 / 1024.0;
-			$sitemap_type         = __( 'static', 'all-in-one-seo-pack' );
+			$sitemap_type         = __( 'static', 'DH-SEO-pack' );
 			if ( $dynamic ) {
-				$sitemap_type = __( 'dynamic', 'all-in-one-seo-pack' );
+				$sitemap_type = __( 'dynamic', 'DH-SEO-pack' );
 			}
 			$this->debug_message( sprintf( ' %01.2f MB memory used generating the %s sitemap in %01.3f seconds, %01.2f MB total memory used.', $sitemap_memory_usage, $sitemap_type, $time, $end_memory_usage ) );
 		}
@@ -1686,7 +1686,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 				$content = $this->do_rewrite_sitemap( $sitemap_type, $page );
 
 				// if the sitemap has no content, it's probabaly invalid and is being called directly.
-				// @issue ( https://github.com/awesomemotive/all-in-one-seo-pack/issues/2190 ).
+				// @issue ( https://github.com/awesomemotive/DH-SEO-pack/issues/2190 ).
 				if ( empty( $content ) ) {
 					return add_action( 'template_redirect', function() {
 						global $wp_query;
@@ -1868,11 +1868,11 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 					if ( is_array( $response ) && ! empty( $response['response'] ) && ! empty( $response['response']['code'] ) ) {
 						if ( 200 !== intval( $response['response']['code'] ) ) {
 							/* translators: Notifies the admin which sitemaps failed to notify with which search engine(s), and display the error code. */
-							$this->debug_message( sprintf( __( 'Failed to notify %1$s about changes to your sitemap at %2$s, error code %3$s.', 'all-in-one-seo-pack' ), $k, $url, $response['response']['code'] ) );
+							$this->debug_message( sprintf( __( 'Failed to notify %1$s about changes to your sitemap at %2$s, error code %3$s.', 'DH-SEO-pack' ), $k, $url, $response['response']['code'] ) );
 						}
 					} else {
 						/* translators: Notifies the admin which sitemaps failed to notify with which search engine(s). */
-						$this->debug_message( sprintf( __( 'Failed to notify %1$s about changes to your sitemap at %2$s, unable to access via wp_remote_get().', 'all-in-one-seo-pack' ), $k, $url ) );
+						$this->debug_message( sprintf( __( 'Failed to notify %1$s about changes to your sitemap at %2$s, unable to access via wp_remote_get().', 'DH-SEO-pack' ), $k, $url ) );
 					}
 				}
 			}

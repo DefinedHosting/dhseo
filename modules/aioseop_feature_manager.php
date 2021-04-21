@@ -32,79 +32,79 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Feature_Manager' ) ) {
 		 */
 		function __construct( $mod ) {
 			/* translators: the Feature Manager allows users to (de)activate other modules of the plugin. */
-			$this->name   = __( 'Feature Manager', 'all-in-one-seo-pack' );        // Human-readable name of the plugin.
+			$this->name   = __( 'Feature Manager', 'DH-SEO-pack' );        // Human-readable name of the plugin.
 			$this->prefix = 'aiosp_feature_manager_';                        // Option prefix.
 			$this->file   = __FILE__;                                    // The current file.
 			parent::__construct();
 			$this->module_info = array(
 				'sitemap'           => array(
 					/* translators: the XML Sitemaps module allows users to generate a sitemap in .xml format for their website and submit it to search engines such as Google, Bing and Yahoo. */
-					'name'         => __( 'XML Sitemaps', 'all-in-one-seo-pack' ),
-					'description'  => __( 'Create and manage your XML Sitemaps using this feature and submit your XML Sitemap to Google, Bing/Yahoo and Ask.com.', 'all-in-one-seo-pack' ),
+					'name'         => __( 'XML Sitemaps', 'DH-SEO-pack' ),
+					'description'  => __( 'Create and manage your XML Sitemaps using this feature and submit your XML Sitemap to Google, Bing/Yahoo and Ask.com.', 'DH-SEO-pack' ),
 					'default'      => 'on',
 					'can_activate' => true,
 				),
 				'opengraph'         => array(
 					/* translators: the Social Meta module allows users to add Open Graph (OG:) meta tags to their site's post/pages to control the appearance of them when shared on social media networks like Facebook and Twitter. */
-					'name'         => __( 'Social Meta', 'all-in-one-seo-pack' ),
+					'name'         => __( 'Social Meta', 'DH-SEO-pack' ),
 					/* translators: Social Meta refers to Open Graph (OG:) meta tags, which can be used to control the appearance of a site's posts/pages when shared on social media networks like Facebook and Twitter. */
-					'description'  => __( 'Add Social Meta data to your site to deliver closer integration between your website and social media.', 'all-in-one-seo-pack' ),
+					'description'  => __( 'Add Social Meta data to your site to deliver closer integration between your website and social media.', 'DH-SEO-pack' ),
 					'can_activate' => true,
 				),
 				'robots'            => array(
 					/* translators: the Robots.txt module allows users to provide instructions to web robots, e.g. search engine crawlers. */
-					'name'         => __( 'Robots.txt', 'all-in-one-seo-pack' ),
-					'description'  => __( 'Generate and validate your robots.txt file to guide search engines through your site.', 'all-in-one-seo-pack' ),
+					'name'         => __( 'Robots.txt', 'DH-SEO-pack' ),
+					'description'  => __( 'Generate and validate your robots.txt file to guide search engines through your site.', 'DH-SEO-pack' ),
 					'can_activate' => true,
 				),
 				'file_editor'       => array(
 					/* translators: the File Editor module allows users to edit the robots.txt file or .htaccess file on their site. */
-					'name'         => __( 'File Editor', 'all-in-one-seo-pack' ),
-					'description'  => __( 'Edit your .htaccess file to fine-tune your site.', 'all-in-one-seo-pack' ),
+					'name'         => __( 'File Editor', 'DH-SEO-pack' ),
+					'description'  => __( 'Edit your .htaccess file to fine-tune your site.', 'DH-SEO-pack' ),
 					'can_activate' => true,
 				),
 				'importer_exporter' => array(
 					/* translators: the Importer & Exporter module allows users to import/export their DH SEO Pack settings for backup purposes or when migrating their site. */
-					'name'         => __( 'Importer & Exporter', 'all-in-one-seo-pack' ),
+					'name'         => __( 'Importer & Exporter', 'DH-SEO-pack' ),
 					/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
-					'description'  => sprintf( __( 'Exports and imports your %s plugin settings.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ),
+					'description'  => sprintf( __( 'Exports and imports your %s plugin settings.', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME ),
 					'can_activate' => true,
 				),
 				'bad_robots'        => array(
 					/* translators: the Bad Bot Blocker module allows users to block requests from user agents that are known to misbehave. */
-					'name'         => __( 'Bad Bot Blocker', 'all-in-one-seo-pack' ),
+					'name'         => __( 'Bad Bot Blocker', 'DH-SEO-pack' ),
 					/* translators: 'bots' refers to user agents/web robots that misbehave. */
-					'description'  => __( 'Stop badly behaving bots from slowing down your website.', 'all-in-one-seo-pack' ),
+					'description'  => __( 'Stop badly behaving bots from slowing down your website.', 'DH-SEO-pack' ),
 					'can_activate' => true,
 				),
 				'performance'       => array(
 					/* translators: the Performance module allows users to set certain performance related settings and check the status of their WordPress installation. */
-					'name'         => __( 'Performance', 'all-in-one-seo-pack' ),
-					'description'  => __( 'Optimize performance related to SEO and check your system status.', 'all-in-one-seo-pack' ),
+					'name'         => __( 'Performance', 'DH-SEO-pack' ),
+					'description'  => __( 'Optimize performance related to SEO and check your system status.', 'DH-SEO-pack' ),
 					'default'      => 'on',
 					'can_activate' => true,
 				),
 				'video_sitemap'     => array(
 					/* translators: The Video Sitemap module allows users to generate a sitemap with video content in .xml format for their website and submit it to search engines such as Google, Bing and Yahoo. */
-					'name'           => __( 'Video Sitemap', 'all-in-one-seo-pack' ),
-					'description'    => __( 'Create and manage your Video Sitemap using this feature and submit your Video Sitemap to Google, Bing/Yahoo and Ask.com.', 'all-in-one-seo-pack' ),
+					'name'           => __( 'Video Sitemap', 'DH-SEO-pack' ),
+					'description'    => __( 'Create and manage your Video Sitemap using this feature and submit your Video Sitemap to Google, Bing/Yahoo and Ask.com.', 'DH-SEO-pack' ),
 					'is_pro_feature' => true,
 					'can_activate'   => DHSEOPRO,
 				),
 				'schema_local_business' => array(
-					'name'           => __( 'Local Business SEO', 'all-in-one-seo-pack' ),
+					'name'           => __( 'Local Business SEO', 'DH-SEO-pack' ),
 					'description'    => sprintf(
-						__( 'Tell Google more about your business and increase your click-through rate using Local Business structured data %s.', 'all-in-one-seo-pack' ),
-						sprintf( '<strong>%s</strong>', __( '(Business & Agency plans only)', 'all-in-one-seo-pack' ) )
+						__( 'Tell Google more about your business and increase your click-through rate using Local Business structured data %s.', 'DH-SEO-pack' ),
+						sprintf( '<strong>%s</strong>', __( '(Business & Agency plans only)', 'DH-SEO-pack' ) )
 					),
 					'is_pro_feature' => true,
 					'can_activate'   => false,
 				),
 				'image_seo'         => array(
-					'name'           => __( 'Image SEO', 'all-in-one-seo-pack' ),
+					'name'           => __( 'Image SEO', 'DH-SEO-pack' ),
 					'description'    => sprintf(
-						__( 'Manage the SEO for your images by controlling their title & alt tag attributes %s.', 'all-in-one-seo-pack' ),
-						sprintf( '<strong>%s</strong>', __( '(Business & Agency plans only)', 'all-in-one-seo-pack' ) )
+						__( 'Manage the SEO for your images by controlling their title & alt tag attributes %s.', 'DH-SEO-pack' ),
+						sprintf( '<strong>%s</strong>', __( '(Business & Agency plans only)', 'DH-SEO-pack' ) )
 					),
 					'is_pro_feature' => true,
 					'can_activate'   => false,
@@ -199,10 +199,10 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Feature_Manager' ) ) {
 		 * @return mixed
 		 */
 		function filter_submit( $submit ) {
-			$submit['Submit']['value']  = __( 'Update Features', 'all-in-one-seo-pack' ) . ' &raquo;';
+			$submit['Submit']['value']  = __( 'Update Features', 'DH-SEO-pack' ) . ' &raquo;';
 			$submit['Submit']['class'] .= ' hidden';
 			/* translators: this button deactivates all active modules of the plugin. */
-			$submit['Submit_Default']['value'] = __( 'Reset Features', 'all-in-one-seo-pack' ) . ' &raquo;';
+			$submit['Submit_Default']['value'] = __( 'Reset Features', 'DH-SEO-pack' ) . ' &raquo;';
 
 			return $submit;
 		}

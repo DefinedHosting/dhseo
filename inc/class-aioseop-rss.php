@@ -61,12 +61,12 @@ class AIOSEOP_Rss {
 					'<div class="aioseop-rss-content-description"><p>%1$s</p></p>%2$s <a href="https://semperplugins.com/documentation/rss-content-settings/" target="_blank">%3$s</a></p></div>',
 					sprintf( 
 						/* translators: 1 - Opening HTML link tag, 2 - Closing HTML link tag. */
-						__( 'This feature allows you to automatically add content for each post in your %1$ssite\'s RSS feed%2$s.', 'all-in-one-seo-pack' ),
+						__( 'This feature allows you to automatically add content for each post in your %1$ssite\'s RSS feed%2$s.', 'DH-SEO-pack' ),
 						"<a href='$feedUrl' target='_blank'>",
 						"<a/>"
 					),
-					__( 'More specifically, it allows you to add links back to your blog and your blog posts so scrapers will automatically add these links too. This helps search engines identify you as the original source of the content.', 'all-in-one-seo-pack' ),
-					__( 'Learn More →', 'all-in-one-seo-pack' )
+					__( 'More specifically, it allows you to add links back to your blog and your blog posts so scrapers will automatically add these links too. This helps search engines identify you as the original source of the content.', 'DH-SEO-pack' ),
+					__( 'Learn More →', 'DH-SEO-pack' )
 				),
 				array(
 					'div' => array(
@@ -84,10 +84,10 @@ class AIOSEOP_Rss {
 					'<div class="aioseop-rss-content-tags"><p>%1$s</p>',
 					sprintf( 
 						/* translators: 1 - "Click here". */
-						__( '%1$s to view the list of macros that we support for these settings.', 'all-in-one-seo-pack' ),
+						__( '%1$s to view the list of macros that we support for these settings.', 'DH-SEO-pack' ),
 						sprintf( '%1$s%2$s%3$s',
 							'<a href="https://semperplugins.com/documentation/rss-content-settings" target="_blank">',
-							__( 'Click here', 'all-in-one-seo-pack' ),
+							__( 'Click here', 'DH-SEO-pack' ),
 							'</a>'
 						)
 					)

@@ -6,7 +6,7 @@
  *
  * @see AIOSEOP_Notice::display_notice_default();
  * @uses $notice in AIOSEOP_Notice::notices
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @subpackage AIOSEOP_Notices
  */
 

@@ -2,7 +2,7 @@
 /**
  * AIOSEOP Usage Tracking Class
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @since 3.7
  */
 
@@ -208,7 +208,7 @@ class AIOSEOP_Usage {
 		// Adds once weekly to the existing schedules.
 		$schedules['weekly'] = array(
 			'interval' => 604800,
-			'display'  => __( 'Once Weekly', 'all-in-one-seo-pack' ),
+			'display'  => __( 'Once Weekly', 'DH-SEO-pack' ),
 		);
 		return $schedules;
 	}

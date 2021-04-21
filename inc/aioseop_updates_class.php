@@ -13,7 +13,7 @@
  * new WP core feature support, etc.
  * AIOSEOP Updates class.
  *
- * @package All-in-One-SEO-Pack.
+ * @package DH-SEO-Pack.
  */
 class AIOSEOP_Updates {
 
@@ -454,7 +454,7 @@ class AIOSEOP_Updates {
 		if ( ! isset( $aioseop_options['aiosp_rss_content_before'] ) && ! isset( $aioseop_options['aiosp_rss_content_after'] ) ) {
 			$aioseop_options['aiosp_rss_content_after'] = sprintf(
 				/* translators: 1 - The post title, 2 - The site title. */
-				__( 'The post %1$s first appeared on %2$s.', 'all-in-one-seo-pack' ),
+				__( 'The post %1$s first appeared on %2$s.', 'DH-SEO-pack' ),
 				'%post_link%',
 				'%site_link%'
 			);

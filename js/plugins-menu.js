@@ -4,7 +4,7 @@
  * Contains all functions that affect the Plugins menu.
  *
  * @since  3.0
- * @package all-in-one-seo-pack
+ * @package DH-SEO-pack
  */
 (function($) {
 

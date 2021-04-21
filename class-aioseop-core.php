@@ -4,7 +4,7 @@
  *
  * Handles all the core operations required to run on a WordPress platform.
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @since 3.4
  */
 
@@ -89,7 +89,7 @@ class AIOSEOP_Core {
 		$this->add_hooks();
 
 		// TODO Remove/Change. We no longer have a folder called i18n OR should this be called `languages`.
-		load_plugin_textdomain( 'all-in-one-seo-pack', false, dirname( AIOSEOP_PLUGIN_BASENAME ) . '/i18n/' );
+		load_plugin_textdomain( 'DH-SEO-pack', false, dirname( AIOSEOP_PLUGIN_BASENAME ) . '/i18n/' );
 
 		// Call importer functions... this should be moved somewhere better.
 		aiosp_seometa_import();
@@ -131,7 +131,7 @@ class AIOSEOP_Core {
 				$aioseop_update_checker->license_key = '';
 			}
 			$aioseop_update_checker->options_page = DHSEO_PLUGIN_DIRNAME . '/aioseop_class.php';
-			$aioseop_update_checker->renewal_page = 'https://semperplugins.com/all-in-one-seo-pack-pro-version/';
+			$aioseop_update_checker->renewal_page = 'https://semperplugins.com/DH-SEO-pack-pro-version/';
 
 			$aioseop_update_checker->addQueryArgFilter( array( $aioseop_update_checker, 'add_secret_key' ) );
 		}
@@ -190,7 +190,7 @@ class AIOSEOP_Core {
 			 *
 			 * @since 3.4
 			 *
-			 * @var string $AIOSEOP_PLUGIN_BASENAME Plugin basename on WP platform. Eg. 'all-in-one-seo-pack/all_in_one_seo_pack.php`.
+			 * @var string $AIOSEOP_PLUGIN_BASENAME Plugin basename on WP platform. Eg. 'DH-SEO-pack/all_in_one_seo_pack.php`.
 			 */
 			define( 'AIOSEOP_PLUGIN_BASENAME', plugin_basename( DHSEO_PLUGIN_FILE ) );
 		}
@@ -234,7 +234,7 @@ class AIOSEOP_Core {
 			 *
 			 * @since ?
 			 *
-			 * @var string $DHSEO_PLUGIN_DIR Plugin folder directory path. Eg. `C:\WebProjects\UW-WPDev-aioseop\src-plugins/all-in-one-seo-pack/`
+			 * @var string $DHSEO_PLUGIN_DIR Plugin folder directory path. Eg. `C:\WebProjects\UW-WPDev-aioseop\src-plugins/DH-SEO-pack/`
 			 */
 			define( 'DHSEO_PLUGIN_DIR', plugin_dir_path( DHSEO_PLUGIN_FILE ) );
 		}
@@ -249,7 +249,7 @@ class AIOSEOP_Core {
 			 *
 			 * @since ?
 			 *
-			 * @var string $DHSEO_PLUGIN_DIRNAME Plugin folder/directory name. Eg. `all-in-one-seo-pack`
+			 * @var string $DHSEO_PLUGIN_DIRNAME Plugin folder/directory name. Eg. `DH-SEO-pack`
 			 */
 			define( 'DHSEO_PLUGIN_DIRNAME', dirname( plugin_basename( DHSEO_PLUGIN_FILE ) ) );
 		}
@@ -260,7 +260,7 @@ class AIOSEOP_Core {
 			 *
 			 * @since ?
 			 *
-			 * @var string $AIOSEOP_PLUGIN_URL Plugin directory url. Eg `http://aioseop.test/wp-content/plugins/all-in-one-seo-pack/`
+			 * @var string $AIOSEOP_PLUGIN_URL Plugin directory url. Eg `http://aioseop.test/wp-content/plugins/DH-SEO-pack/`
 			 */
 			define( 'AIOSEOP_PLUGIN_URL', plugin_dir_url( DHSEO_PLUGIN_FILE ) );
 		}
@@ -271,7 +271,7 @@ class AIOSEOP_Core {
 			 *
 			 * @since ?
 			 *
-			 * @var string $AIOSEOP_PLUGIN_IMAGES_URL URL location for the plugin's image directory. Eg. `http://aioseop.test/wp-content/plugins/all-in-one-seo-pack/images/`
+			 * @var string $AIOSEOP_PLUGIN_IMAGES_URL URL location for the plugin's image directory. Eg. `http://aioseop.test/wp-content/plugins/DH-SEO-pack/images/`
 			 */
 			define( 'AIOSEOP_PLUGIN_IMAGES_URL', plugin_dir_url( DHSEO_PLUGIN_FILE ) . 'images/' );
 		}
@@ -531,8 +531,8 @@ class AIOSEOP_Core {
 	 * @since ?
 	 */
 	public function disable_all_in_one_free() {
-		if ( DHSEOPRO && is_plugin_active( 'all-in-one-seo-pack/all_in_one_seo_pack.php' ) ) {
-			deactivate_plugins( 'all-in-one-seo-pack/all_in_one_seo_pack.php' );
+		if ( DHSEOPRO && is_plugin_active( 'DH-SEO-pack/all_in_one_seo_pack.php' ) ) {
+			deactivate_plugins( 'DH-SEO-pack/all_in_one_seo_pack.php' );
 		}
 	}
 
@@ -624,7 +624,7 @@ class AIOSEOP_Core {
 		$action_links = array(
 			'settings' => array(
 				/* translators: This is an action link users can click to open a feature request/bug report on GitHub. */
-				'label' => __( 'Suggest a Feature', 'all-in-one-seo-pack' ),
+				'label' => __( 'Suggest a Feature', 'DH-SEO-pack' ),
 				'url'   => 'https://semperplugins.com/suggest-a-feature/?utm_source=WordPress&utm_medium=' . $medium . '&utm_campaign=action-links&utm_content=Feature',
 			),
 
@@ -653,19 +653,19 @@ class AIOSEOP_Core {
 		$action_links           = array(
 			'settings' => array(
 				/* translators: This is an action link users can click to open the General Settings menu. */
-				'label' => __( 'SEO Settings', 'all-in-one-seo-pack' ),
+				'label' => __( 'SEO Settings', 'DH-SEO-pack' ),
 				'url'   => get_admin_url( null, "admin.php?page=$DHSEO_PLUGIN_DIRname/aioseop_class.php" ),
 			),
 
 			'forum'    => array(
 				/* translators: This is an action link users can click to open our premium support forum. */
-				'label' => __( 'Support', 'all-in-one-seo-pack' ),
+				'label' => __( 'Support', 'DH-SEO-pack' ),
 				'url'   => 'https://semperplugins.com/contact/',
 			),
 
 			'docs'     => array(
 				/* translators: This is an action link users can click to open our general documentation page. */
-				'label' => __( 'Documentation', 'all-in-one-seo-pack' ),
+				'label' => __( 'Documentation', 'DH-SEO-pack' ),
 				'url'   => 'https://semperplugins.com/documentation/',
 			),
 
@@ -676,7 +676,7 @@ class AIOSEOP_Core {
 		// if ( ! DHSEOPRO ) {
 		// 	$action_links['proupgrade'] = array(
 		// 		/* translators: This is an action link users can click to purchase a license for DH SEO Pack Pro. */
-		// 		'label' => __( 'Upgrade to Pro', 'all-in-one-seo-pack' ),
+		// 		'label' => __( 'Upgrade to Pro', 'DH-SEO-pack' ),
 		// 		'url'   => aioseop_get_utm_url( 'plugins-menu' ),
 		//
 		// 	);

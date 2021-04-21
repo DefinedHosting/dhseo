@@ -4,7 +4,7 @@
  * @summary  Handles the AJAX Actions with AIOSEOP_Notices
  *
  * @since    2.4.2
- * @package all-in-one-seo-pack
+ * @package DH-SEO-pack
  */
 // phpcs:disable PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket
 // phpcs:disable PEAR.Functions.FunctionCallSignature.MultipleArguments

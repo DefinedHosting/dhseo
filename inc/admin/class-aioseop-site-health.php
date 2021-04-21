@@ -63,16 +63,16 @@ class AIOSEOP_Site_Health {
 			return $this->result(
 				'aioseo_site_public',
 				'critical',
-				__( 'Your site does not appear in search results', 'all-in-one-seo-pack' ),
-				__( 'Your site is set to private. This means WordPress asks search engines to exclude your website from search results.', 'all-in-one-seo-pack' ),
-				$this->actionLink( admin_url( 'options-reading.php' ), __( 'Go to Settings > Reading', 'all-in-one-seo-pack' ) )
+				__( 'Your site does not appear in search results', 'DH-SEO-pack' ),
+				__( 'Your site is set to private. This means WordPress asks search engines to exclude your website from search results.', 'DH-SEO-pack' ),
+				$this->actionLink( admin_url( 'options-reading.php' ), __( 'Go to Settings > Reading', 'DH-SEO-pack' ) )
 			);
 		}
 		return $this->result(
 			'aioseo_site_public',
 			'good',
-			__( 'Your site appears in search results', 'all-in-one-seo-pack' ),
-			__( 'Your site is set to public. Search engines will index your website and it will appear in search results.', 'all-in-one-seo-pack' )
+			__( 'Your site appears in search results', 'DH-SEO-pack' ),
+			__( 'Your site is set to public. Search engines will index your website and it will appear in search results.', 'DH-SEO-pack' )
 		);
 	}
 
@@ -91,16 +91,16 @@ class AIOSEOP_Site_Health {
 			return $this->result(
 				'aioseo_site_info',
 				'recommended',
-				__( 'Your Site Title and/or Tagline are blank', 'all-in-one-seo-pack' ),
-				__( 'Your Site Title and/or Tagline are blank. We recommend setting both of these values as AIOSEO requires these for various features, including our schema markup' , 'all-in-one-seo-pack' ),
-				$this->actionLink( admin_url( 'options-general.php' ), __( 'Go to Settings > General', 'all-in-one-seo-pack' ) )
+				__( 'Your Site Title and/or Tagline are blank', 'DH-SEO-pack' ),
+				__( 'Your Site Title and/or Tagline are blank. We recommend setting both of these values as AIOSEO requires these for various features, including our schema markup' , 'DH-SEO-pack' ),
+				$this->actionLink( admin_url( 'options-general.php' ), __( 'Go to Settings > General', 'DH-SEO-pack' ) )
 			);
 		}
 		return $this->result(
 			'aioseo_site_info',
 			'good',
-			__( 'Your Site Title and Tagline are set', 'all-in-one-seo-pack' ),
-			__( "Great! These are required for AIOSEO's schema markup and are often used as fallback values for various other features." , 'all-in-one-seo-pack' )
+			__( 'Your Site Title and Tagline are set', 'DH-SEO-pack' ),
+			__( "Great! These are required for AIOSEO's schema markup and are often used as fallback values for various other features." , 'DH-SEO-pack' )
 		);
 	}
 
@@ -122,16 +122,16 @@ class AIOSEOP_Site_Health {
 				return $this->result(
 					'aioseo_schema_markup',
 					'recommended',
-					__( 'Your Organization Name and/or Logo are blank', 'all-in-one-seo-pack' ),
-					__( "Your Organization Name and/or Logo are blank. These values are required for AIOSEO's Organization schema markup.", 'all-in-one-seo-pack' ),
-					$this->actionLink( $menuPath, __( 'Go to General Settings', 'all-in-one-seo-pack' ) )
+					__( 'Your Organization Name and/or Logo are blank', 'DH-SEO-pack' ),
+					__( "Your Organization Name and/or Logo are blank. These values are required for AIOSEO's Organization schema markup.", 'DH-SEO-pack' ),
+					$this->actionLink( $menuPath, __( 'Go to General Settings', 'DH-SEO-pack' ) )
 				);
 			}
 			return $this->result(
 				'aioseo_schema_markup',
 				'good',
-				__( 'Your Organization Name and Logo are set', 'all-in-one-seo-pack' ),
-				__( "Awesome! These are required for AIOSEO's Organization schema markup.", 'all-in-one-seo-pack' )
+				__( 'Your Organization Name and Logo are set', 'DH-SEO-pack' ),
+				__( "Awesome! These are required for AIOSEO's Organization schema markup.", 'DH-SEO-pack' )
 			);
 		}
 
@@ -142,16 +142,16 @@ class AIOSEOP_Site_Health {
 			return $this->result(
 				'aioseo_schema_markup',
 				'recommended',
-				__( 'Your Person Name and/or Image are blank', 'all-in-one-seo-pack' ),
-				__( "Your Person Name and/or Image are blank. These values are required for AIOSEO's Person schema markup.", 'all-in-one-seo-pack' ),
-				$this->actionLink( $menuPath, __( 'Go to General Settings', 'all-in-one-seo-pack' ) )
+				__( 'Your Person Name and/or Image are blank', 'DH-SEO-pack' ),
+				__( "Your Person Name and/or Image are blank. These values are required for AIOSEO's Person schema markup.", 'DH-SEO-pack' ),
+				$this->actionLink( $menuPath, __( 'Go to General Settings', 'DH-SEO-pack' ) )
 			);
 		}
 		return $this->result(
 			'aioseo_schema_markup',
 			'good',
-			__( 'Your Person Name and Image are set', 'all-in-one-seo-pack' ),
-			__( "Awesome! These are required for AIOSEO's Person schema markup.", 'all-in-one-seo-pack' )
+			__( 'Your Person Name and Image are set', 'DH-SEO-pack' ),
+			__( "Awesome! These are required for AIOSEO's Person schema markup.", 'DH-SEO-pack' )
 		);
 	}
 
@@ -167,7 +167,7 @@ class AIOSEOP_Site_Health {
 
 		$shouldUpdate = false;
 		if ( ! DHSEOPRO ) {
-			$response = wp_remote_get( 'https://api.wordpress.org/plugins/info/1.0/all-in-one-seo-pack.json' );
+			$response = wp_remote_get( 'https://api.wordpress.org/plugins/info/1.0/DH-SEO-pack.json' );
 			$body     = wp_remote_retrieve_body( $response );
 			if ( ! $body ) {
 				// Something went wrong.
@@ -189,16 +189,16 @@ class AIOSEOP_Site_Health {
 			return $this->result(
 				'aioseo_plugin_update',
 				'critical',
-				__( 'DH SEO needs to be updated', 'all-in-one-seo-pack' ),
-				__( "An update is available for DH SEO. Upgrade to the latest version to receive all the latest features, bug fixes and security improvements.", 'all-in-one-seo-pack' ),
-				$this->actionLink( admin_url( 'plugins.php' ), __( 'Go to Plugins', 'all-in-one-seo-pack' ) )
+				__( 'DH SEO needs to be updated', 'DH-SEO-pack' ),
+				__( "An update is available for DH SEO. Upgrade to the latest version to receive all the latest features, bug fixes and security improvements.", 'DH-SEO-pack' ),
+				$this->actionLink( admin_url( 'plugins.php' ), __( 'Go to Plugins', 'DH-SEO-pack' ) )
 			);
 		}
 		return $this->result(
 			'aioseo_plugin_update',
 			'good',
-			__( 'DH SEO is updated to the latest version', 'all-in-one-seo-pack' ),
-			__( "Fantastic! By updating to the latest version, you have access to all the latest features, bug fixes and security improvements.", 'all-in-one-seo-pack' )
+			__( 'DH SEO is updated to the latest version', 'DH-SEO-pack' ),
+			__( "Fantastic! By updating to the latest version, you have access to all the latest features, bug fixes and security improvements.", 'DH-SEO-pack' )
 		);
 	}
 
@@ -256,7 +256,7 @@ class AIOSEOP_Site_Health {
 		$noindexed = $this->noindexed();
 		if ( $noindexed ) {
 			$fields['noindexed'] = $this->field(
-				__( 'Noindexed content', 'all-in-one-seo-pack' ),
+				__( 'Noindexed content', 'DH-SEO-pack' ),
 				implode( ', ', $noindexed )
 			);
 		}
@@ -264,7 +264,7 @@ class AIOSEOP_Site_Health {
 		$nofollowed = $this->nofollowed();
 		if ( $nofollowed ) {
 			$fields['nofollowed'] = $this->field(
-				__( 'Nofollowed content', 'all-in-one-seo-pack' ),
+				__( 'Nofollowed content', 'DH-SEO-pack' ),
 				implode( ', ', $nofollowed )
 			);
 		}
@@ -274,8 +274,8 @@ class AIOSEOP_Site_Health {
 		}
 
 		$debugInfo['aioseo'] = array(
-			'label'       => __( 'SEO', 'all-in-one-seo-pack' ),
-			'description' => __( 'The fields below contain important SEO information from DH SEO that may effect your site.', 'all-in-one-seo-pack' ),
+			'label'       => __( 'SEO', 'DH-SEO-pack' ),
+			'description' => __( 'The fields below contain important SEO information from DH SEO that may effect your site.', 'DH-SEO-pack' ),
 			'private'     => false,
 			'show_count'  => true,
 			'fields'      => $fields,
@@ -293,13 +293,13 @@ class AIOSEOP_Site_Health {
 	private function noindexed() {
 		global $aioseop_options;
 		$settings = array(
-			'aiosp_category_noindex'       => __( 'Categories', 'all-in-one-seo-pack' ),
-			'aiosp_tags_noindex'           => __( 'Tags', 'all-in-one-seo-pack' ),
-			'aiosp_paginated_noindex'      => __( 'Paginated Content', 'all-in-one-seo-pack' ),
-			'aiosp_archive_author_noindex' => __( 'Author Archives', 'all-in-one-seo-pack' ),
-			'aiosp_archive_date_noindex'   => __( 'Date Archives', 'all-in-one-seo-pack' ),
-			'aiosp_search_noindex'         => __( 'Search Page', 'all-in-one-seo-pack' ),
-			'aiosp_404_noindex'            => __( '404 Not Found Page', 'all-in-one-seo-pack' ),
+			'aiosp_category_noindex'       => __( 'Categories', 'DH-SEO-pack' ),
+			'aiosp_tags_noindex'           => __( 'Tags', 'DH-SEO-pack' ),
+			'aiosp_paginated_noindex'      => __( 'Paginated Content', 'DH-SEO-pack' ),
+			'aiosp_archive_author_noindex' => __( 'Author Archives', 'DH-SEO-pack' ),
+			'aiosp_archive_date_noindex'   => __( 'Date Archives', 'DH-SEO-pack' ),
+			'aiosp_search_noindex'         => __( 'Search Page', 'DH-SEO-pack' ),
+			'aiosp_404_noindex'            => __( '404 Not Found Page', 'DH-SEO-pack' ),
 		);
 
 		$noindexed = array();
@@ -350,7 +350,7 @@ class AIOSEOP_Site_Health {
 		}
 
 		if ( ! empty( $aioseop_options['aiosp_paginated_nofollow'] ) ) {
-			array_push( $nofollowed, __( 'Paginated Content', 'all-in-one-seo-pack' ) );
+			array_push( $nofollowed, __( 'Paginated Content', 'DH-SEO-pack' ) );
 		}
 		return $nofollowed;
 	}

@@ -10,7 +10,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Compatible' ) ) {
 	/**
 	 * Abstract class to be used to create compatibility with 3rd party WordPress plugins.
 	 *
-	 * @package All-in-One-SEO-Pack
+	 * @package DH-SEO-Pack
 	 * @author Alejandro Mostajo
 	 * @copyright DH SEO <https://semperplugins.com/>
 	 * @version 2.3.13

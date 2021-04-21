@@ -37,7 +37,7 @@ if ( ! class_exists( 'aioseop_dashboard_widget' ) ) {
 			if ( current_user_can( 'install_plugins' ) && false !== $this->show_widget() ) {
 				wp_add_dashboard_widget(
 					'semperplugins-rss-feed',
-					__( 'SEO News', 'all-in-one-seo-pack' ),
+					__( 'SEO News', 'DH-SEO-pack' ),
 					array(
 						$this,
 						'display_rss_dashboard_widget',
@@ -90,7 +90,7 @@ if ( ! class_exists( 'aioseop_dashboard_widget' ) ) {
 
 				$rss = fetch_feed( 'https://www.semperplugins.com/feed/' );
 				if ( is_wp_error( $rss ) ) {
-					echo __( '{Temporarily unable to load feed.}', 'all-in-one-seo-pack' );
+					echo __( '{Temporarily unable to load feed.}', 'DH-SEO-pack' );
 
 					return;
 				}

@@ -31,7 +31,7 @@ if ( ! class_exists( 'AIOSEOP_Translations' ) ) :
 		 *
 		 * @var string $url
 		 */
-		public $url = 'https://translate.wordpress.org/api/projects/wp-plugins/all-in-one-seo-pack/dev';
+		public $url = 'https://translate.wordpress.org/api/projects/wp-plugins/DH-SEO-pack/dev';
 
 		/**
 		 * Name
@@ -67,7 +67,7 @@ if ( ! class_exists( 'AIOSEOP_Translations' ) ) :
 		 *
 		 * @var string $translation_url
 		 */
-		public $translation_url = 'https://translate.wordpress.org/projects/wp-plugins/all-in-one-seo-pack';
+		public $translation_url = 'https://translate.wordpress.org/projects/wp-plugins/DH-SEO-pack';
 
 		/**
 		 * Slug
@@ -231,7 +231,7 @@ if ( ! class_exists( 'AIOSEOP_Translations' ) ) :
 
 			if ( null !== $this->wplocale ) {
 
-				$url = "https://translate.wordpress.org/projects/wp-plugins/all-in-one-seo-pack/dev/$this->slug/$this->formal/?filters%5Bstatus%5D=untranslated&sort%5Bby%5D=priority&sort%5Bhow%5D=desc";
+				$url = "https://translate.wordpress.org/projects/wp-plugins/DH-SEO-pack/dev/$this->slug/$this->formal/?filters%5Bstatus%5D=untranslated&sort%5Bby%5D=priority&sort%5Bhow%5D=desc";
 
 				$this->translation_url = $url;
 			}

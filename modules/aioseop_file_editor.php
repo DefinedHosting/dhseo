@@ -17,7 +17,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_File_Editor' ) ) {
 		 * All_in_One_SEO_Pack_File_Editor constructor.
 		 */
 		function __construct() {
-			$this->name   = __( 'File Editor', 'all-in-one-seo-pack' ); // Human-readable name of the plugin.
+			$this->name   = __( 'File Editor', 'DH-SEO-pack' ); // Human-readable name of the plugin.
 			$this->prefix = 'aiosp_file_editor_';                       // option prefix.
 			$this->file   = __FILE__;                                   // the current file.
 			parent::__construct();
@@ -28,7 +28,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_File_Editor' ) ) {
 
 			$this->default_options = array(
 				'htaccfile' => array(
-					'name'    => __( 'Edit .htaccess', 'all-in-one-seo-pack' ),
+					'name'    => __( 'Edit .htaccess', 'DH-SEO-pack' ),
 					'save'    => false,
 					'default' => '',
 					'type'    => 'textarea',
@@ -39,12 +39,12 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_File_Editor' ) ) {
 			);
 
 			$this->tabs = array(
-				'htaccess' => array( 'name' => __( '.htaccess', 'all-in-one-seo-pack' ) ),
+				'htaccess' => array( 'name' => __( '.htaccess', 'DH-SEO-pack' ) ),
 			);
 
 			$this->layout = array(
 				'htaccess' => array(
-					'name'    => __( 'Edit .htaccess', 'all-in-one-seo-pack' ),
+					'name'    => __( 'Edit .htaccess', 'DH-SEO-pack' ),
 					'options' => array( 'htaccfile' ),
 					'tab'     => 'htaccess',
 				),
@@ -89,7 +89,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_File_Editor' ) ) {
 				$submit['Submit_htaccess'] = array(
 					'type'  => 'submit',
 					'class' => 'button-primary',
-					'value' => __( 'Update .htaccess', 'all-in-one-seo-pack' ) . ' &raquo;',
+					'value' => __( 'Update .htaccess', 'DH-SEO-pack' ) . ' &raquo;',
 				);
 			}
 

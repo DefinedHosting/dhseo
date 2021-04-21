@@ -2,7 +2,7 @@
 /**
  * AIOSEOP_FLyout
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @since 3.4.0
  */
 
@@ -78,7 +78,7 @@ class AIOSEOP_Flyout {
 				</a>
 			</div>',
 			self::get_items_html(), // phpcs:ignore
-			esc_attr__( 'See Quick Links', 'all-in-one-seo-pack' ),
+			esc_attr__( 'See Quick Links', 'DH-SEO-pack' ),
 			esc_url( AIOSEOP_PLUGIN_URL . 'images/flyout/gear-default.png' ),
 			esc_url( AIOSEOP_PLUGIN_URL . 'images/flyout/gear-default.png' )
 		);
@@ -127,24 +127,24 @@ class AIOSEOP_Flyout {
 
 		$items = array(
 			array(
-				'title'         => sprintf( __( 'Upgrade to DH SEO Pack Pro', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
+				'title'         => sprintf( __( 'Upgrade to DH SEO Pack Pro', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
 				'url'           => aioseop_get_utm_url( $utm_campaign, 'WordPress', $medium ) . '&utm_content=Upgrade',
 				'icon'          => 'star-solid',
 				'bgcolor'       => '#E1772F',
 				'hover_bgcolor' => '#ff8931',
 			),
 			array(
-				'title' => esc_html__( 'Support & Docs', 'all-in-one-seo-pack' ),
+				'title' => esc_html__( 'Support & Docs', 'DH-SEO-pack' ),
 				'url'   => 'https://semperplugins.com/documentation/?utm_source=WordPress&utm_medium=' . $medium . '&utm_campaign=' . $utm_campaign . '&utm_content=Support',
 				'icon'  => 'life-ring-regular',
 			),
 			array(
-				'title' => esc_html__( 'Join Our Community', 'all-in-one-seo-pack' ),
+				'title' => esc_html__( 'Join Our Community', 'DH-SEO-pack' ),
 				'url'   => 'https://www.facebook.com/groups/wpbeginner/',
 				'icon'  => 'comments-solid',
 			),
 			array(
-				'title' => esc_html__( 'Suggest a Feature', 'all-in-one-seo-pack' ),
+				'title' => esc_html__( 'Suggest a Feature', 'DH-SEO-pack' ),
 				'url'   => 'https://semperplugins.com/suggest-a-feature/?utm_source=WordPress&utm_medium=' . $medium . '&utm_campaign=' . $utm_campaign . '&utm_content=Feature',
 				'icon'  => 'lightbulb-regular',
 			),

@@ -4,7 +4,7 @@
  *
  * Alternative PHP functions for improved operations or compatibility with pre-existing functions that had param changes.
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  * @since 3.4.0
  */
 

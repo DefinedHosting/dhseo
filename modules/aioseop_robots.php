@@ -29,7 +29,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 			}
 			*/
 			// phpcs:enable
-			$this->name   = __( 'Robots.txt', 'all-in-one-seo-pack' ); // Human-readable name of the plugin.
+			$this->name   = __( 'Robots.txt', 'DH-SEO-pack' ); // Human-readable name of the plugin.
 			$this->prefix = 'aiosp_robots_';                           // option prefix.
 			$this->file   = __FILE__;                                  // the current file.
 			parent::__construct();
@@ -38,30 +38,30 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 				'usage' => array(
 					'type'    => 'html',
 					'label'   => 'none',
-					'default' => __( 'Use the rule builder below to add/delete rules.', 'all-in-one-seo-pack' ),
+					'default' => __( 'Use the rule builder below to add/delete rules.', 'DH-SEO-pack' ),
 					'save'    => false,
 				),
 			);
 
 			$this->rule_fields = array(
 				'agent'             => array(
-					'name'  => __( 'User Agent', 'all-in-one-seo-pack' ),
+					'name'  => __( 'User Agent', 'DH-SEO-pack' ),
 					'type'  => 'text',
 					'label' => 'top',
 					'save'  => false,
 				),
 				'type'              => array(
-					'name'            => __( 'Rule', 'all-in-one-seo-pack' ),
+					'name'            => __( 'Rule', 'DH-SEO-pack' ),
 					'type'            => 'select',
 					'initial_options' => array(
-						'allow'    => __( 'Allow', 'all-in-one-seo-pack' ),
-						'disallow' => __( 'Disallow', 'all-in-one-seo-pack' ),
+						'allow'    => __( 'Allow', 'DH-SEO-pack' ),
+						'disallow' => __( 'Disallow', 'DH-SEO-pack' ),
 					),
 					'label'           => 'top',
 					'save'            => false,
 				),
 				'path'              => array(
-					'name'  => __( 'Directory Path', 'all-in-one-seo-pack' ),
+					'name'  => __( 'Directory Path', 'DH-SEO-pack' ),
 					'type'  => 'text',
 					'label' => 'top',
 					'save'  => false,
@@ -69,7 +69,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 				'Submit'            => array(
 					'type'  => 'submit',
 					'class' => 'button-primary add-edit-rule',
-					'name'  => __( 'Add Rule', 'all-in-one-seo-pack' ) . ' &raquo;',
+					'name'  => __( 'Add Rule', 'DH-SEO-pack' ) . ' &raquo;',
 					'label' => 'none',
 					'save'  => false,
 					'value' => 1,
@@ -81,12 +81,12 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 					'value' => '',
 				),
 				'rules'             => array(
-					'name' => __( 'Configured Rules', 'all-in-one-seo-pack' ),
+					'name' => __( 'Configured Rules', 'DH-SEO-pack' ),
 					'type' => 'custom',
 					'save' => true,
 				),
 				'robots.txt'        => array(
-					'name' => __( 'Robots.txt', 'all-in-one-seo-pack' ),
+					'name' => __( 'Robots.txt', 'DH-SEO-pack' ),
 					'type' => 'custom',
 					'save' => true,
 				),
@@ -98,7 +98,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 
 			$this->layout = array(
 				'default' => array(
-					'name'      => __( 'Create a Robots.txt File', 'all-in-one-seo-pack' ),
+					'name'      => __( 'Create a Robots.txt File', 'DH-SEO-pack' ),
 					'help_link' => 'https://semperplugins.com/documentation/robots-txt-module/',
 					'options'   => array_merge( array( 'usage' ), array_keys( $this->rule_fields ) ),
 				),
@@ -129,10 +129,10 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 			if ( $this->has_physical_file() ) {
 				if ( ( is_multisite() && is_network_admin() ) || ( ! is_multisite() && current_user_can( 'manage_options' ) ) ) {
 					// @codingStandardsIgnoreStart
-					$this->default_options['usage']['default'] .= '<div id="aiosp_robots_physical_import_delete"><p>' . sprintf( __( 'A physical file exists. Do you want to %simport and delete%s it, %sdelete%s it or continue using it?', 'all-in-one-seo-pack' ), '<a href="#" class="aiosp_robots_physical aiosp_robots_import" data-action="import">', '</a>', '<a href="#" class="aiosp_robots_physical aiosp_robots_delete" data-action="delete">', '</a>' ) . '</p></div>';
+					$this->default_options['usage']['default'] .= '<div id="aiosp_robots_physical_import_delete"><p>' . sprintf( __( 'A physical file exists. Do you want to %simport and delete%s it, %sdelete%s it or continue using it?', 'DH-SEO-pack' ), '<a href="#" class="aiosp_robots_physical aiosp_robots_import" data-action="import">', '</a>', '<a href="#" class="aiosp_robots_physical aiosp_robots_delete" data-action="delete">', '</a>' ) . '</p></div>';
 					// @codingStandardsIgnoreStop
 				} else {
-					$this->default_options['usage']['default'] .= '<p>' . __( 'A physical file exists. This feature cannot be used.', 'all-in-one-seo-pack' ) . '</p>';
+					$this->default_options['usage']['default'] .= '<p>' . __( 'A physical file exists. This feature cannot be used.', 'DH-SEO-pack' ) . '</p>';
 				}
 
 				return;
@@ -211,12 +211,12 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 				case 'import':
 					$this->import_default_robots();
 					if ( ! $this->import_physical_file() ) {
-						wp_send_json_success( array( 'message' => __( 'Unable to read file', 'all-in-one-seo-pack' ) ) );
+						wp_send_json_success( array( 'message' => __( 'Unable to read file', 'DH-SEO-pack' ) ) );
 					}
 					// fall-through.
 				case 'delete':
 					if ( ! $this->delete_physical_file() ) {
-						wp_send_json_success( array( 'message' => __( 'Unable to delete file', 'all-in-one-seo-pack' ) ) );
+						wp_send_json_success( array( 'message' => __( 'Unable to delete file', 'DH-SEO-pack' ) ) );
 					}
 					break;
 			}
@@ -620,10 +620,10 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 		 */
 		private function validate_rule( $rules, $new_rule ) {
 			if ( empty( $new_rule[ 'agent' ] ) ) {
-				return new WP_Error('invalid', __( 'User Agent cannot be empty', 'all-in-one-seo-pack' ) );
+				return new WP_Error('invalid', __( 'User Agent cannot be empty', 'DH-SEO-pack' ) );
 			}
 			if ( empty( $new_rule[ 'path' ] ) ) {
-				return new WP_Error('invalid', __( 'Directory Path cannot be empty', 'all-in-one-seo-pack' ) );
+				return new WP_Error('invalid', __( 'Directory Path cannot be empty', 'DH-SEO-pack' ) );
 			}
 
 			$default = $this->get_default_rules();
@@ -642,7 +642,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 				$ids = wp_list_pluck( $rules, 'id' );
 				if ( in_array( $id, $ids ) ) {
 					aiosp_log("rejected: same rule id exists - " . print_r($new_rule,true) . " vs. " . print_r($rules,true));
-					return new WP_Error('duplicate', sprintf( __( 'Identical rule exists: %s', 'all-in-one-seo-pack' ), $new_rule[ 'path' ] ) );
+					return new WP_Error('duplicate', sprintf( __( 'Identical rule exists: %s', 'DH-SEO-pack' ), $new_rule[ 'path' ] ) );
 				}
 			}
 
@@ -656,14 +656,14 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 				$agent_path =  $new_rule[ 'agent' ] . $path;
 				if ( in_array( $agent_path, $nw_agent_paths ) ) {
 					aiosp_log("rejected: same agent/path being overridden - " . print_r($new_rule,true) . " vs. " . print_r($rules,true));
-					return new WP_Error('duplicate', sprintf( __( 'Rule cannot be overridden: %s', 'all-in-one-seo-pack' ), $new_rule[ 'path' ] ) );
+					return new WP_Error('duplicate', sprintf( __( 'Rule cannot be overridden: %s', 'DH-SEO-pack' ), $new_rule[ 'path' ] ) );
 				}
 
 				// an identical path as specified by Network Admin cannot be overriden by Admin.
 				$nw_paths = wp_list_pluck( $network, 'path' );
 				if ( in_array( $path, $nw_paths ) ) {
 					aiosp_log("rejected: same path being overridden - " . print_r($new_rule,true) . " vs. " . print_r($rules,true));
-					return new WP_Error('duplicate', sprintf( __( 'Path cannot be overridden: %s', 'all-in-one-seo-pack' ), $new_rule[ 'path' ] ) );
+					return new WP_Error('duplicate', sprintf( __( 'Path cannot be overridden: %s', 'DH-SEO-pack' ), $new_rule[ 'path' ] ) );
 				}
 
 				// a wild-carded path specified by the Admin cannot override a path specified by Network Admin.
@@ -685,7 +685,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 					preg_match( "/{$pattern}/", $nw_path, $matches );
 					if ( ! empty( $matches ) && count( $matches ) >= 2 && ! empty( $matches[1] ) ) {
 						aiosp_log("rejected: wild card path being overridden - " . print_r($new_rule,true) . " vs. " . print_r($rules,true));
-						return new WP_Error('conflict', sprintf( __( 'Wild-card path cannot be overridden: %s', 'all-in-one-seo-pack' ), $new_rule[ 'path' ] ) );
+						return new WP_Error('conflict', sprintf( __( 'Wild-card path cannot be overridden: %s', 'DH-SEO-pack' ), $new_rule[ 'path' ] ) );
 					}
 				}
 			}
@@ -742,12 +742,12 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 			$buf = '';
 			if ( ! empty( $rules ) ) {
 				$rules = $this->reorder_rules( $rules );
-				$buf = sprintf( "<table class='aioseop_table' data-edit-label='%s'>\n", __( 'Modify Rule', 'all-in-one-seo-pack' ) . ' &raquo;' );
+				$buf = sprintf( "<table class='aioseop_table' data-edit-label='%s'>\n", __( 'Modify Rule', 'DH-SEO-pack' ) . ' &raquo;' );
 				$row = "\t
 					<tr>
 						<td>
-							<a href='#' class='dashicons dashicons-trash aiosp_robots_delete_rule' data-id='%s' aria-label='" . __('Delete this rule', 'all-in-one-seo-pack') . "'></a>
-							<a href='#' class='dashicons dashicons-edit aiosp_robots_edit_rule' data-id='%s' data-agent='%s' data-type='%s' data-path='%s' aria-label='" . __('Edit this rule', 'all-in-one-seo-pack') . "'></a>
+							<a href='#' class='dashicons dashicons-trash aiosp_robots_delete_rule' data-id='%s' aria-label='" . __('Delete this rule', 'DH-SEO-pack') . "'></a>
+							<a href='#' class='dashicons dashicons-edit aiosp_robots_edit_rule' data-id='%s' data-agent='%s' data-type='%s' data-path='%s' aria-label='" . __('Edit this rule', 'DH-SEO-pack') . "'></a>
 						</td>
 						<td>%s</td>
 						<td>%s</td>
@@ -800,8 +800,8 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 					$buf .= '</div>';
 					break;
 				case "{$this->prefix}robots.txt":
-					$buf .= "<h3>" . __( "Here's how your robots.txt looks:", 'all-in-one-seo-pack' ) . "</h3>";
-					$buf .= "<textarea disabled id='{$this->prefix}robot-txt' class='large-text robots-text' rows='15' aria-label='" . __('This shows how your robots.txt appears', 'all-in-one-seo-pack') . "'>";
+					$buf .= "<h3>" . __( "Here's how your robots.txt looks:", 'DH-SEO-pack' ) . "</h3>";
+					$buf .= "<textarea disabled id='{$this->prefix}robot-txt' class='large-text robots-text' rows='15' aria-label='" . __('This shows how your robots.txt appears', 'DH-SEO-pack') . "'>";
 					$buf .= $this->do_robots();
 					$buf .= "</textarea>";
 					break;
@@ -835,7 +835,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Robots' ) ) {
 		 * @return bool
 		 */
 		public function add_menu( $parent_slug ) {
-			$hook = 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_robots';
+			$hook = 'DH-SEO_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_robots';
 			if ( is_multisite() && is_network_admin() ) {
 				// Add the robots.txt editor into the network admin menu.
 				$hook = add_menu_page(

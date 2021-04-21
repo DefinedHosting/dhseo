@@ -221,7 +221,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 	 */
 	function __construct() {
 		global $aioseop_options;
-		$this->log_file = WP_CONTENT_DIR . '/all-in-one-seo-pack.log'; // PHP <5.3 compatibility, once we drop support we can use __DIR___.
+		$this->log_file = WP_CONTENT_DIR . '/DH-SEO-pack.log'; // PHP <5.3 compatibility, once we drop support we can use __DIR___.
 
 		if ( ! empty( $aioseop_options ) && isset( $aioseop_options['aiosp_do_log'] ) && $aioseop_options['aiosp_do_log'] ) {
 			$this->do_log = true;
@@ -236,9 +236,9 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		}
 
 		/* translators: This is a header for the General Settings menu. %s is a placeholder and is replaced with the name of the plugin. */
-		$this->name = sprintf( __( '%s Plugin Options', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME );
+		$this->name = sprintf( __( '%s Plugin Options', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME );
 		/* translators: This is the main menu of the plugin. */
-		$this->menu_name = __( 'General Settings', 'all-in-one-seo-pack' );
+		$this->menu_name = __( 'General Settings', 'DH-SEO-pack' );
 
 		$this->prefix       = 'aiosp_';                        // Option prefix.
 		$this->option_name  = 'aioseop_options';
@@ -250,12 +250,12 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		$this->default_options = array(
 			'license_key'                 => array(
 				/* translators: This is a setting where users can enter their license code for DH SEO Pack Pro. */
-				'name' => __( 'License Key', 'all-in-one-seo-pack' ),
+				'name' => __( 'License Key', 'DH-SEO-pack' ),
 				'type' => 'text',
 			),
 			'home_title'                  => array(
 				/* translators: This is a setting where users can enter the title for their homepage. */
-				'name'     => __( 'Home Title', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Home Title', 'DH-SEO-pack' ),
 				'default'  => null,
 				'type'     => 'text',
 				'sanitize' => 'text',
@@ -266,7 +266,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'home_description'            => array(
 				/* translators: This is a setting where users can enter the description for their homepage. */
-				'name'     => __( 'Home Description', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Home Description', 'DH-SEO-pack' ),
 				'default'  => '',
 				'type'     => 'textarea',
 				'sanitize' => 'text',
@@ -277,19 +277,19 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'togglekeywords'              => array(
 				/* translators: This is a setting where users can enable the use of meta keywords for their website. */
-				'name'            => __( 'Use Keywords', 'all-in-one-seo-pack' ),
+				'name'            => __( 'Use Keywords', 'DH-SEO-pack' ),
 				'default'         => 1,
 				'type'            => 'radio',
 				'initial_options' => array(
 					/* translators: Some settings are either 'Enabled' or 'Disabled'. 'Activated' and 'Deactivated' mean the same. */
-					0 => __( 'Enabled', 'all-in-one-seo-pack' ),
+					0 => __( 'Enabled', 'DH-SEO-pack' ),
 					/* translators: Some settings are either 'Enabled' or 'Disabled'. 'Activated' and 'Deactivated' mean the same. */
-					1 => __( 'Disabled', 'all-in-one-seo-pack' ),
+					1 => __( 'Disabled', 'DH-SEO-pack' ),
 				),
 			),
 			'home_keywords'               => array(
 				/* translators: This is a setting where users can enter meta keywords for their homepage. */
-				'name'     => __( 'Home Keywords (comma separated)', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Home Keywords (comma separated)', 'DH-SEO-pack' ),
 				'default'  => null,
 				'type'     => 'textarea',
 				'sanitize' => 'text',
@@ -300,146 +300,146 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'use_static_home_info'        => array(
 				/* translators: This is a setting where users can indicate that they are using a static page for their homepage. */
-				'name'            => __( 'Use Static Front Page Instead', 'all-in-one-seo-pack' ),
+				'name'            => __( 'Use Static Front Page Instead', 'DH-SEO-pack' ),
 				'default'         => 0,
 				'type'            => 'radio',
 				'initial_options' => array(
-					1 => __( 'Enabled', 'all-in-one-seo-pack' ),
-					0 => __( 'Disabled', 'all-in-one-seo-pack' ),
+					1 => __( 'Enabled', 'DH-SEO-pack' ),
+					0 => __( 'Disabled', 'DH-SEO-pack' ),
 				),
 			),
 			'can'                         => array(
 				/* translators: This is the name of a setting. Canonical URLs help users prevent duplicate content issues - https://en.wikipedia.org/wiki/Canonical_link_element. Leave "Canonical" in English if there is no such term in your language. */
-				'name'    => __( 'Canonical URLs', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Canonical URLs', 'DH-SEO-pack' ),
 				'default' => 1,
 			),
 			'no_paged_canonical_links'    => array(
 				/* translators: This is the name of a setting. Canonical URLs help users prevent duplicate content issues - https://en.wikipedia.org/wiki/Canonical_link_element. Leave "Canonical" in English if there is no such term in your language. Enabling this setting means the plugin will use the URL of the first page as the canonical URL for all subsequent paginated pages. */
-				'name'     => __( 'No Pagination for Canonical URLs', 'all-in-one-seo-pack' ),
+				'name'     => __( 'No Pagination for Canonical URLs', 'DH-SEO-pack' ),
 				'default'  => 0,
 				'condshow' => array( 'aiosp_can' => 'on' ),
 			),
 			'force_rewrites'              => array(
 				/* translators: This is the name of a setting. Enabling this option forces the plugin to use output buffering to ensure that the title tag will be rewritten. */
-				'name'            => __( 'Force Rewrites', 'all-in-one-seo-pack' ),
+				'name'            => __( 'Force Rewrites', 'DH-SEO-pack' ),
 				'default'         => 1,
 				'type'            => 'hidden',
 				'prefix'          => $this->prefix,
 				'initial_options' => array(
-					1 => __( 'Enabled', 'all-in-one-seo-pack' ),
-					0 => __( 'Disabled', 'all-in-one-seo-pack' ),
+					1 => __( 'Enabled', 'DH-SEO-pack' ),
+					0 => __( 'Disabled', 'DH-SEO-pack' ),
 				),
 			),
 			'use_original_title'          => array(
 				/* translators: This is the name of a setting. Enabling this option forces the plugin to use the wp_title() function to fetch the title tag. */
-				'name'            => __( 'Use Original Title', 'all-in-one-seo-pack' ),
+				'name'            => __( 'Use Original Title', 'DH-SEO-pack' ),
 				'type'            => 'radio',
 				'default'         => 0,
 				'initial_options' => array(
-					1 => __( 'Enabled', 'all-in-one-seo-pack' ),
-					0 => __( 'Disabled', 'all-in-one-seo-pack' ),
+					1 => __( 'Enabled', 'DH-SEO-pack' ),
+					0 => __( 'Disabled', 'DH-SEO-pack' ),
 				),
 			),
 			'home_page_title_format'      => array(
 				/* translators: This is a setting where users can enter the title format for the homepage. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Home Page Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Home Page Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%page_title%',
 			),
 			'page_title_format'           => array(
 
 				/* translators: This is a setting where users can enter the title format for Pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Page Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Page Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%page_title% | %site_title%',
 			),
 			'post_title_format'           => array(
 				/* translators: This is a setting where users can enter the title format for Posts. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Post Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Post Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%post_title% | %site_title%',
 			),
 			'category_title_format'       => array(
 				/* translators: This is a setting where users can enter the title format for categories. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Category Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Category Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%category_title% | %site_title%',
 			),
 			'archive_title_format'        => array(
 				/*  translators: This is a setting where users can enter the title format for archive pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Archive Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Archive Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%archive_title% | %site_title%',
 			),
 			'date_title_format'           => array(
 				/*  translators: This is a setting where users can enter the title format for date archive pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Date Archive Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Date Archive Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%date% | %site_title%',
 			),
 			'author_title_format'         => array(
 				/* translators: This is a setting where users can enter the title format for author archive pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Author Archive Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Author Archive Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%author% | %site_title%',
 			),
 			'tag_title_format'            => array(
 				/* translators: This is a setting where users can enter the title format for tag archive pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Tag Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Tag Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%tag% | %site_title%',
 			),
 			'search_title_format'         => array(
 				/* translators: This is a setting where users can enter the title format for the search page. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Search Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Search Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%search% | %site_title%',
 			),
 			'description_format'          => array(
 				/* translators: This is a setting where users can enter the description format. The description format is the format DH SEO Pack uses to rewrite the meta description tag. */
-				'name'    => __( 'Description Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Description Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
 				'default' => '%description%',
 			),
 			'404_title_format'            => array(
 				/* translators: This is a setting where users can enter the title format for the 404 page. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( '404 Title Format', 'all-in-one-seo-pack' ),
+				'name'    => __( '404 Title Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
-				'default' => __( 'Nothing found for %request_words%', 'all-in-one-seo-pack' ),
+				'default' => __( 'Nothing found for %request_words%', 'DH-SEO-pack' ),
 			),
 			'paged_format'                => array(
 				/* translators: This is a setting where users can enter the title format for paginated pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
-				'name'    => __( 'Paged Format', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Paged Format', 'DH-SEO-pack' ),
 				'type'    => 'text',
-				'default' => sprintf( ' - %s %%page%%', __( 'Part', 'all-in-one-seo-pack' ) ),
+				'default' => sprintf( ' - %s %%page%%', __( 'Part', 'DH-SEO-pack' ) ),
 			),
 			'cpostactive'                 => array(
 				/* translators: This is a setting where users can indicate which post types they want to use DH SEO Pack with. */
-				'name'    => __( 'SEO on only these Content Types', 'all-in-one-seo-pack' ),
+				'name'    => __( 'SEO on only these Content Types', 'DH-SEO-pack' ),
 				'type'    => 'multicheckbox',
 				'default' => array( 'post', 'page', 'product' ),
 			),
 			'taxactive'                   => array(
 				/* translators: This is a setting where users can indicate which taxonomies they want to use DH SEO Pack with. */
-				'name'    => __( 'SEO on only these taxonomies', 'all-in-one-seo-pack' ),
+				'name'    => __( 'SEO on only these taxonomies', 'DH-SEO-pack' ),
 				'type'    => 'multicheckbox',
 				'default' => array( 'category', 'post_tag', 'product_cat', 'product_tag' ),
 			),
 			'cpostnoindex'                => array(
 				/* translators: This is a setting where users can indicate which post types they want to NOINDEX by default. NOINDEX is a value of the HTML robots meta tag that asks search engines not to index the page. */
-				'name'    => __( 'Default to NOINDEX', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Default to NOINDEX', 'DH-SEO-pack' ),
 				'type'    => 'multicheckbox',
 				'default' => array(),
 			),
 			'cpostnofollow'               => array(
 				/* translators: This is a setting where users can indicate which post types they want to NOFOLLOW by default. NOFOLLOW is a value of the HTML robots meta tag that asks search engines not to follow any links on the page. */
-				'name'    => __( 'Default to NOFOLLOW', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Default to NOFOLLOW', 'DH-SEO-pack' ),
 				'type'    => 'multicheckbox',
 				'default' => array(),
 			),
 			'posttypecolumns'             => array(
 				/* translators: This is a setting where users can indicate for which post types they want to enable columns. Columns are added to the All Posts, All Pages, etc. list pages and allow users to quick-edit their title and description - https://semperplugins.com/documentation/display-settings/#show-column-labels-for-custom-post-types. */
-				'name'    => __( 'Show Column Labels for Custom Post Types', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Show Column Labels for Custom Post Types', 'DH-SEO-pack' ),
 				'type'    => 'multicheckbox',
 				'default' => array( 'post', 'page' ),
 			),
@@ -455,7 +455,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'pinterest_verify'            => array(
 				/* translators: This is a setting where users can add their Pinterest website verification code. */
-				'name'    => __( 'Pinterest Site Verification', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Pinterest Site Verification', 'DH-SEO-pack' ),
 				'default' => '',
 				'type'    => 'text',
 			),
@@ -471,19 +471,19 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'google_analytics_id'         => array(
 				/* translators: This is a setting where users can add their Google Analytics verification code. Leave this in English if there is no translation for "Google Analytics". */
-				'name'        => __( 'Google Analytics ID', 'all-in-one-seo-pack' ),
+				'name'        => __( 'Google Analytics ID', 'DH-SEO-pack' ),
 				'default'     => null,
 				'type'        => 'text',
 				'placeholder' => 'UA-########-#',
 			),
 			'ga_advanced_options'         => array(
 				/* translators: This is a setting users can enable to display more advanced options for Google Analytics. */
-				'name'            => __( 'Advanced Analytics Options', 'all-in-one-seo-pack' ),
+				'name'            => __( 'Advanced Analytics Options', 'DH-SEO-pack' ),
 				'default'         => 'on',
 				'type'            => 'radio',
 				'initial_options' => array(
-					'on' => __( 'Enabled', 'all-in-one-seo-pack' ),
-					0    => __( 'Disabled', 'all-in-one-seo-pack' ),
+					'on' => __( 'Enabled', 'DH-SEO-pack' ),
+					0    => __( 'Disabled', 'DH-SEO-pack' ),
 				),
 				'condshow'        => array(
 					'aiosp_google_analytics_id' => array(
@@ -495,7 +495,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'ga_domain'                   => array(
 				/* translators: This is a setting which allows users to set the cookie domain for their Google Analytics tracking code. */
-				'name'     => __( 'Tracking Domain', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Tracking Domain', 'DH-SEO-pack' ),
 				'type'     => 'text',
 				'condshow' => array(
 					'aiosp_google_analytics_id' => array(
@@ -508,7 +508,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'ga_multi_domain'             => array(
 				/* translators: This is a setting which allows users to enable Google Analytics tracking for multiple domain names. */
-				'name'     => __( 'Track Multiple Domains', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Track Multiple Domains', 'DH-SEO-pack' ),
 				'default'  => 0,
 				'condshow' => array(
 					'aiosp_google_analytics_id' => array(
@@ -521,7 +521,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'ga_addl_domains'             => array(
 				/* translators: This is a setting which allows users to enter additional domain names used for Google Analytics cross-domain tracking - https://support.google.com/analytics/answer/1034342?hl=en.*/
-				'name'     => __( 'Additional Domains', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Additional Domains', 'DH-SEO-pack' ),
 				'type'     => 'textarea',
 				'condshow' => array(
 					'aiosp_google_analytics_id' => array(
@@ -535,7 +535,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'ga_anonymize_ip'             => array(
 				/* translators: This is a setting which tells Google Analytics not to track and store the IP addresses of website visitors. This is required to be compliant with the GDPR for example. */
-				'name'     => __( 'Anonymize IP Addresses', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Anonymize IP Addresses', 'DH-SEO-pack' ),
 				'type'     => 'checkbox',
 				'condshow' => array(
 					'aiosp_google_analytics_id' => array(
@@ -548,7 +548,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'ga_display_advertising'      => array(
 				/* translators: This is a setting that enables a collection of Google Analytics features so you can, for example, create segments based on demographic and interest data. */
-				'name'     => __( 'Display Advertiser Tracking', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Display Advertiser Tracking', 'DH-SEO-pack' ),
 				'type'     => 'checkbox',
 				'condshow' => array(
 					'aiosp_google_analytics_id' => array(
@@ -561,7 +561,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'ga_exclude_users'            => array(
 				/* translators: This is a setting that allows you to exclude certain WordPress user roles, e.g. Administrators, from Google Analytics tracking. */
-				'name'     => __( 'Exclude Users From Tracking', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Exclude Users From Tracking', 'DH-SEO-pack' ),
 				'type'     => 'multicheckbox',
 				'condshow' => array(
 					'aiosp_google_analytics_id' => array(
@@ -574,7 +574,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'ga_track_outbound_links'     => array(
 				/* translators: This is a setting that enables tracking of outbound/external links by Google Analytics. */
-				'name'     => __( 'Track Outbound Links', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Track Outbound Links', 'DH-SEO-pack' ),
 				'default'  => 0,
 				'condshow' => array(
 					'aiosp_google_analytics_id' => array(
@@ -587,7 +587,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'ga_link_attribution'         => array(
 				/* translators: This is a setting for Google Analytics that allows you to tag your pages to implement enhanced link-tracking. */
-				'name'     => __( 'Enhanced Link Attribution', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Enhanced Link Attribution', 'DH-SEO-pack' ),
 				'default'  => 0,
 				'condshow' => array(
 					'aiosp_google_analytics_id' => array(
@@ -600,7 +600,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'ga_enhanced_ecommerce'       => array(
 				/* translators: This is a setting which tells Google Analytics to track your customers' path to purchase on your e-commerce website. */
-				'name'     => __( 'Enhanced Ecommerce', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Enhanced Ecommerce', 'DH-SEO-pack' ),
 				'default'  => 0,
 				'condshow' => array(
 					'aiosp_google_analytics_id' => array(
@@ -613,25 +613,25 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'schema_markup'               => array(
 				/* translators: This is a setting that outputs basic Schema.org markup, also known as structured data, into the source code of each page. */
-				'name'            => __( 'Use Schema.org Markup', 'all-in-one-seo-pack' ),
+				'name'            => __( 'Use Schema.org Markup', 'DH-SEO-pack' ),
 				'type'            => 'radio',
 				'default'         => 1,
 				'initial_options' => array(
-					1 => __( 'Enabled', 'all-in-one-seo-pack' ),
-					0 => __( 'Disabled', 'all-in-one-seo-pack' ),
+					1 => __( 'Enabled', 'DH-SEO-pack' ),
+					0 => __( 'Disabled', 'DH-SEO-pack' ),
 				),
 			),
 			// TODO Change `schema_search_results_page` to `schema_add_search_results_page`. Requires modifying double arrow alignment.
 			'schema_search_results_page'  => array(
 				/*  translators: This is a setting users can enable to add the basic markup code to their source code that is needed for Google to generate a Sitelinks Search Box - https://developers.google.com/search/docs/data-types/sitelinks-searchbox.*/
-				'name'     => __( 'Display Sitelinks Search Box', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Display Sitelinks Search Box', 'DH-SEO-pack' ),
 				'condshow' => array(
 					'aiosp_schema_markup' => 1,
 				),
 			),
 			'schema_social_profile_links' => array(
 				/* translators: This is a setting where users can add links to their social media profiles. These are then output as schema.org markup. */
-				'name'     => __( 'Social Profile Links', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Social Profile Links', 'DH-SEO-pack' ),
 				'type'     => 'textarea',
 				'cols'     => 60,
 				'rows'     => 5,
@@ -641,12 +641,12 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'schema_site_represents'      => array(
 				/* translators: This is a setting where users can indicate whether their website represents a person or organization. This is used for our schema.org markup. */
-				'name'            => __( 'Person or Organization', 'all-in-one-seo-pack' ),
+				'name'            => __( 'Person or Organization', 'DH-SEO-pack' ),
 				'type'            => 'radio',
 				'default'         => 'organization',
 				'initial_options' => array(
-					'organization' => __( 'Organization', 'all-in-one-seo-pack' ),
-					'person'       => __( 'Person', 'all-in-one-seo-pack' ),
+					'organization' => __( 'Organization', 'DH-SEO-pack' ),
+					'person'       => __( 'Person', 'DH-SEO-pack' ),
 				),
 				'condshow'        => array(
 					'aiosp_schema_markup' => 1,
@@ -654,7 +654,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'schema_organization_name'    => array(
 				/* translators: This is a setting where users can enter the name of their organization. This is used for our schema.org markup. */
-				'name'     => __( 'Organization Name', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Organization Name', 'DH-SEO-pack' ),
 				'type'     => 'text',
 				'default'  => '',
 				'condshow' => array(
@@ -664,7 +664,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'schema_organization_logo'    => array(
 				/* translators: This is a setting where users can upload and select a logo for their organization. This is used for our schema.org markup. */
-				'name'     => __( 'Organization Logo', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Organization Logo', 'DH-SEO-pack' ),
 				'type'     => 'image',
 				'condshow' => array(
 					'aiosp_schema_markup'          => 1,
@@ -674,7 +674,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 
 			'schema_person_user'          => array(
 				/* translators: This is a dropdown setting where users can select the username of the person that the website is for. The profile from that user is then used for our schema.org markup.*/
-				'name'     => __( 'Person\'s Username', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Person\'s Username', 'DH-SEO-pack' ),
 				'type'     => 'select',
 				'default'  => 1,
 				'condshow' => array(
@@ -685,7 +685,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'schema_person_manual_name'   => array(
 				/* translators: Option shown when 'Manually Enter' is selected in Person's Username. Users use this to enter the Person's name for schema Person. */
-				'name'     => __( 'Person\'s Name', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Person\'s Name', 'DH-SEO-pack' ),
 				'type'     => 'text',
 				'condshow' => array(
 					'aiosp_schema_markup'          => 1,
@@ -695,7 +695,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'schema_person_manual_image'  => array(
 				/* translators: Option shown when 'Manually Enter' is selected in Person's Username. Users use this to enter the Person's image for schema Person. */
-				'name'     => __( 'Person\'s Image', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Person\'s Image', 'DH-SEO-pack' ),
 				'type'     => 'image',
 				'condshow' => array(
 					'aiosp_schema_markup'          => 1,
@@ -705,7 +705,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'schema_phone_number'         => array(
 				/* translators: This is a setting where users can enter a phone number for their organization. This is used for our schema.org markup. */
-				'name'         => __( 'Phone Number', 'all-in-one-seo-pack' ),
+				'name'         => __( 'Phone Number', 'DH-SEO-pack' ),
 				'type'         => 'tel',
 				'autocomplete' => 'off',
 				'condshow'     => array(
@@ -715,7 +715,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'schema_contact_type'         => array(
 				/* translators: This is a setting where users have to indicate what contact/department their phone number connects to (e.g. "Sales" or "Customer Support"). This is used for our schema.org markup. */
-				'name'            => __( 'Type of Contact', 'all-in-one-seo-pack' ),
+				'name'            => __( 'Type of Contact', 'DH-SEO-pack' ),
 				'type'            => 'select',
 				'condshow'        => array(
 					'aiosp_schema_markup'          => 1,
@@ -723,150 +723,150 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				),
 				'initial_options' => array(
 					/* translators: This is the placeholder we use in one of our dropdowns when no value has been selected yet. */
-					'none'                => __( '-- Select --', 'all-in-one-seo-pack' ),
-					'customer support'    => __( 'Customer Support', 'all-in-one-seo-pack' ),
-					'tech support'        => __( 'Technical Support', 'all-in-one-seo-pack' ),
+					'none'                => __( '-- Select --', 'DH-SEO-pack' ),
+					'customer support'    => __( 'Customer Support', 'DH-SEO-pack' ),
+					'tech support'        => __( 'Technical Support', 'DH-SEO-pack' ),
 					/* translators: This is the support department of a business that handles all billing related enquiries. */
-					'billing support'     => __( 'Billing Support', 'all-in-one-seo-pack' ),
+					'billing support'     => __( 'Billing Support', 'DH-SEO-pack' ),
 					/* translators: This is the department of a business that handles payments of bills. */
-					'bill payment'        => __( 'Bill Payment', 'all-in-one-seo-pack' ),
-					'sales'               => __( 'Sales', 'all-in-one-seo-pack' ),
-					'reservations'        => __( 'Reservations', 'all-in-one-seo-pack' ),
-					'credit card support' => __( 'Credit Card Support', 'all-in-one-seo-pack' ),
-					'emergency'           => __( 'Emergency', 'all-in-one-seo-pack' ),
+					'bill payment'        => __( 'Bill Payment', 'DH-SEO-pack' ),
+					'sales'               => __( 'Sales', 'DH-SEO-pack' ),
+					'reservations'        => __( 'Reservations', 'DH-SEO-pack' ),
+					'credit card support' => __( 'Credit Card Support', 'DH-SEO-pack' ),
+					'emergency'           => __( 'Emergency', 'DH-SEO-pack' ),
 					/* translators: This is the department that handles baggage enquiries when e.g. baggage is lost or missing. */
-					'baggage tracking'    => __( 'Baggage Tracking', 'all-in-one-seo-pack' ),
-					'roadside assistance' => __( 'Roadside Assistance', 'all-in-one-seo-pack' ),
+					'baggage tracking'    => __( 'Baggage Tracking', 'DH-SEO-pack' ),
+					'roadside assistance' => __( 'Roadside Assistance', 'DH-SEO-pack' ),
 					/* translators: This refers to the department of a package courier that handles enquiries when e.g. a package has not been delivered or is missing.  */
-					'package tracking'    => __( 'Package Tracking', 'all-in-one-seo-pack' ),
+					'package tracking'    => __( 'Package Tracking', 'DH-SEO-pack' ),
 				),
 			),
 			'use_categories'              => array(
 				/* translators: This is the name of a setting. By enabling it, the plugin will use the categories of the relevant post as meta keywords in addition to any user-specified keywords. */
-				'name'     => __( 'Use Categories for META keywords', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Use Categories for META keywords', 'DH-SEO-pack' ),
 				'default'  => 0,
 				'condshow' => array( 'aiosp_togglekeywords' => 0 ),
 			),
 			'use_tags_as_keywords'        => array(
 				/* translators: This is the name of a setting. By enabling it, the plugin will use the tags of the relevant post as meta keywords in addition to any user-specified keywords. */
-				'name'     => __( 'Use Tags for META keywords', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Use Tags for META keywords', 'DH-SEO-pack' ),
 				'default'  => 1,
 				'condshow' => array( 'aiosp_togglekeywords' => 0 ),
 			),
 			'dynamic_postspage_keywords'  => array(
 				/* translators: This a setting that allows you to dynamically output meta keywords on archive pages based on the keywords from the posts that are displayed by the archive page. */
-				'name'     => __( 'Dynamically Generate Keywords for Posts Page/Archives', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Dynamically Generate Keywords for Posts Page/Archives', 'DH-SEO-pack' ),
 				'default'  => 1,
 				'condshow' => array( 'aiosp_togglekeywords' => 0 ),
 			),
 			'category_noindex'            => array(
 				/* translators: This is a global setting that allows you to NOINDEX all your categories. */
-				'name'    => __( 'Use noindex for Categories', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Use noindex for Categories', 'DH-SEO-pack' ),
 				'default' => 1,
 			),
 			'archive_date_noindex'        => array(
 				/* translators: This is a global setting that allows you to NOINDEX all your date archive pages. */
-				'name'    => __( 'Use noindex for Date Archives', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Use noindex for Date Archives', 'DH-SEO-pack' ),
 				'default' => 1,
 			),
 			'archive_author_noindex'      => array(
 				/* translators: This is a global setting that allows you to NOINDEX all your author archive pages. */
-				'name'    => __( 'Use noindex for Author Archives', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Use noindex for Author Archives', 'DH-SEO-pack' ),
 				'default' => 1,
 			),
 			'tags_noindex'                => array(
 				/* translators: This is a global setting that allows you to NOINDEX all your tag archive pages. */
-				'name'    => __( 'Use noindex for Tag Archives', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Use noindex for Tag Archives', 'DH-SEO-pack' ),
 				'default' => 0,
 			),
 			'search_noindex'              => array(
 				/* translators: This is a setting that allows you to NOINDEX your search results page. */
-				'name'    => __( 'Use noindex for the Search page', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Use noindex for the Search page', 'DH-SEO-pack' ),
 				'default' => 0,
 			),
 			'404_noindex'                 => array(
 				/* translators: This is a setting that allows you to NOINDEX your 404 Not Found page. */
-				'name'    => __( 'Use noindex for the 404 page', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Use noindex for the 404 page', 'DH-SEO-pack' ),
 				'default' => 0,
 			),
 			'tax_noindex'                 => array(
 				/* translators: This is a global setting that allows you to NOINDEX specific taxonomies. */
-				'name'    => __( 'Use noindex for Taxonomy Archives', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Use noindex for Taxonomy Archives', 'DH-SEO-pack' ),
 				'type'    => 'multicheckbox',
 				'default' => array(),
 			),
 			'paginated_noindex'           => array(
 				/* translators: This is a global setting that allows you to NOINDEX all your paginated content (page 2 and higher). */
-				'name'    => __( 'Use noindex for paginated pages/posts', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Use noindex for paginated pages/posts', 'DH-SEO-pack' ),
 				'default' => 0,
 			),
 			'paginated_nofollow'          => array(
 				/* translators: This is a global setting that allows you to NOFOLLOW all your paginated content. */
-				'name'    => __( 'Use nofollow for paginated pages/posts', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Use nofollow for paginated pages/posts', 'DH-SEO-pack' ),
 				'default' => 0,
 			),
 			'generate_descriptions'       => array(
 				/* translators: This is a setting that allows the plugin to automatically populate the meta description tag based on the excerpt or content of the post/page.*/
-				'name'    => __( 'Autogenerate Descriptions', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Autogenerate Descriptions', 'DH-SEO-pack' ),
 				'default' => 0,
 			),
 			'skip_excerpt'                => array(
 				/* translators: This is the name of a setting. By enabling it, the plugin will use the content of the post/page to automatically populate the meta description tag, instead of the excerpt. */
-				'name'     => __( 'Use Content For Autogenerated Descriptions', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Use Content For Autogenerated Descriptions', 'DH-SEO-pack' ),
 				'default'  => 0,
 				'condshow' => array( 'aiosp_generate_descriptions' => 'on' ),
 			),
 			'run_shortcodes'              => array(
 				/* translators: This is a setting that enables the plugin to execute shortcodes in the autogenerated descriptions. Shortcodes allow people to execute code inside WordPress posts, pages, and widgets without writing any code directly. */
-				'name'     => __( 'Run Shortcodes In Autogenerated Descriptions', 'all-in-one-seo-pack' ),
+				'name'     => __( 'Run Shortcodes In Autogenerated Descriptions', 'DH-SEO-pack' ),
 				'default'  => 0,
 				'condshow' => array( 'aiosp_generate_descriptions' => 'on' ),
 			),
 			'hide_paginated_descriptions' => array(
 				/* translators: This is a setting that, if enabled, removes the meta description for paginated content (page 2 and higher). */
-				'name'    => __( 'Remove Descriptions For Paginated Pages', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Remove Descriptions For Paginated Pages', 'DH-SEO-pack' ),
 				'default' => 0,
 			),
 			'dont_truncate_descriptions'  => array(
 				/* translators: This is a setting that makes sure the plugin does not truncate the meta description tag if it is longer than what DH SEO Pack recommends. */
-				'name'    => __( 'Never Shorten Long Descriptions', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Never Shorten Long Descriptions', 'DH-SEO-pack' ),
 				'default' => 0,
 			),
 			'redirect_attachement_parent' => array(
 				/* translators: This is the name of a setting. By enabling it, the plugin will redirect attachment page requests to the post parent, or in other words, the post/page where the media is embedded. */
-				'name'    => __( 'Redirect Attachments to Post Parent', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Redirect Attachments to Post Parent', 'DH-SEO-pack' ),
 				'default' => 0,
 			),
 			'ex_pages'                    => array(
 				/* translators: This is a textarea setting where users can enter a list of pages that DH SEO Pack should not affect. */
-				'name'    => __( 'Exclude Pages', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Exclude Pages', 'DH-SEO-pack' ),
 				'type'    => 'textarea',
 				'default' => '',
 			),
 			'do_log'                      => array(
 				/* translators: This is a setting that enables DH SEO Pack to log important events to help with debugging. */
-				'name'    => __( 'Log important events', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Log important events', 'DH-SEO-pack' ),
 				'default' => null,
 			),
 			'rss_content_before'          => array(
-				'name' => __( 'Before Your Content', 'all-in-one-seo-pack' ),
+				'name' => __( 'Before Your Content', 'DH-SEO-pack' ),
 				'type' => 'textarea',
 				'rows' => 2,
 			),
 			'rss_content_after'           => array(
-				'name'    => __( 'After Your Content', 'all-in-one-seo-pack' ),
+				'name'    => __( 'After Your Content', 'DH-SEO-pack' ),
 				'type'    => 'textarea',
 				'rows'    => 2,
 				'default' => sprintf(
 					/* translators: 1 - The post title, 2 - The site title. */
-					__( 'The post %1$s first appeared on %2$s.', 'all-in-one-seo-pack' ),
+					__( 'The post %1$s first appeared on %2$s.', 'DH-SEO-pack' ),
 					'%post_link%',
 					'%site_link%'
 				)
 			),
 
 			'usage_tracking'              => array(
-				'name'    => __( 'Allow Usage Tracking', 'all-in-one-seo-pack' ),
+				'name'    => __( 'Allow Usage Tracking', 'DH-SEO-pack' ),
 				'default' => null,
 			),
 		);
@@ -926,27 +926,27 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 							aioseop_get_utm_url( 'metabox-main' ),
 							sprintf(
 								/* translators: %s: "DH SEO Pack Pro". */
-								__( 'Upgrade to %s', 'all-in-one-seo-pack' ),
+								__( 'Upgrade to %s', 'DH-SEO-pack' ),
 								AIOSEOP_PLUGIN_NAME . '&nbsp;Pro'
 							),
-							__( 'UPGRADE TO PRO VERSION', 'all-in-one-seo-pack' )
+							__( 'UPGRADE TO PRO VERSION', 'DH-SEO-pack' )
 						),
 					),
 					'snippet'            => array(
 						/* translators: The preview snippet shows how the page will look like in the search results (title, meta description and permalink). */
-						'name'    => __( 'Preview Snippet', 'all-in-one-seo-pack' ),
+						'name'    => __( 'Preview Snippet', 'DH-SEO-pack' ),
 						'type'    => 'custom',
 						'label'   => 'top',
 						'default' => '<div class="preview_snippet"><div id="aioseop_snippet"><h3><a>%s</a></h3><div><div><cite id="aioseop_snippet_link">%s</cite></div><span id="aioseop_snippet_description">%s</span></div></div></div>',
 					),
 					'title'              => array(
-						'name'  => __( 'Title', 'all-in-one-seo-pack' ),
+						'name'  => __( 'Title', 'DH-SEO-pack' ),
 						'type'  => 'text',
 						'count' => true,
 						'size'  => 60,
 					),
 					'description'        => array(
-						'name'  => __( 'Description', 'all-in-one-seo-pack' ),
+						'name'  => __( 'Description', 'DH-SEO-pack' ),
 						'type'  => 'textarea',
 						'count' => true,
 						'cols'  => 80,
@@ -954,28 +954,28 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 					),
 
 					'keywords'           => array(
-						'name' => __( 'Keywords (comma separated)', 'all-in-one-seo-pack' ),
+						'name' => __( 'Keywords (comma separated)', 'DH-SEO-pack' ),
 						'type' => 'text',
 					),
 					'custom_link'        => array(
 						/* translators: This is a setting that users can enable to enter a custom canonical URL. */
-						'name' => __( 'Custom Canonical URL', 'all-in-one-seo-pack' ),
+						'name' => __( 'Custom Canonical URL', 'DH-SEO-pack' ),
 						'type' => 'text',
 						'size' => 60,
 					),
 					'noindex'            => array(
 						/* translators: This is a setting that allows users to add the NOINDEX robots meta tag value to the current post/page. */
-						'name'    => __( 'NOINDEX this page/post', 'all-in-one-seo-pack' ),
+						'name'    => __( 'NOINDEX this page/post', 'DH-SEO-pack' ),
 						'default' => '',
 
 					),
 					'nofollow'           => array(
 						/* translators: This is a setting that allows users to add the NOFOLLOW robots meta tag value to the current post/page. */
-						'name'    => __( 'NOFOLLOW this page/post', 'all-in-one-seo-pack' ),
+						'name'    => __( 'NOFOLLOW this page/post', 'DH-SEO-pack' ),
 						'default' => '',
 					),
 					'sitemap_exclude'    => array(
-						'name'     => __( 'Exclude From Sitemap', 'all-in-one-seo-pack' ),
+						'name'     => __( 'Exclude From Sitemap', 'DH-SEO-pack' ),
 						'condshow' => array(
 							'aiosp_noindex' => array(
 								'lhs' => 'aiosp_noindex',
@@ -986,7 +986,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 					),
 					'sitemap_priority'   => array(
 						/* translators: This is a setting that allows users to override the global sitemap priority value for a given post/term. */
-						'name'            => __( 'Sitemap Priority', 'all-in-one-seo-pack' ),
+						'name'            => __( 'Sitemap Priority', 'DH-SEO-pack' ),
 						'type'            => 'select',
 						'condshow'        => array(
 							'aiosp_noindex'         => array(
@@ -1001,7 +1001,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 							),
 						),
 						'initial_options' => array(
-							''    => __( 'Do Not Override', 'all-in-one-seo-pack' ),
+							''    => __( 'Do Not Override', 'DH-SEO-pack' ),
 							'0.1' => '10%',
 							'0.2' => '20%',
 							'0.3' => '30%',
@@ -1016,7 +1016,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 					),
 					'sitemap_frequency'  => array(
 						/* translators: This is a setting that allows users to override the global sitemap frequency value for a given post/term. */
-						'name'            => __( 'Sitemap Frequency', 'all-in-one-seo-pack' ),
+						'name'            => __( 'Sitemap Frequency', 'DH-SEO-pack' ),
 						'type'            => 'select',
 						'condshow'        => array(
 							'aiosp_noindex'         => array(
@@ -1031,22 +1031,22 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 							),
 						),
 						'initial_options' => array(
-							''        => __( 'Do Not Override', 'all-in-one-seo-pack' ),
-							'always'  => __( 'Always', 'all-in-one-seo-pack' ),
-							'hourly'  => __( 'Hourly', 'all-in-one-seo-pack' ),
-							'daily'   => __( 'Daily', 'all-in-one-seo-pack' ),
-							'weekly'  => __( 'Weekly', 'all-in-one-seo-pack' ),
-							'monthly' => __( 'Monthly', 'all-in-one-seo-pack' ),
-							'yearly'  => __( 'Yearly', 'all-in-one-seo-pack' ),
-							'never'   => __( 'Never', 'all-in-one-seo-pack' ),
+							''        => __( 'Do Not Override', 'DH-SEO-pack' ),
+							'always'  => __( 'Always', 'DH-SEO-pack' ),
+							'hourly'  => __( 'Hourly', 'DH-SEO-pack' ),
+							'daily'   => __( 'Daily', 'DH-SEO-pack' ),
+							'weekly'  => __( 'Weekly', 'DH-SEO-pack' ),
+							'monthly' => __( 'Monthly', 'DH-SEO-pack' ),
+							'yearly'  => __( 'Yearly', 'DH-SEO-pack' ),
+							'never'   => __( 'Never', 'DH-SEO-pack' ),
 						),
 					),
 					/* translators: This is a setting that allows users to disable DH SEO Pack for the current post/page. */
-					'disable'            => array( 'name' => __( 'Disable on this page/post', 'all-in-one-seo-pack' ) ),
+					'disable'            => array( 'name' => __( 'Disable on this page/post', 'DH-SEO-pack' ) ),
 					/* translators: This is a setting that allows users to exclude the current post/page from the sitemap. */
 					'disable_analytics'  => array(
 						/* translators: This is a setting that allows users to disable Google Analytics tracking for the current post/page. */
-							'name' => __( 'Disable Google Analytics', 'all-in-one-seo-pack' ),
+							'name' => __( 'Disable Google Analytics', 'DH-SEO-pack' ),
 						'condshow' => array( 'aiosp_disable' => 'on' ),
 					),
 				),
@@ -1064,17 +1064,17 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		$this->layout = array(
 			'default'   => array(
 				/* translators: This is the name of the main menu. */
-				'name'      => __( 'General Settings', 'all-in-one-seo-pack' ),
+				'name'      => __( 'General Settings', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/general-settings/',
 				'options'   => array(), // This is set below, to the remaining options -- pdb.
 			),
 			'home'      => array(
-				'name'      => __( 'Home Page Settings', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Home Page Settings', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/home-page-settings/',
 				'options'   => array( 'home_title', 'home_description', 'home_keywords', 'use_static_home_info' ),
 			),
 			'title'     => array(
-				'name'      => __( 'Title Settings', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Title Settings', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/title-settings/',
 				'options'   => array(
 					'force_rewrites',
@@ -1094,24 +1094,24 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			),
 			'cpt'       => array(
 				/* translators: This is the name of a settings section where users can indicate which post types and taxonomies they want to use DH SEO Pack with. */
-				'name'      => __( 'Content Type Settings', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Content Type Settings', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/custom-post-type-settings/',
 				'options'   => array( 'taxactive', 'cpostactive' ),
 			),
 			'display'   => array(
 				/* translators: This is the name of a settings section where users can control how DH SEO Pack appears in the WordPress Administrator Panel. */
-				'name'      => __( 'Display Settings', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Display Settings', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/display-settings/',
 				'options'   => array( 'posttypecolumns' ),
 			),
 			'webmaster' => array(
 				/* translators: This is the name of a settings section where users can add verification codes of webmaster platforms such as Google Search Console, Bing Webmaster Tools, etc. */
-				'name'      => __( 'Webmaster Verification', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Webmaster Verification', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/sections/webmaster-verification/',
 				'options'   => array( 'google_verify', 'bing_verify', 'pinterest_verify', 'yandex_verify', 'baidu_verify' ),
 			),
 			'google'    => array(
-				'name'      => __( 'Google Analytics', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Google Analytics', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/advanced-google-analytics-settings/',
 				'options'   => array(
 					'google_analytics_id',
@@ -1128,7 +1128,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				),
 			),
 			'schema'    => array(
-				'name'      => __( 'Schema Settings', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Schema Settings', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/schema-settings/',
 				'options'   => array(
 					'schema_markup',
@@ -1145,7 +1145,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				),
 			),
 			'noindex'   => array(
-				'name'      => __( 'Noindex Settings', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Noindex Settings', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/noindex-settings/',
 				'options'   => array(
 					'cpostnoindex',
@@ -1162,7 +1162,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				),
 			),
 			'rss_content' => array(
-				'name'      => __( 'RSS Content Settings', 'all-in-one-seo-pack' ),
+				'name'      => __( 'RSS Content Settings', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/rss-content-settings/',
 				'options'   => array(
 					'rss_content_before',
@@ -1170,8 +1170,8 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				),
 			),
 			'advanced'  => array(
-				'name'      => __( 'Advanced Settings', 'all-in-one-seo-pack' ),
-				'help_link' => 'https://semperplugins.com/documentation/all-in-one-seo-pack-advanced-settings/',
+				'name'      => __( 'Advanced Settings', 'DH-SEO-pack' ),
+				'help_link' => 'https://semperplugins.com/documentation/DH-SEO-pack-advanced-settings/',
 				'options'   => array(
 					'generate_descriptions',
 					'skip_excerpt',
@@ -1183,7 +1183,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				),
 			),
 			'keywords'  => array(
-				'name'      => __( 'Keyword Settings', 'all-in-one-seo-pack' ),
+				'name'      => __( 'Keyword Settings', 'DH-SEO-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/keyword-settings/',
 				'options'   => array(
 					'togglekeywords',
@@ -1198,15 +1198,15 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		if ( 'admin.php' === $pagenow ) {
 			// Person's Username setting.
 			$this->default_options['schema_person_user']['initial_options'] = array(
-				0  => __( '- Select -', 'all-in-one-seo-pack' ),
-				-1 => __( 'Manually Enter', 'all-in-one-seo-pack' ),
+				0  => __( '- Select -', 'DH-SEO-pack' ),
+				-1 => __( 'Manually Enter', 'DH-SEO-pack' ),
 			);
 
 			global $wpdb;
 			$user_count = $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->users}" );
 			if ( 50 < $user_count ) {
 				$this->default_options['schema_person_user']['initial_options'] = array(
-					-1 => __( 'Manually Enter', 'all-in-one-seo-pack' ),
+					-1 => __( 'Manually Enter', 'DH-SEO-pack' ),
 				);
 			} else {
 				$user_args = array(
@@ -3564,9 +3564,9 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		}
 
 		$this->pointers['aioseop_menu_2640'] = array(
-			'pointer_target' => "#toplevel_page_all-in-one-seo-pack$pro-aioseop_class",
-			'pointer_text'   => '<h3>' . __( 'Review Your Settings', 'all-in-one-seo-pack' )
-								. '</h3><p>' . sprintf( __( 'Welcome to version %1$s. Thank you for running the latest and greatest %2$s ever! Please review your settings, as we\'re always adding new features for you!', 'all-in-one-seo-pack' ), AIOSEOP_VERSION, AIOSEOP_PLUGIN_NAME ) . '</p>',
+			'pointer_target' => "#toplevel_page_DH-SEO-pack$pro-aioseop_class",
+			'pointer_text'   => '<h3>' . __( 'Review Your Settings', 'DH-SEO-pack' )
+								. '</h3><p>' . sprintf( __( 'Welcome to version %1$s. Thank you for running the latest and greatest %2$s ever! Please review your settings, as we\'re always adding new features for you!', 'DH-SEO-pack' ), AIOSEOP_VERSION, AIOSEOP_PLUGIN_NAME ) . '</p>',
 			'pointer_edge'   => 'top',
 			'pointer_align'  => 'left',
 			'pointer_scope'  => 'global',
@@ -3606,10 +3606,10 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 
 		if ( isset( $post_types['attachment'] ) ) {
 			/* translators: This refers to entries in the Media Library (images, videos, recordings and other files) and their attachment pages. */
-			$post_types['attachment'] = __( 'Media / Attachments', 'all-in-one-seo-pack' );
+			$post_types['attachment'] = __( 'Media / Attachments', 'DH-SEO-pack' );
 		}
 		if ( isset( $all_post_types['attachment'] ) ) {
-			$all_post_types['attachment'] = __( 'Media / Attachments', 'all-in-one-seo-pack' );
+			$all_post_types['attachment'] = __( 'Media / Attachments', 'DH-SEO-pack' );
 		}
 
 		$taxes     = get_taxonomies( '', 'objects' );
@@ -3648,7 +3648,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			if ( ! isset( $this->default_options[ $field ] ) ) {
 				$this->default_options[ $field ]  = array(
 					/* translators: The title format is the template that is used to format the title for each post of a certain post type (Posts, Pages, etc.). */
-					'name'     => "$name " . __( 'Title Format', 'all-in-one-seo-pack' ) . "<br />($p)",
+					'name'     => "$name " . __( 'Title Format', 'DH-SEO-pack' ) . "<br />($p)",
 					'type'     => 'text',
 					'default'  => '%post_title% | %site_title%',
 					'condshow' => array(
@@ -3680,7 +3680,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				if ( ! isset( $this->default_options[ $field ] ) ) {
 					$this->default_options[ $field ]  = array(
 						/* translators: The taxonomy title format is the template that is used to format the title for each taxonomy term of a certain taxonomy (Categories, Tags, etc.). */
-						'name'     => "$name " . __( 'Taxonomy Title Format:', 'all-in-one-seo-pack' ),
+						'name'     => "$name " . __( 'Taxonomy Title Format:', 'DH-SEO-pack' ),
 						'type'     => 'text',
 						'default'  => '%taxonomy_title% | %site_title%',
 						'condshow' => array(
@@ -3829,13 +3829,13 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			'type'  => 'submit',
 			'class' => 'aioseop_reset_settings_button button-secondary',
 			/* translators: This is the text of a button that allows users to reset the General Settings to their default values. */
-			'value' => __( 'Reset General Settings to Defaults', 'all-in-one-seo-pack' ) . ' &raquo;',
+			'value' => __( 'Reset General Settings to Defaults', 'DH-SEO-pack' ) . ' &raquo;',
 		);
 		$submit['Submit_All_Default'] = array(
 			'type'  => 'submit',
 			'class' => 'aioseop_reset_settings_button button-secondary',
 			/* translators: This is the text of a button that allows users to reset all settings across the entire plugin to their default values. */
-			'value' => __( 'Reset ALL Settings to Defaults', 'all-in-one-seo-pack' ) . ' &raquo;',
+			'value' => __( 'Reset ALL Settings to Defaults', 'DH-SEO-pack' ) . ' &raquo;',
 		);
 
 		return $submit;
@@ -3923,18 +3923,18 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 					$settings[ "{$prefix}noindex" ]['type']            = 'select';
 					$settings[ "{$prefix}noindex" ]['initial_options'] = array(
 						/* translators: This indicates that the current post/page is using the default value for its post type, which is NOINDEX. */
-						''    => __( 'Default - noindex', 'all-in-one-seo-pack' ),
-						'off' => __( 'index', 'all-in-one-seo-pack' ),
-						'on'  => __( 'noindex', 'all-in-one-seo-pack' ),
+						''    => __( 'Default - noindex', 'DH-SEO-pack' ),
+						'off' => __( 'index', 'DH-SEO-pack' ),
+						'on'  => __( 'noindex', 'DH-SEO-pack' ),
 					);
 				}
 				if ( ! empty( $this->options['aiosp_cpostnofollow'] ) && in_array( $post_type, $this->options['aiosp_cpostnofollow'] ) ) {
 					$settings[ "{$prefix}nofollow" ]['type']            = 'select';
 					$settings[ "{$prefix}nofollow" ]['initial_options'] = array(
 						/* translators: This indicates that the current post/page is using the default value for its post type, which is NOFOLLOW. */
-						''    => __( 'Default - nofollow', 'all-in-one-seo-pack' ),
-						'off' => __( 'follow', 'all-in-one-seo-pack' ),
-						'on'  => __( 'nofollow', 'all-in-one-seo-pack' ),
+						''    => __( 'Default - nofollow', 'DH-SEO-pack' ),
+						'off' => __( 'follow', 'DH-SEO-pack' ),
+						'on'  => __( 'nofollow', 'DH-SEO-pack' ),
 					);
 				}
 
@@ -4551,7 +4551,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		if ( ! defined( 'AIOSEOP_UNIT_TESTING' ) && $aioseop_dup_counter > 1 ) {
 
 			/* translators: %1$s, %2$s and %3$s are placeholders and should not be translated. %1$s expands to the name of the plugin, DH SEO Pack, %2$s to the name of a filter function and %3$s is replaced with a number. */
-			echo "\n<!-- " . sprintf( __( 'Debug Warning: %1$s meta data was included again from %2$s filter. Called %3$s times!', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME, current_filter(), $aioseop_dup_counter ) . " -->\n";
+			echo "\n<!-- " . sprintf( __( 'Debug Warning: %1$s meta data was included again from %2$s filter. Called %3$s times!', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME, current_filter(), $aioseop_dup_counter ) . " -->\n";
 			if ( ! empty( $old_wp_query ) ) {
 				// Change the query back after we've finished.
 				global $wp_query;
@@ -4579,13 +4579,13 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		echo "[$this->title_start,$this->title_end] ";
 		echo "-->\n";
 		if ( DHSEOPRO ) {
-			echo '<!-- ' . __( 'Debug String', 'all-in-one-seo-pack' ) . ': ' . $aioseop_update_checker->get_verification_code() . " -->\n";
+			echo '<!-- ' . __( 'Debug String', 'DH-SEO-pack' ) . ': ' . $aioseop_update_checker->get_verification_code() . " -->\n";
 		}
 		$blog_page  = aiosp_common::get_blog_page( $post );
 		$save_posts = $posts;
 
 		// This outputs robots meta tags and custom canonical URl on WooCommerce product archive page.
-		// See Github issue https://github.com/awesomemotive/all-in-one-seo-pack/issues/755.
+		// See Github issue https://github.com/awesomemotive/DH-SEO-pack/issues/755.
 		if ( function_exists( 'wc_get_page_id' ) && is_post_type_archive( 'product' ) ) {
 			$post_id = wc_get_page_id( 'shop' );
 			if ( $post_id ) {
@@ -5133,7 +5133,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		foreach ( $tabs as $t ) {
 			if ( $active ) {
 				/* translators: This is the name of the main tab of the DH SEO Pack meta box that appears on the Edit screen. */
-				$title = __( 'Main Settings', 'all-in-one-seo-pack' );
+				$title = __( 'Main Settings', 'DH-SEO-pack' );
 			} else {
 				$title = $t['title'];
 			}
@@ -5195,7 +5195,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			$wp_admin_bar->add_menu(
 				array(
 					'id'    => DHSEO_PLUGIN_DIRNAME,
-					'title' => '<span class="ab-icon aioseop-admin-bar-logo"></span>' . __( 'SEO', 'all-in-one-seo-pack' ) . $notifications,
+					'title' => '<span class="ab-icon aioseop-admin-bar-logo"></span>' . __( 'SEO', 'DH-SEO-pack' ) . $notifications,
 				)
 			);
 
@@ -5204,7 +5204,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 					array(
 						'id'     => 'aioseop-notifications',
 						'parent' => DHSEO_PLUGIN_DIRNAME,
-						'title'  => __( 'Notifications', 'all-in-one-seo-pack' ) . $notifications,
+						'title'  => __( 'Notifications', 'DH-SEO-pack' ) . $notifications,
 						'href'   => $url,
 					)
 				);
@@ -5215,7 +5215,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 					array(
 						'id'     => 'aioseop-settings',
 						'parent' => DHSEO_PLUGIN_DIRNAME,
-						'title'  => __( 'SEO Settings', 'all-in-one-seo-pack' ),
+						'title'  => __( 'SEO Settings', 'DH-SEO-pack' ),
 					)
 				);
 			}
@@ -5224,7 +5224,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				array(
 					'id'     => 'aioseop-settings-general',
 					'parent' => is_admin() ? DHSEO_PLUGIN_DIRNAME : 'aioseop-settings',
-					'title'  => __( 'General Settings', 'all-in-one-seo-pack' ),
+					'title'  => __( 'General Settings', 'DH-SEO-pack' ),
 					'href'   => $url,
 				)
 			);
@@ -5263,7 +5263,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 								array(
 									'id'     => 'aiosp_edit_' . $post->ID,
 									'parent' => DHSEO_PLUGIN_DIRNAME,
-									'title'  => __( 'Edit SEO', 'all-in-one-seo-pack' ),
+									'title'  => __( 'Edit SEO', 'DH-SEO-pack' ),
 									'href'   => get_edit_post_link( $post->ID ) . '#aiosp',
 								)
 							);
@@ -5277,7 +5277,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 							array(
 								'id'     => 'aiosp_edit_' . $post->ID,
 								'parent' => DHSEO_PLUGIN_DIRNAME,
-								'title'  => __( 'Edit SEO', 'all-in-one-seo-pack' ),
+								'title'  => __( 'Edit SEO', 'DH-SEO-pack' ),
 								'href'   => $edit_term_link . '#aiosp',
 							)
 						);
@@ -5291,7 +5291,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			// 	$wp_admin_bar->add_menu(
 			// 		array(
 			// 			'parent' => DHSEO_PLUGIN_DIRNAME,
-			// 			'title'  => __( 'Upgrade to Pro', 'all-in-one-seo-pack' ),
+			// 			'title'  => __( 'Upgrade to Pro', 'DH-SEO-pack' ),
 			// 			'id'     => 'aioseop-pro-upgrade',
 			// 			'href'   => $href,
 			// 			'meta'   => array( 'target' => '_blank' ),
@@ -5478,7 +5478,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		}
 		add_meta_box(
 			'aioseop-support',
-			__( 'Support', 'all-in-one-seo-pack' ),
+			__( 'Support', 'DH-SEO-pack' ),
 			array( 'aiosp_metaboxes', 'display_extra_metaboxes' ),
 			'aioseop_metaboxes',
 			'side',
@@ -5486,7 +5486,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		);
 		add_meta_box(
 			'aioseop-list',
-			__( 'Join Our Mailing List', 'all-in-one-seo-pack' ),
+			__( 'Join Our Mailing List', 'DH-SEO-pack' ),
 			array( 'aiosp_metaboxes', 'display_extra_metaboxes' ),
 			'aioseop_metaboxes',
 			'side',
@@ -5538,7 +5538,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 						$title = $this->plugin_name . ' - ' . $title;
 					}
 					if ( ! empty( $m['help_link'] ) ) {
-						$title .= "<a class='aioseop_help_text_link aioseop_meta_box_help' target='_blank' href='" . $m['help_link'] . "'><span>" . __( 'Help', 'all-in-one-seo-pack' ) . '</span></a>';
+						$title .= "<a class='aioseop_help_text_link aioseop_meta_box_help' target='_blank' href='" . $m['help_link'] . "'><span>" . __( 'Help', 'DH-SEO-pack' ) . '</span></a>';
 					}
 					add_meta_box( $m['id'], $title, $m['callback'], $m['post_type'], $m['context'], $m['priority'], $m['callback_args'] );
 				}

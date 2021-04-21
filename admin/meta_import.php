@@ -22,7 +22,7 @@ if ( class_exists( 'WPSEO_Import_Hooks' ) ) {
 		 *
 		 * @var string $plugin_file
 		 */
-		protected $plugin_file = 'all-in-one-seo-pack/all_in_one_seo_pack.php';
+		protected $plugin_file = 'DH-SEO-pack/all_in_one_seo_pack.php';
 
 		/**
 		 * Deactivate Listener
@@ -46,16 +46,16 @@ if ( class_exists( 'WPSEO_Import_Hooks' ) ) {
 			if ( empty( $aioseop_yst_detected_notice_dismissed ) ) {
 
 				/* translators: %1$s, %2$s and %3$s are placeholders, which means these shouldn't be translated. The first two placeholders are used to add a link to anchor text and the third is replaced with the name of the plugin, DH SEO Pack. */
-				echo '<div class="notice notice-warning row-title is-dismissible yst_notice"><p>', sprintf( esc_html__( 'The plugin Yoast SEO has been detected. Do you want to %1$simport its settings%2$s into %3$s', 'all-in-one-seo-pack' ), sprintf( '<a href="%s">', esc_url( $aiourl ) ), '</a>', AIOSEOP_PLUGIN_NAME ), '</p></div>';
+				echo '<div class="notice notice-warning row-title is-dismissible yst_notice"><p>', sprintf( esc_html__( 'The plugin Yoast SEO has been detected. Do you want to %1$simport its settings%2$s into %3$s', 'DH-SEO-pack' ), sprintf( '<a href="%s">', esc_url( $aiourl ) ), '</a>', AIOSEOP_PLUGIN_NAME ), '</p></div>';
 
 			}
 			// phpcs:disable WordPress.WP.I18n
-			echo '<div class="error"><p>', sprintf( esc_html__( 'The plugin All-In-One-SEO has been detected. Do you want to %1$simport its settings%2$s?', 'wordpress-seo' ), sprintf( '<a href="%s">', esc_url( $yoasturl ) ), '</a>' ), '</p></div>';
+			echo '<div class="error"><p>', sprintf( esc_html__( 'The plugin DH-SEO has been detected. Do you want to %1$simport its settings%2$s?', 'wordpress-seo' ), sprintf( '<a href="%s">', esc_url( $yoasturl ) ), '</a>' ), '</p></div>';
 			// phpcs:enable
 		}
 
 		public function show_deactivate_notice() {
-			echo '<div class="updated"><p>', esc_html__( 'DH SEO has been deactivated', 'all-in-one-seo-pack' ), '</p></div>';
+			echo '<div class="updated"><p>', esc_html__( 'DH SEO has been deactivated', 'DH-SEO-pack' ), '</p></div>';
 		}
 	}
 } else {
@@ -82,7 +82,7 @@ function aiosp_seometa_settings_init() {
 	global $_aiosp_seometa_admin_pagehook;
 
 	// TODO Put this in with the rest of the import/export stuff.
-	$_aiosp_seometa_admin_pagehook = add_submenu_page( 'tools.php', __( 'Import SEO Data', 'all-in-one-seo-pack' ), __( 'SEO Data Import', 'all-in-one-seo-pack' ), 'manage_options', 'aiosp_import', 'aiosp_seometa_admin' );
+	$_aiosp_seometa_admin_pagehook = add_submenu_page( 'tools.php', __( 'Import SEO Data', 'DH-SEO-pack' ), __( 'SEO Data Import', 'DH-SEO-pack' ), 'manage_options', 'aiosp_import', 'aiosp_seometa_admin' );
 }
 add_action( 'admin_menu', 'aiosp_seometa_settings_init' );
 
@@ -100,13 +100,13 @@ function aiosp_seometa_action() {
 	}
 
 	if ( empty( $_REQUEST['platform_old'] ) ) {
-		printf( '<div class="error"><p>%s</p></div>', __( 'Sorry, you can\'t do that. Please choose a platform and then click Analyze or Convert.', 'all-in-one-seo-pack' ) );
+		printf( '<div class="error"><p>%s</p></div>', __( 'Sorry, you can\'t do that. Please choose a platform and then click Analyze or Convert.', 'DH-SEO-pack' ) );
 
 		return;
 	}
 
 	if ( 'DH SEO Pack' === $_REQUEST['platform_old'] ) {
-		printf( '<div class="error"><p>%s</p></div>', __( 'Sorry, you can\'t do that. Please choose a platform and then click Analyze or Convert.', 'all-in-one-seo-pack' ) );
+		printf( '<div class="error"><p>%s</p></div>', __( 'Sorry, you can\'t do that. Please choose a platform and then click Analyze or Convert.', 'DH-SEO-pack' ) );
 
 		return;
 	}
@@ -115,20 +115,20 @@ function aiosp_seometa_action() {
 
 	if ( ! empty( $_REQUEST['analyze'] ) ) {
 
-		printf( '<h3>%s</h3>', __( 'Analysis Results', 'all-in-one-seo-pack' ) );
+		printf( '<h3>%s</h3>', __( 'Analysis Results', 'DH-SEO-pack' ) );
 
 		$response = aiosp_seometa_post_meta_analyze( $_REQUEST['platform_old'], 'DH SEO Pack' );
 		if ( is_wp_error( $response ) ) {
-			printf( '<div class="error"><p>%s</p></div>', __( 'Sorry, something went wrong. Please try again', 'all-in-one-seo-pack' ) );
+			printf( '<div class="error"><p>%s</p></div>', __( 'Sorry, something went wrong. Please try again', 'DH-SEO-pack' ) );
 
 			return;
 		}
 
-		printf( __( '<p>Analyzing records in a %1$s to %2$s conversion&hellip;', 'all-in-one-seo-pack' ), esc_html( $_POST['platform_old'] ), 'DH SEO Pack' );
+		printf( __( '<p>Analyzing records in a %1$s to %2$s conversion&hellip;', 'DH-SEO-pack' ), esc_html( $_POST['platform_old'] ), 'DH SEO Pack' );
 		printf( '<p><b>%d</b> Compatible Records were identified</p>', $response->update );
 		// phpcs:ignore Squiz.Commenting.InlineComment.InvalidEndChar
 		// printf( '<p>%d Compatible Records will be ignored</p>', $response->ignore );
-		printf( '<p><b>%s</b></p>', __( 'Compatible data:', 'all-in-one-seo-pack' ) );
+		printf( '<p><b>%s</b></p>', __( 'Compatible data:', 'DH-SEO-pack' ) );
 		echo '<ol>';
 		foreach ( (array) $response->elements as $element ) {
 			printf( '<li>%s</li>', $element );
@@ -138,11 +138,11 @@ function aiosp_seometa_action() {
 		return;
 	}
 
-	printf( '<h3>%s</h3>', __( 'Conversion Results', 'all-in-one-seo-pack' ) );
+	printf( '<h3>%s</h3>', __( 'Conversion Results', 'DH-SEO-pack' ) );
 
 	$result = aiosp_seometa_post_meta_convert( stripslashes( $_REQUEST['platform_old'] ), 'DH SEO Pack' );
 	if ( is_wp_error( $result ) ) {
-		printf( '<p>%s</p>', __( 'Sorry, something went wrong. Please try again', 'all-in-one-seo-pack' ) );
+		printf( '<p>%s</p>', __( 'Sorry, something went wrong. Please try again', 'DH-SEO-pack' ) );
 
 		return;
 	}
@@ -162,29 +162,29 @@ function aiosp_seometa_admin() {
 	<div class="wrap">
 
 
-		<h1><?php _e( 'Import SEO Settings', 'all-in-one-seo-pack' ); ?></h1>
+		<h1><?php _e( 'Import SEO Settings', 'DH-SEO-pack' ); ?></h1>
 
 		<p><span
-				class="description"><?php printf( __( 'Use the drop down below to choose which plugin or theme you wish to import SEO data from.', 'all-in-one-seo-pack' ) ); ?></span>
+				class="description"><?php printf( __( 'Use the drop down below to choose which plugin or theme you wish to import SEO data from.', 'DH-SEO-pack' ) ); ?></span>
 		</p>
 
 		<p><span
 				class="description">
 				<?php
 				/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
-				printf( sprintf( __( 'Click "Analyze" for a list of SEO data that can be imported into %s, along with the number of records that will be imported.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ) );
+				printf( sprintf( __( 'Click "Analyze" for a list of SEO data that can be imported into %s, along with the number of records that will be imported.', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME ) );
 				?>
 				</span>
 		</p>
 
 		<p>
 			<span class="description">
-				<strong><?php printf( __( 'Please Note: ', 'all-in-one-seo-pack' ) ); ?></strong>
+				<strong><?php printf( __( 'Please Note: ', 'DH-SEO-pack' ) ); ?></strong>
 				<?php
 				/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 				printf(
 					sprintf(
-						__( 'Some plugins and themes do not share similar data, or they store data in a non-standard way. If we cannot import this data, it will remain unchanged in your database. Any compatible SEO data will be displayed for you to review. If a post or page already has SEO data in %s, we will not import data from another plugin/theme.', 'all-in-one-seo-pack' ),
+						__( 'Some plugins and themes do not share similar data, or they store data in a non-standard way. If we cannot import this data, it will remain unchanged in your database. Any compatible SEO data will be displayed for you to review. If a post or page already has SEO data in %s, we will not import data from another plugin/theme.', 'DH-SEO-pack' ),
 						AIOSEOP_PLUGIN_NAME
 					)
 				);
@@ -193,11 +193,11 @@ function aiosp_seometa_admin() {
 		</p>
 
 		<p><span
-				class="description"><?php printf( __( 'Click "Convert" to perform the import. After the import has completed, you will be alerted to how many records were imported, and how many records had to be ignored, based on the criteria above.', 'all-in-one-seo-pack' ) ); ?></span>
+				class="description"><?php printf( __( 'Click "Convert" to perform the import. After the import has completed, you will be alerted to how many records were imported, and how many records had to be ignored, based on the criteria above.', 'DH-SEO-pack' ) ); ?></span>
 		</p>
 
 		<p><span
-				class="row-title"><?php printf( esc_html__( 'Before performing an import, we strongly recommend that you make a backup of your site. We use and recommend %1$s VaultPress by Jetpack %2$s for backups.', 'all-in-one-seo-pack' ), sprintf( '<a target="_blank" href="%s">', esc_url( 'https://www.wpbeginner.com/refer/jetpack/' ) ), '</a>' ); ?></span>
+				class="row-title"><?php printf( esc_html__( 'Before performing an import, we strongly recommend that you make a backup of your site. We use and recommend %1$s VaultPress by Jetpack %2$s for backups.', 'DH-SEO-pack' ), sprintf( '<a target="_blank" href="%s">', esc_url( 'https://www.wpbeginner.com/refer/jetpack/' ) ), '</a>' ); ?></span>
 		</p>
 
 
@@ -207,11 +207,11 @@ function aiosp_seometa_admin() {
 
 			$platform_old = ( ! isset( $_POST['platform_old'] ) ) ? '' : $_POST['platform_old'];
 
-			_e( 'Import SEO data from:', 'all-in-one-seo-pack' );
-			echo '<select name="platform_old" aria-label="' . __( 'Choose the platform you want to import SEO data from', 'all-in-one-seo-pack' ) . '">';
-			printf( '<option value="">%s</option>', __( 'Choose platform:', 'all-in-one-seo-pack' ) );
+			_e( 'Import SEO data from:', 'DH-SEO-pack' );
+			echo '<select name="platform_old" aria-label="' . __( 'Choose the platform you want to import SEO data from', 'DH-SEO-pack' ) . '">';
+			printf( '<option value="">%s</option>', __( 'Choose platform:', 'DH-SEO-pack' ) );
 
-			printf( '<optgroup label="%s">', __( 'Plugins', 'all-in-one-seo-pack' ) );
+			printf( '<optgroup label="%s">', __( 'Plugins', 'DH-SEO-pack' ) );
 			foreach ( $_aiosp_seometa_plugins as $platform => $data ) {
 				if ( 'DH SEO Pack' !== $platform ) {
 					printf( '<option value="%s" %s>%s</option>', $platform, selected( $platform, $platform_old, 0 ), $platform );
@@ -219,7 +219,7 @@ function aiosp_seometa_admin() {
 			}
 			printf( '</optgroup>' );
 
-			printf( '<optgroup label="%s">', __( 'Themes', 'all-in-one-seo-pack' ) );
+			printf( '<optgroup label="%s">', __( 'Themes', 'DH-SEO-pack' ) );
 			foreach ( $_aiosp_seometa_themes as $platform => $data ) {
 				printf( '<option value="%s" %s>%s</option>', $platform, selected( $platform, $platform_old, 0 ), $platform );
 			}
@@ -233,12 +233,12 @@ function aiosp_seometa_admin() {
 				type="submit"
 				class="button-secondary"
 				name="analyze"
-				value="<?php _e( 'Analyze', 'all-in-one-seo-pack' ); ?>"
+				value="<?php _e( 'Analyze', 'DH-SEO-pack' ); ?>"
 				aria-label="Analyze"/>
 			<input
 				type="submit"
 				class="button-primary"
-				value="<?php _e( 'Convert', 'all-in-one-seo-pack' ); ?>"
+				value="<?php _e( 'Convert', 'DH-SEO-pack' ); ?>"
 				aria-label="Convert"/>
 
 		</form>

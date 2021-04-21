@@ -3,11 +3,11 @@
  *
  * @author DH SEO Team.
  * @copyright http://semperplugins.com
- * @package All-in-One-SEO-Pack.
+ * @package DH-SEO-Pack.
  */
 
-[class*="all-in-one-seo-pack"] #wpbody-content,
-.all-in-one-seo_page_aiosp_opengraph #wpbody-content {
+[class*="DH-SEO-pack"] #wpbody-content,
+.DH-SEO_page_aiosp_opengraph #wpbody-content {
     min-width: 900px;
 }
 .form-table.aioseop {
@@ -395,11 +395,11 @@
 	width: 100%;
 }
 
-body.all-in-one-seo_page_all-in-one-seo-pack-aioseop_feature_manager .aioseop_settings_left {
+body.DH-SEO_page_DH-SEO-pack-aioseop_feature_manager .aioseop_settings_left {
 	margin-top: 20px;
 }
 
-body.all-in-one-seo_page_all-in-one-seo-pack-pro-aioseop_feature_manager .aioseop_settings_left {
+body.DH-SEO_page_DH-SEO-pack-pro-aioseop_feature_manager .aioseop_settings_left {
 	margin-top: 20px;
 }
 
@@ -517,7 +517,7 @@ div.aioseop_feature {
 }
 
 #aioseop_coming_soon .free.flag,
-.all-in-one-seo_page_all-in-one-seo-pack-pro-modules-aioseop_feature_manager .aioseop_feature .free.flag {
+.DH-SEO_page_DH-SEO-pack-pro-modules-aioseop_feature_manager .aioseop_feature .free.flag {
 	display: none;
 }
 
@@ -526,7 +526,7 @@ div.aioseop_feature {
 	margin-top: -30px;
 }
 
-.all-in-one-seo_page_all-in-one-seo-pack-pro-modules-aioseop_feature_manager #aioseop_coming_soon .flag.pro {
+.DH-SEO_page_DH-SEO-pack-pro-modules-aioseop_feature_manager #aioseop_coming_soon .flag.pro {
 	display: none;
 }
 
@@ -1592,62 +1592,62 @@ div#aiosp_sitemap_status_metabox .toggle-indicator {
 * Styling for jQuery UI Datepicker in Safari
 *
 */
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div {
 	background-color: #fff;
 	padding: 15px;
 	border: 1px solid #8d96a0;
 	border-radius: 4px;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div .ui-datepicker-prev {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div .ui-datepicker-prev {
 	float: left;
 	text-align: left;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div .ui-datepicker-prev:before {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div .ui-datepicker-prev:before {
 	content: '\2190 ';
 	padding-right: 2px;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div .ui-datepicker-next {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div .ui-datepicker-next {
 	float: right;
 	text-align: right;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div .ui-datepicker-next:after {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div .ui-datepicker-next:after {
 	content: '\2192 ';
 	padding-left: 2px;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div .ui-datepicker-title {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div .ui-datepicker-title {
 	clear: both;
 	text-align: center;
 	font-weight: bold;
 	padding: 10px 0;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div table.ui-datepicker-calendar {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div table.ui-datepicker-calendar {
 	border: 1px solid #007cba;
 	border-collapse: collapse;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div table.ui-datepicker-calendar thead {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div table.ui-datepicker-calendar thead {
 	background-color: #f1f1f1;
 	border-bottom: 1px solid #8d96a0;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div table.ui-datepicker-calendar thead th,
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div table.ui-datepicker-calendar td {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div table.ui-datepicker-calendar thead th,
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div table.ui-datepicker-calendar td {
 	width: 2rem;
 	height: 2rem;
 	text-align: center;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div table.ui-datepicker-calendar td a {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div table.ui-datepicker-calendar td a {
 	text-decoration: none;
 }
 
-body[class*="all-in-one-seo_page_all-in-one-seo-pack"] #ui-datepicker-div table.ui-datepicker-calendar td a:hover {
+body[class*="DH-SEO_page_DH-SEO-pack"] #ui-datepicker-div table.ui-datepicker-calendar td a:hover {
 	border: 1px solid #8d96a0;
 	padding: 5px 7px;
 }

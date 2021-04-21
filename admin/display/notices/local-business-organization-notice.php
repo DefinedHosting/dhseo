@@ -15,14 +15,14 @@ function aioseoLocalBusinessOrganizationNotice() {
 	return array(
 		'slug'           => 'local_business_organization',
 		'delay_time'     => 0,
-		'message'        => __( 'Your site is currently set to represent a Person. In order to use Local Business schema, you must set your site to represent an Organization.', 'all-in-one-seo-pack' ),
+		'message'        => __( 'Your site is currently set to represent a Person. In order to use Local Business schema, you must set your site to represent an Organization.', 'DH-SEO-pack' ),
 		'class'          => 'notice-warning',
 		'target'         => 'site',
 		'screens'        => aioseop_get_admin_screens(),
 		'action_options' => array(
 			array(
 				'time'    => 0,
-				'text'    => __( 'Go to General Settings menu', 'all-in-one-seo-pack' ),
+				'text'    => __( 'Go to General Settings menu', 'DH-SEO-pack' ),
 				'link'    => $menuPath,
 				'new_tab' => false,
 				'dismiss' => false,

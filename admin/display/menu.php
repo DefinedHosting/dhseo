@@ -51,8 +51,8 @@ class AIOSEOPAdminMenus {
 
 		// add_submenu_page(
 		// 	$menu_slug,
-		// 	sprintf( __( 'About %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ),
-		// 	__( 'About Us', 'all-in-one-seo-pack' ),
+		// 	sprintf( __( 'About %s', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME ),
+		// 	__( 'About Us', 'DH-SEO-pack' ),
 		// 	apply_filters( 'manage_aiosp', 'aiosp_manage_seo' ),
 		// 	'aioseop-about',
 		// 	array( 'AIOSEOP_About', 'init' ),
@@ -65,7 +65,7 @@ class AIOSEOPAdminMenus {
 		//
 		//
 		// $url          = aioseop_get_utm_url( 'admin-menu' );
-		// $upgrade_text = __( 'Upgrade to Pro', 'all-in-one-seo-pack' );
+		// $upgrade_text = __( 'Upgrade to Pro', 'DH-SEO-pack' );
 		// $submenu[ DHSEO_PLUGIN_DIRNAME . '/aioseop_class.php' ][] = array(
 		// 	"<span class='upgrade_menu_link'>$upgrade_text</span>",
 		// 	'manage_options',

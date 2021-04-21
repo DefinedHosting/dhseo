@@ -5,7 +5,7 @@
  * Handles adding, updating, and removing notices. Then handles activating or
  * deactivating those notices site-wide or user based.
  *
- * @link https://wordpress.org/plugins/all-in-one-seo-pack/
+ * @link https://wordpress.org/plugins/DH-SEO-pack/
  *
  * @package All_in_One_SEO_Pack
  * @since 3.0
@@ -143,7 +143,7 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 		 * @since 3.4.0
 		 */
 		private $excluded_screens = array(
-			'About Us' => 'all-in-one-seo_page_aioseop-about',
+			'About Us' => 'DH-SEO_page_aioseop-about',
 		);
 
 		/**
@@ -570,7 +570,7 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 		public function action_options_defaults() {
 			return array(
 				'time'    => 0,
-				'text'    => __( 'Dismiss', 'all-in-one-seo-pack' ),
+				'text'    => __( 'Dismiss', 'DH-SEO-pack' ),
 				'link'    => '#',
 				'new_tab' => true,
 				'dismiss' => true,
@@ -1139,7 +1139,7 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 		public function ajax_notice_action() {
 			check_ajax_referer( 'aioseop_ajax_notice' );
 			if ( ! current_user_can( 'aiosp_manage_seo' ) ) {
-				wp_send_json_error( __( "User doesn't have `aiosp_manage_seo` capabilities.", 'all-in-one-seo-pack' ) );
+				wp_send_json_error( __( "User doesn't have `aiosp_manage_seo` capabilities.", 'DH-SEO-pack' ) );
 			}
 			// Notice (Slug) => (Action_Options) Index.
 			$notice_slug  = null;
@@ -1162,10 +1162,10 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 			}
 			if ( empty( $notice_slug ) ) {
 				/* Translators: Displays the hardcoded slug that is missing. */
-				wp_send_json_error( sprintf( __( 'Missing values from `%s`.', 'all-in-one-seo-pack' ), 'notice_slug' ) );
+				wp_send_json_error( sprintf( __( 'Missing values from `%s`.', 'DH-SEO-pack' ), 'notice_slug' ) );
 			} elseif ( empty( $action_index ) && 0 !== (int) $action_index ) {
 				/* Translators: Displays the hardcoded action index that is missing. */
-				wp_send_json_error( sprintf( __( 'Missing values from `%s`.', 'all-in-one-seo-pack' ), 'action_index' ) );
+				wp_send_json_error( sprintf( __( 'Missing values from `%s`.', 'DH-SEO-pack' ), 'action_index' ) );
 			}
 
 			$action_options            = $this->action_options_defaults();
@@ -1186,7 +1186,7 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 			}
 
 			$this->obj_update_options();
-			wp_send_json_success( __( 'Notice updated successfully.', 'all-in-one-seo-pack' ) );
+			wp_send_json_success( __( 'Notice updated successfully.', 'DH-SEO-pack' ) );
 		}
 
 		/**
@@ -1197,7 +1197,7 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 		public function ajax_remote_notice_action() {
 			check_ajax_referer( 'aioseop_ajax_notice' );
 			if ( ! current_user_can( 'aiosp_manage_seo' ) ) {
-				wp_send_json_error( __( "User doesn't have `aiosp_manage_seo` capabilities.", 'all-in-one-seo-pack' ) );
+				wp_send_json_error( __( "User doesn't have `aiosp_manage_seo` capabilities.", 'DH-SEO-pack' ) );
 			}
 
 			$remote_notice_id  = null;
@@ -1211,13 +1211,13 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 			}
 			if ( empty( $remote_notice_id ) ) {
 				/* Translators: Displays the hardcoded ID that is missing. */
-				wp_send_json_error( sprintf( __( 'Missing values from `%s`.', 'all-in-one-seo-pack' ), 'remote_notice_id' ) );
+				wp_send_json_error( sprintf( __( 'Missing values from `%s`.', 'DH-SEO-pack' ), 'remote_notice_id' ) );
 			}
 
 			$this->dismissed_notices[ 'remote_' . $remote_notice_id ] = time();
 
 			$this->obj_update_options();
-			wp_send_json_success( __( 'Notice updated successfully.', 'all-in-one-seo-pack' ) );
+			wp_send_json_success( __( 'Notice updated successfully.', 'DH-SEO-pack' ) );
 		}
 
 	}

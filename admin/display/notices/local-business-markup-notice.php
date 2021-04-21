@@ -15,14 +15,14 @@ function aioseoLocalBusinessMarkupNotice() {
 	return array(
 		'slug'           => 'local_business_markup',
 		'delay_time'     => 0,
-		'message'        => __( "You've enabled the Local Business SEO module, but all Schema markup (including Local Business schema) is currently disabled.", 'all-in-one-seo-pack' ),
+		'message'        => __( "You've enabled the Local Business SEO module, but all Schema markup (including Local Business schema) is currently disabled.", 'DH-SEO-pack' ),
 		'class'          => 'notice-warning',
 		'target'         => 'site',
 		'screens'        => aioseop_get_admin_screens(),
 		'action_options' => array(
 			array(
 				'time'    => 0,
-				'text'    => __( 'Go to General Settings menu', 'all-in-one-seo-pack' ),
+				'text'    => __( 'Go to General Settings menu', 'DH-SEO-pack' ),
 				'link'    => $menuPath,
 				'new_tab' => false,
 				'dismiss' => false,

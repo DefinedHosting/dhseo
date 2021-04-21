@@ -11,10 +11,10 @@
 function aioseoDeprecatedAdditionalHeadersSettings() {
 	global $aioseop_options;
 	$settings = array_filter( array(
-		__( 'Additional Post Headers', 'all-in-one-seo-pack' )       => $aioseop_options['aiosp_post_meta_tags'],
-		__( 'Additional Page Headers', 'all-in-one-seo-pack' )       => $aioseop_options['aiosp_page_meta_tags'],
-		__( 'Additional Front Page Headers', 'all-in-one-seo-pack' ) => $aioseop_options['aiosp_front_meta_tags'],
-		__( 'Additional Posts Page Headers', 'all-in-one-seo-pack' ) => $aioseop_options['aiosp_home_meta_tags']
+		__( 'Additional Post Headers', 'DH-SEO-pack' )       => $aioseop_options['aiosp_post_meta_tags'],
+		__( 'Additional Page Headers', 'DH-SEO-pack' )       => $aioseop_options['aiosp_page_meta_tags'],
+		__( 'Additional Front Page Headers', 'DH-SEO-pack' ) => $aioseop_options['aiosp_front_meta_tags'],
+		__( 'Additional Posts Page Headers', 'DH-SEO-pack' ) => $aioseop_options['aiosp_home_meta_tags']
 	));
 
 	if ( ! count( $settings ) ) {
@@ -23,7 +23,7 @@ function aioseoDeprecatedAdditionalHeadersSettings() {
 
 	$message = sprintf( __( 'The Additional Headers settings have been deprecated and removed from %1$s. 
 	You are seeing this message because you may have been using these settings. We recommend you use the Insert Headers and Footers plugin from WPBeginner instead. 
-	Below you can find details of the settings that you were using:', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME );
+	Below you can find details of the settings that you were using:', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME );
 	
 	$content = "<p>$message<p/><ul>";
 	foreach ( $settings as $name => $value ) {
@@ -47,7 +47,7 @@ function aioseoDeprecatedAdditionalHeadersSettings() {
 		'action_options' => array(
 			array(
 				'time'    => 0,
-				'text'    => __( 'Install Headers and Footers plugin', 'all-in-one-seo-pack' ),
+				'text'    => __( 'Install Headers and Footers plugin', 'DH-SEO-pack' ),
 				'link'    => admin_url( "plugin-install.php?s=insert+headers+and+footers&tab=search&type=term" ),
 				'new_tab' => false,
 				'dismiss' => false,

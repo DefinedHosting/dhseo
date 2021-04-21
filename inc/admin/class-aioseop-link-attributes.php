@@ -3,7 +3,7 @@
  * Extends the Gutenberg Editor and Classic Editor with extra rich text features.
  *
  * @since 3.4.0
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  */
 
 /**
@@ -37,15 +37,15 @@ class AIOSEOP_Link_Attributes {
 			'wplink',
 			'aioseopL10n',
 			array(
-				'update'         => __( 'Update', 'all-in-one-seo-pack' ),
-				'save'           => __( 'Add Link', 'all-in-one-seo-pack' ),
-				'noTitle'        => __( '(no title)', 'all-in-one-seo-pack' ),
-				'labelTitle'     => __( 'Title', 'all-in-one-seo-pack' ),
-				'noMatchesFound' => __( 'No results found.', 'all-in-one-seo-pack' ),
-				'linkInserted'   => __( 'Link has been inserted.', 'all-in-one-seo-pack' ),
-				'noFollow'       => __( '&nbsp;Add <code>rel="nofollow"</code> to link', 'all-in-one-seo-pack' ),
-				'sponsored'      => __( '&nbsp;Add <code>rel="sponsored"</code> to link', 'all-in-one-seo-pack' ),
-				'ugc'            => __( '&nbsp;Add <code>rel="UGC"</code> to link', 'all-in-one-seo-pack' ),
+				'update'         => __( 'Update', 'DH-SEO-pack' ),
+				'save'           => __( 'Add Link', 'DH-SEO-pack' ),
+				'noTitle'        => __( '(no title)', 'DH-SEO-pack' ),
+				'labelTitle'     => __( 'Title', 'DH-SEO-pack' ),
+				'noMatchesFound' => __( 'No results found.', 'DH-SEO-pack' ),
+				'linkInserted'   => __( 'Link has been inserted.', 'DH-SEO-pack' ),
+				'noFollow'       => __( '&nbsp;Add <code>rel="nofollow"</code> to link', 'DH-SEO-pack' ),
+				'sponsored'      => __( '&nbsp;Add <code>rel="sponsored"</code> to link', 'DH-SEO-pack' ),
+				'ugc'            => __( '&nbsp;Add <code>rel="UGC"</code> to link', 'DH-SEO-pack' ),
 			)
 		);
 	}

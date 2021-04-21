@@ -72,14 +72,14 @@ class AIOSEOP_About {
 				'requestUrl'  => admin_url( 'admin-ajax.php' ),
 				'nonce'       => wp_create_nonce( 'aioseop-am-plugins' ),
 				'aioseopL10n' => array(
-					'active'            => __( 'Active', 'all-in-one-seo-pack' ),
-					'inactive'          => __( 'Inactive', 'all-in-one-seo-pack' ),
-					'activated'         => __( 'Activated', 'all-in-one-seo-pack' ),
-					'install'           => __( 'Install Plugin', 'all-in-one-seo-pack' ),
-					'activate'          => __( 'Activate', 'all-in-one-seo-pack' ),
-					'install_failed'    => __( 'Installation Failed', 'all-in-one-seo-pack' ),
-					'activation_failed' => __( 'Activation Failed', 'all-in-one-seo-pack' ),
-					'wait'              => __( 'Please wait...', 'all-in-one-seo-pack' ),
+					'active'            => __( 'Active', 'DH-SEO-pack' ),
+					'inactive'          => __( 'Inactive', 'DH-SEO-pack' ),
+					'activated'         => __( 'Activated', 'DH-SEO-pack' ),
+					'install'           => __( 'Install Plugin', 'DH-SEO-pack' ),
+					'activate'          => __( 'Activate', 'DH-SEO-pack' ),
+					'install_failed'    => __( 'Installation Failed', 'DH-SEO-pack' ),
+					'activation_failed' => __( 'Activation Failed', 'DH-SEO-pack' ),
+					'wait'              => __( 'Please wait...', 'DH-SEO-pack' ),
 				),
 			);
 
@@ -156,7 +156,7 @@ class AIOSEOP_About {
 			if ( ! is_wp_error( $activated ) ) {
 				wp_send_json_success(
 					array(
-						'msg'          => __( 'Plugin installed & activated.', 'all-in-one-seo-pack' ),
+						'msg'          => __( 'Plugin installed & activated.', 'DH-SEO-pack' ),
 						'is_activated' => true,
 						'basename'     => $plugin_basename,
 					)
@@ -164,7 +164,7 @@ class AIOSEOP_About {
 			} else {
 				wp_send_json_success(
 					array(
-						'msg'          => __( 'Plugin installed.', 'all-in-one-seo-pack' ),
+						'msg'          => __( 'Plugin installed.', 'DH-SEO-pack' ),
 						'is_activated' => false,
 						'basename'     => $plugin_basename,
 					)
@@ -197,7 +197,7 @@ class AIOSEOP_About {
 			if ( ! is_wp_error( $activate ) ) {
 				wp_send_json_success(
 					array(
-						'msg' => __( 'Plugin activated.', 'all-in-one-seo-pack' ),
+						'msg' => __( 'Plugin activated.', 'DH-SEO-pack' ),
 					)
 				);
 			}
@@ -280,7 +280,7 @@ class AIOSEOP_About {
 					<?php
 					printf(
 						/* translators: %1$s: "DH SEO Pack" */
-						__( 'Welcome to %1$s, the original SEO plugin for WordPress. At %2$s, we build software that helps you rank your website in search results and gain organic traffic.', 'all-in-one-seo-pack' ),
+						__( 'Welcome to %1$s, the original SEO plugin for WordPress. At %2$s, we build software that helps you rank your website in search results and gain organic traffic.', 'DH-SEO-pack' ),
 						AIOSEOP_PLUGIN_NAME,
 						AIOSEOP_PLUGIN_NAME
 					);
@@ -288,17 +288,17 @@ class AIOSEOP_About {
 				</h3>
 
 				<p>
-					<?php esc_html_e( 'Over the years, we found that most other WordPress SEO plugins were bloated, buggy, slow, and very hard to use. So we designed our plugin as an easy and powerful tool.', 'all-in-one-seo-pack' ); ?>
+					<?php esc_html_e( 'Over the years, we found that most other WordPress SEO plugins were bloated, buggy, slow, and very hard to use. So we designed our plugin as an easy and powerful tool.', 'DH-SEO-pack' ); ?>
 				</p>
 				<p>
-					<?php esc_html_e( 'Our goal is to take the pain out of optimizing your website for search engines.', 'all-in-one-seo-pack' ); ?>
+					<?php esc_html_e( 'Our goal is to take the pain out of optimizing your website for search engines.', 'DH-SEO-pack' ); ?>
 				</p>
 				<p>
 					<?php
 					printf(
 						wp_kses(
 							/* translators: %1$s: "DH SEO Pack" - %2$s: hyperlink - %3$s: hyperlink - %4$s: hyperlink */
-							__( '%1$s is brought to you by Awesome Motive, the same team that’s behind the largest WordPress resource site, <a href="%2$s" target="_blank" rel="noopener noreferrer">WPBeginner</a>, the most popular lead-generation software, <a href="%3$s" target="_blank" rel="noopener noreferrer">OptinMonster</a>, the best WordPress analytics plugin, <a href="%4$s" target="_blank" rel="noopener noreferrer">MonsterInsights</a> and many more.', 'all-in-one-seo-pack' ),
+							__( '%1$s is brought to you by Awesome Motive, the same team that’s behind the largest WordPress resource site, <a href="%2$s" target="_blank" rel="noopener noreferrer">WPBeginner</a>, the most popular lead-generation software, <a href="%3$s" target="_blank" rel="noopener noreferrer">OptinMonster</a>, the best WordPress analytics plugin, <a href="%4$s" target="_blank" rel="noopener noreferrer">MonsterInsights</a> and many more.', 'DH-SEO-pack' ),
 							array(
 								'a' => array(
 									'href'   => array(),
@@ -315,15 +315,15 @@ class AIOSEOP_About {
 					?>
 				</p>
 				<p>
-					<?php esc_html_e( 'Yup, we know a thing or two about building awesome products that customers love.', 'all-in-one-seo-pack' ); ?>
+					<?php esc_html_e( 'Yup, we know a thing or two about building awesome products that customers love.', 'DH-SEO-pack' ); ?>
 				</p>
 			</div>
 
 			<div class="aioseop-admin-column-40 aioseop-admin-column-last">
 				<figure>
-					<img src="<?php echo AIOSEOP_PLUGIN_URL; ?>images/about/about-team.jpg" alt="<?php esc_attr_e( 'The Awesome Motive Team photo', 'all-in-one-seo-pack' ); ?>">
+					<img src="<?php echo AIOSEOP_PLUGIN_URL; ?>images/about/about-team.jpg" alt="<?php esc_attr_e( 'The Awesome Motive Team photo', 'DH-SEO-pack' ); ?>">
 					<figcaption>
-						<?php esc_html_e( 'The Awesome Motive Team', 'all-in-one-seo-pack' ); ?><br>
+						<?php esc_html_e( 'The Awesome Motive Team', 'DH-SEO-pack' ); ?><br>
 					</figcaption>
 				</figure>
 			</div>
@@ -366,7 +366,7 @@ class AIOSEOP_About {
 									<strong>
 										<?php
 										printf(
-											esc_html__( 'Status: %s', 'all-in-one-seo-pack' ),
+											esc_html__( 'Status: %s', 'DH-SEO-pack' ),
 											'<span class="status-label ' . esc_attr( $plugin_data['status_class'] ) . '">' . wp_kses_post( $plugin_data['status_text'] ) . '</span>'
 										);
 										?>
@@ -396,16 +396,16 @@ class AIOSEOP_About {
 		$next_license = 'Pro';
 
 		$license_features = array(
-			'seo'                => esc_html__( 'Search Engine Optimization (SEO)', 'all-in-one-seo-pack' ),
-			'open_graph'         => esc_html__( 'Social Meta (Open Graph Markup)', 'all-in-one-seo-pack' ),
-			'woocommerce'        => esc_html__( 'WooCommerce Integration', 'all-in-one-seo-pack' ),
-			'xml_sitemap'        => esc_html__( 'XML Sitemap', 'all-in-one-seo-pack' ),
-			'video_sitemap'      => esc_html__( 'Video XML Sitemap', 'all-in-one-seo-pack' ),
-			'news_sitemap'       => esc_html__( 'News Sitemap', 'all-in-one-seo-pack' ),
-			'google_tag_manager' => esc_html__( 'Google Tag Manager', 'all-in-one-seo-pack' ),
-			'image_seo'          => esc_html__( 'Image SEO', 'all-in-one-seo-pack' ),
-			'schema'             => esc_html__( 'Schema Rich Snippets', 'all-in-one-seo-pack' ),
-			'support'            => esc_html__( 'Customer Support', 'all-in-one-seo-pack' ),
+			'seo'                => esc_html__( 'Search Engine Optimization (SEO)', 'DH-SEO-pack' ),
+			'open_graph'         => esc_html__( 'Social Meta (Open Graph Markup)', 'DH-SEO-pack' ),
+			'woocommerce'        => esc_html__( 'WooCommerce Integration', 'DH-SEO-pack' ),
+			'xml_sitemap'        => esc_html__( 'XML Sitemap', 'DH-SEO-pack' ),
+			'video_sitemap'      => esc_html__( 'Video XML Sitemap', 'DH-SEO-pack' ),
+			'news_sitemap'       => esc_html__( 'News Sitemap', 'DH-SEO-pack' ),
+			'google_tag_manager' => esc_html__( 'Google Tag Manager', 'DH-SEO-pack' ),
+			'image_seo'          => esc_html__( 'Image SEO', 'DH-SEO-pack' ),
+			'schema'             => esc_html__( 'Schema Rich Snippets', 'DH-SEO-pack' ),
+			'support'            => esc_html__( 'Customer Support', 'DH-SEO-pack' ),
 		);
 
 		?>
@@ -418,7 +418,7 @@ class AIOSEOP_About {
 			<p class="centered">
 				<?php
 					/* translators: %s: "DH SEO Pack" */
-					printf( __( 'Get the most out of %s by upgrading to Pro and unlocking all of the powerful features.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME );
+					printf( __( 'Get the most out of %s by upgrading to Pro and unlocking all of the powerful features.', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME );
 				?>
 			</p>
 		</div>
@@ -428,7 +428,7 @@ class AIOSEOP_About {
 			<div class="aioseop-admin-about-section-hero-main aioseop-admin-columns">
 				<div class="aioseop-admin-column-33">
 					<h3 class="no-margin">
-						<?php esc_html_e( 'Feature', 'all-in-one-seo-pack' ); ?>
+						<?php esc_html_e( 'Feature', 'DH-SEO-pack' ); ?>
 					</h3>
 				</div>
 				<div class="aioseop-admin-column-33">
@@ -490,7 +490,7 @@ class AIOSEOP_About {
 
 						printf(
 							/* translators: %s: "DH SEO Pack Pro" */
-							sprintf( __( 'Get %s Today and Unlock all the Powerful Features', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
+							sprintf( __( 'Get %s Today and Unlock all the Powerful Features', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
 							esc_html( $next_license )
 						);
 					?>
@@ -502,7 +502,7 @@ class AIOSEOP_About {
 					echo wp_kses(
 						sprintf(
 							/* translators: %s: "DH SEO Pack Lite" */
-							__( 'Bonus: %s users get <span class="price-20-off">30%% off regular price</span>, automatically applied at checkout.', 'all-in-one-seo-pack' ),
+							__( 'Bonus: %s users get <span class="price-20-off">30%% off regular price</span>, automatically applied at checkout.', 'DH-SEO-pack' ),
 							AIOSEOP_PLUGIN_NAME . '&nbsp;Lite'
 						),
 						array(
@@ -528,15 +528,15 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'partial',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Limited Support', 'all-in-one-seo-pack' ) . '</strong>',
-						esc_html__( 'Posts, Pages and Custom Post Types Only', 'all-in-one-seo-pack' ),
+						'<strong>' . esc_html__( 'Limited Support', 'DH-SEO-pack' ) . '</strong>',
+						esc_html__( 'Posts, Pages and Custom Post Types Only', 'DH-SEO-pack' ),
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Complete Support', 'all-in-one-seo-pack' ) . '</strong>',
-						esc_html__( 'Posts, Pages, Custom Post Types + Categories, Tags and Custom Taxonomies', 'all-in-one-seo-pack' ),
+						'<strong>' . esc_html__( 'Complete Support', 'DH-SEO-pack' ) . '</strong>',
+						esc_html__( 'Posts, Pages, Custom Post Types + Categories, Tags and Custom Taxonomies', 'DH-SEO-pack' ),
 					),
 				),
 			),
@@ -544,15 +544,15 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'partial',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Limited Support', 'all-in-one-seo-pack' ) . '</strong>',
-						esc_html__( 'Posts, Pages and Custom Post Types Only', 'all-in-one-seo-pack' ),
+						'<strong>' . esc_html__( 'Limited Support', 'DH-SEO-pack' ) . '</strong>',
+						esc_html__( 'Posts, Pages and Custom Post Types Only', 'DH-SEO-pack' ),
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Complete Support', 'all-in-one-seo-pack' ) . '</strong>',
-						esc_html__( 'Posts, Pages, Custom Post Types + Categories, Tags and Custom Taxonomies', 'all-in-one-seo-pack' ),
+						'<strong>' . esc_html__( 'Complete Support', 'DH-SEO-pack' ) . '</strong>',
+						esc_html__( 'Posts, Pages, Custom Post Types + Categories, Tags and Custom Taxonomies', 'DH-SEO-pack' ),
 					),
 				),
 			),
@@ -560,15 +560,15 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'partial',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Limited Support', 'all-in-one-seo-pack' ) . '</strong>',
-						esc_html__( 'WooCommerce Products Only', 'all-in-one-seo-pack' ),
+						'<strong>' . esc_html__( 'Limited Support', 'DH-SEO-pack' ) . '</strong>',
+						esc_html__( 'WooCommerce Products Only', 'DH-SEO-pack' ),
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Complete Support', 'all-in-one-seo-pack' ) . '</strong>',
-						esc_html__( 'WooCommerce Products, Product Categories, Product Tags and Other Product Attributes', 'all-in-one-seo-pack' ),
+						'<strong>' . esc_html__( 'Complete Support', 'DH-SEO-pack' ) . '</strong>',
+						esc_html__( 'WooCommerce Products, Product Categories, Product Tags and Other Product Attributes', 'DH-SEO-pack' ),
 					),
 				),
 			),
@@ -576,15 +576,15 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'partial',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Limited Support', 'all-in-one-seo-pack' ) . '</strong>',
-						esc_html__( 'Basic Control of Sitemap Priority & Frequency', 'all-in-one-seo-pack' ),
+						'<strong>' . esc_html__( 'Limited Support', 'DH-SEO-pack' ) . '</strong>',
+						esc_html__( 'Basic Control of Sitemap Priority & Frequency', 'DH-SEO-pack' ),
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Complete Support', 'all-in-one-seo-pack' ) . '</strong>',
-						esc_html__( 'Granular Control of Sitemap Priority & Frequency for Each Post, Page, Category, Tag, etc.', 'all-in-one-seo-pack' ),
+						'<strong>' . esc_html__( 'Complete Support', 'DH-SEO-pack' ) . '</strong>',
+						esc_html__( 'Granular Control of Sitemap Priority & Frequency for Each Post, Page, Category, Tag, etc.', 'DH-SEO-pack' ),
 					),
 				),
 			),
@@ -592,13 +592,13 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'none',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Not Available', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Not Available', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Submit Your Videos to Search Engines', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Submit Your Videos to Search Engines', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 			),
@@ -606,13 +606,13 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'none',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Not Available', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Not Available', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Submit Your Latest News Stories to Google News (Business & Agency plans only)', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Submit Your Latest News Stories to Google News (Business & Agency plans only)', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 			),
@@ -620,13 +620,13 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'none',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Not Available', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Not Available', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Control The Title & Alt Tag Attribute of Your Images (Business & Agency plans only)', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Control The Title & Alt Tag Attribute of Your Images (Business & Agency plans only)', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 			),
@@ -634,13 +634,13 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'none',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Not Available', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Not Available', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Connect to Google Tag Manager for Advanced Analytics', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Connect to Google Tag Manager for Advanced Analytics', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 			),
@@ -648,22 +648,22 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'partial',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Limited Support', 'all-in-one-seo-pack' ) . '</strong>',
-						esc_html__( 'Posts, Pages, Categories and Tags Only', 'all-in-one-seo-pack' ),
+						'<strong>' . esc_html__( 'Limited Support', 'DH-SEO-pack' ) . '</strong>',
+						esc_html__( 'Posts, Pages, Categories and Tags Only', 'DH-SEO-pack' ),
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Complete Support', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Complete Support', 'DH-SEO-pack' ) . '</strong>',
 						sprintf(
 							'<ul><li>%1$s</li><li>%2$s</li><li>%3$s</li></ul>',
-							esc_html__( 'Posts, Pages, Categories, Tags', 'all-in-one-seo-pack' ),
-							esc_html__( 'Breadcrumb Navigation', 'all-in-one-seo-pack' ),
+							esc_html__( 'Posts, Pages, Categories, Tags', 'DH-SEO-pack' ),
+							esc_html__( 'Breadcrumb Navigation', 'DH-SEO-pack' ),
 							sprintf(
 								'%1$s <strong>%2$s</strong>',
-								esc_html__( 'Local Business schema', 'all-in-one-seo-pack' ),
-								esc_html__( '(Business & Agency plans only)', 'all-in-one-seo-pack' )
+								esc_html__( 'Local Business schema', 'DH-SEO-pack' ),
+								esc_html__( '(Business & Agency plans only)', 'DH-SEO-pack' )
 							)
 						),
 					),
@@ -673,13 +673,13 @@ class AIOSEOP_About {
 				'lite' => array(
 					'status' => 'partial',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Limited Support', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Limited Support', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 				'pro'  => array(
 					'status' => 'full',
 					'text'   => array(
-						'<strong>' . esc_html__( 'Priority Support', 'all-in-one-seo-pack' ) . '</strong>',
+						'<strong>' . esc_html__( 'Priority Support', 'DH-SEO-pack' ) . '</strong>',
 					),
 				),
 			),
@@ -710,13 +710,13 @@ class AIOSEOP_About {
 			'google-analytics-for-wordpress/googleanalytics.php' => array(
 				'icon' => $images_url . 'plugin-mi.png',
 				'name' => 'MonsterInsights',
-				'desc' => esc_html__( 'MonsterInsights makes it “effortless” to properly connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business.', 'all-in-one-seo-pack' ),
+				'desc' => esc_html__( 'MonsterInsights makes it “effortless” to properly connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business.', 'DH-SEO-pack' ),
 				'url'  => 'https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.zip',
 				'pro'  => array(
 					'plug' => 'google-analytics-premium/googleanalytics-premium.php',
 					'icon' => $images_url . 'plugin-mi.png',
 					'name' => 'MonsterInsights Pro',
-					'desc' => esc_html__( 'MonsterInsights makes it “effortless” to properly connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business.', 'all-in-one-seo-pack' ),
+					'desc' => esc_html__( 'MonsterInsights makes it “effortless” to properly connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business.', 'DH-SEO-pack' ),
 					'url'  => 'https://www.monsterinsights.com/?utm_source=proplugin&utm_medium=pluginheader&utm_campaign=pluginurl&utm_content=7%2E0%2E0',
 					'act'  => 'go-to-url',
 				),
@@ -725,20 +725,20 @@ class AIOSEOP_About {
 			'optinmonster/optin-monster-wp-api.php' => array(
 				'icon' => $images_url . 'plugin-om.png',
 				'name' => 'OptinMonster',
-				'desc' => esc_html__( 'Our high-converting optin forms like Exit-Intent® popups, Fullscreen Welcome Mats, and Scroll boxes help you dramatically boost conversions and get more email subscribers.', 'all-in-one-seo-pack' ),
+				'desc' => esc_html__( 'Our high-converting optin forms like Exit-Intent® popups, Fullscreen Welcome Mats, and Scroll boxes help you dramatically boost conversions and get more email subscribers.', 'DH-SEO-pack' ),
 				'url'  => 'https://downloads.wordpress.org/plugin/optinmonster.zip',
 			),
 
 			'wp-mail-smtp/wp_mail_smtp.php'         => array(
 				'icon' => $images_url . 'plugin-smtp.png',
 				'name' => 'WP Mail SMTP',
-				'desc' => esc_html__( 'Make sure your website\'s emails reach the inbox. Our goal is to make email deliverability easy and reliable. Trusted by over 1 million websites.', 'all-in-one-seo-pack' ),
+				'desc' => esc_html__( 'Make sure your website\'s emails reach the inbox. Our goal is to make email deliverability easy and reliable. Trusted by over 1 million websites.', 'DH-SEO-pack' ),
 				'url'  => 'https://downloads.wordpress.org/plugin/wp-mail-smtp.zip',
 				'pro'  => array(
 					'plug' => 'wp-mail-smtp-pro/wp_mail_smtp.php',
 					'icon' => $images_url . 'plugin-smtp.png',
 					'name' => 'WP Mail SMTP Pro',
-					'desc' => esc_html__( 'Make sure your website\'s emails reach the inbox. Our goal is to make email deliverability easy and reliable. Trusted by over 1 million websites.', 'all-in-one-seo-pack' ),
+					'desc' => esc_html__( 'Make sure your website\'s emails reach the inbox. Our goal is to make email deliverability easy and reliable. Trusted by over 1 million websites.', 'DH-SEO-pack' ),
 					'url'  => 'https://wpmailsmtp.com/pricing/',
 					'act'  => 'go-to-url',
 				),
@@ -747,20 +747,20 @@ class AIOSEOP_About {
 			'wpforms-lite/wpforms.php'              => array(
 				'icon' => $images_url . 'plugin-wpforms.png',
 				'name' => 'WPForms',
-				'desc' => esc_html__( 'WPForms allows you to create beautiful contact forms for your site in minutes, not hours!', 'all-in-one-seo-pack' ),
+				'desc' => esc_html__( 'WPForms allows you to create beautiful contact forms for your site in minutes, not hours!', 'DH-SEO-pack' ),
 				'url'  => 'https://downloads.wordpress.org/plugin/wpforms-lite.zip',
 			),
 
 			'rafflepress/rafflepress.php'           => array(
 				'icon' => $images_url . 'plugin-rp.png',
 				'name' => 'RafflePress',
-				'desc' => esc_html__( 'Turn your visitors into brand ambassadors! Easily grow your email list, website traffic, and social media followers with powerful viral giveaways & contests.', 'all-in-one-seo-pack' ),
+				'desc' => esc_html__( 'Turn your visitors into brand ambassadors! Easily grow your email list, website traffic, and social media followers with powerful viral giveaways & contests.', 'DH-SEO-pack' ),
 				'url'  => 'https://downloads.wordpress.org/plugin/rafflepress.zip',
 				'pro'  => array(
 					'plug' => 'rafflepress-pro/rafflepress-pro.php',
 					'icon' => $images_url . 'plugin-rp.png',
 					'name' => 'RafflePress Pro',
-					'desc' => esc_html__( 'Turn your visitors into brand ambassadors! Easily grow your email list, website traffic, and social media followers with powerful viral giveaways & contests.', 'all-in-one-seo-pack' ),
+					'desc' => esc_html__( 'Turn your visitors into brand ambassadors! Easily grow your email list, website traffic, and social media followers with powerful viral giveaways & contests.', 'DH-SEO-pack' ),
 					'url'  => 'https://rafflepress.com/pricing/',
 					'act'  => 'go-to-url',
 				),
@@ -803,21 +803,21 @@ class AIOSEOP_About {
 
 				// Status text/status.
 				$plugin_data['status_class'] = 'status-active';
-				$plugin_data['status_text']  = esc_html__( 'Active', 'all-in-one-seo-pack' );
+				$plugin_data['status_text']  = esc_html__( 'Active', 'DH-SEO-pack' );
 
 				// Button text/status.
 				$plugin_data['action_class'] = $plugin_data['status_class'] . ' button button-secondary disabled';
-				$plugin_data['action_text']  = esc_html__( 'Activated', 'all-in-one-seo-pack' );
+				$plugin_data['action_text']  = esc_html__( 'Activated', 'DH-SEO-pack' );
 				$plugin_data['plugin_src']   = esc_attr( $plugin );
 			} else {
 
 				// Status text/status.
 				$plugin_data['status_class'] = 'status-inactive';
-				$plugin_data['status_text']  = esc_html__( 'Inactive', 'all-in-one-seo-pack' );
+				$plugin_data['status_text']  = esc_html__( 'Inactive', 'DH-SEO-pack' );
 
 				// Button text/status.
 				$plugin_data['action_class'] = $plugin_data['status_class'] . ' button button-secondary';
-				$plugin_data['action_text']  = esc_html__( 'Activate', 'all-in-one-seo-pack' );
+				$plugin_data['action_text']  = esc_html__( 'Activate', 'DH-SEO-pack' );
 				$plugin_data['plugin_src']   = esc_attr( $plugin );
 			}
 		} else {
@@ -827,10 +827,10 @@ class AIOSEOP_About {
 			if ( isset( $details['act'] ) && 'go-to-url' === $details['act'] ) {
 				$plugin_data['status_class'] = 'status-go-to-url';
 			}
-			$plugin_data['status_text'] = esc_html__( 'Not Installed', 'all-in-one-seo-pack' );
+			$plugin_data['status_text'] = esc_html__( 'Not Installed', 'DH-SEO-pack' );
 			// Button text/status.
 			$plugin_data['action_class'] = $plugin_data['status_class'] . ' button button-primary';
-			$plugin_data['action_text']  = esc_html__( 'Install Plugin', 'all-in-one-seo-pack' );
+			$plugin_data['action_text']  = esc_html__( 'Install Plugin', 'DH-SEO-pack' );
 			$plugin_data['plugin_src']   = esc_url( $details['url'] );
 		}
 

@@ -265,7 +265,7 @@ jQuery( document ).ready(
          * @see http://www.webmaster-source.com/2013/02/06/using-the-wordpress-3-5-media-uploader-in-your-plugin-or-theme/
          * @since ?
          * @since 2.3.11.2 Use WP 3.5 new media uploader
-         * @since 2.3.13 Fixed issue #[740](https://github.com/awesomemotive/all-in-one-seo-pack/issues/740)
+         * @since 2.3.13 Fixed issue #[740](https://github.com/awesomemotive/DH-SEO-pack/issues/740)
          *
          */
         jQuery(document).ready(
@@ -342,7 +342,7 @@ jQuery( document ).ready(
 	 * @param $e.
 	 * @return boolean.
 	 */
-		jQuery( ".all-in-one-seo_page_all-in-one-seo-pack-modules-aioseop_feature_manager #aiosp_settings_form .aioseop_settings_left" )
+		jQuery( ".DH-SEO_page_DH-SEO-pack-modules-aioseop_feature_manager #aiosp_settings_form .aioseop_settings_left" )
 		.delegate(
 			"input[name='Submit']", "click", function( e ) {
 				e.preventDefault();
@@ -355,7 +355,7 @@ jQuery( document ).ready(
 	 * @param $e.
 	 * @return boolean.
 	 */
-		jQuery( ".all-in-one-seo_page_all-in-one-seo-pack-modules-aioseop_feature_manager #aiosp_settings_form" )
+		jQuery( ".DH-SEO_page_DH-SEO-pack-modules-aioseop_feature_manager #aiosp_settings_form" )
 		.delegate(
 			"input[name='Submit']", "click", function( e ) {
 				e.preventDefault();
@@ -384,7 +384,7 @@ jQuery( document ).ready(
 	 * @param $e.
 	 * @return boolean.
 	 */
-		jQuery( ".all-in-one-seo_page_all-in-one-seo-pack-pro-modules-aioseop_feature_manager #aiosp_settings_form .aioseop_settings_left" )
+		jQuery( ".DH-SEO_page_DH-SEO-pack-pro-modules-aioseop_feature_manager #aiosp_settings_form .aioseop_settings_left" )
 		.delegate(
 			"input[name='Submit']", "click", function( e ) {
 				e.preventDefault();
@@ -397,7 +397,7 @@ jQuery( document ).ready(
 	 * @param $e.
 	 * @return boolean.
 	 */
-		jQuery( ".all-in-one-seo_page_all-in-one-seo-pack-pro-modules-aioseop_feature_manager #aiosp_settings_form" )
+		jQuery( ".DH-SEO_page_DH-SEO-pack-pro-modules-aioseop_feature_manager #aiosp_settings_form" )
 		.delegate(
 			"input[name='Submit']", "click", function( e ) {
 				e.preventDefault();

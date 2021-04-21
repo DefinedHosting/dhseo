@@ -96,7 +96,7 @@ jQuery(function($){ // eslint-disable-line max-statements
 	function aioseopCountChars() {
 		let countCharsFields;
 		switch (currentPage) {
-			case 'toplevel_page_all-in-one-seo-packp/aioseop_class':
+			case 'toplevel_page_DH-SEO-packp/aioseop_class':
 			case 'aiosp_opengraph_description': {
 				countCharsFields = [
 					aioseopDefineTitleField,
@@ -247,7 +247,7 @@ jQuery(function($){ // eslint-disable-line max-statements
 				titleField = 'aiosp_home_title';
 				break;
 			}
-			case 'all-in-one-seo_page_aiosp_opengraph': {
+			case 'DH-SEO_page_aiosp_opengraph': {
 				titleField = 'aiosp_opengraph_hometitle';
 				break;
 			}
@@ -284,7 +284,7 @@ jQuery(function($){ // eslint-disable-line max-statements
 				descriptionField = 'aiosp_home_description';
 				break;
 			}
-			case 'all-in-one-seo_page_aiosp_opengraph': {
+			case 'DH-SEO_page_aiosp_opengraph': {
 				descriptionField = 'aiosp_opengraph_description';
 				break;
 			}

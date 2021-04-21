@@ -4,7 +4,7 @@
  *
  * Includes all code for the robots meta tag.
  *
- * @package All-in-One-SEO-Pack
+ * @package DH-SEO-Pack
  */
 
 /**

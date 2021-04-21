@@ -44,14 +44,14 @@ class aiosp_metaboxes {
 						wp_parse_str( $_SERVER['QUERY_STRING'], $qa );
 						$qa['aioseop_reset_notices'] = 1;
 						$url                         = '?' . build_query( $qa );
-						echo '<p><a href="' . $url . '">' . __( 'Reset Dismissed Notices', 'all-in-one-seo-pack' ) . '</a></p>';
+						echo '<p><a href="' . $url . '">' . __( 'Reset Dismissed Notices', 'DH-SEO-pack' ) . '</a></p>';
 					}
 					?>
 					<?php if ( ! DHSEOPRO ) : ?>
 						<p>
 							<strong>
 								<?php
-								_e( 'Upgrade to our premium version and unlock:', 'all-in-one-seo-pack' );
+								_e( 'Upgrade to our premium version and unlock:', 'DH-SEO-pack' );
 								?>
 							</strong>
 						</p>
@@ -84,7 +84,7 @@ class aiosp_metaboxes {
 
 								/* translators: %1$s, %2$s, etc. are placeholders and shouldn't be translated. %1$s expands to the number of languages DH SEO Pack has been translated into, %2$s to the name of the plugin, $3%s to the percentage translated of the current language, $4%s to the language name, %5$s and %6$s to anchor tags with link to the translation page at translate.wordpress.org  */
 								printf(
-									__( '%1$s has been translated into %2$s languages, but currently the %3$s translation is only %4$s percent complete. %5$sClick here%6$s to help get it to 100 percent.', 'all-in-one-seo-pack' ),
+									__( '%1$s has been translated into %2$s languages, but currently the %3$s translation is only %4$s percent complete. %5$sClick here%6$s to help get it to 100 percent.', 'DH-SEO-pack' ),
 									AIOSEOP_PLUGIN_NAME,
 									$aiosp_trans->translated_count,
 									$maybe_native_name,
@@ -112,17 +112,17 @@ class aiosp_metaboxes {
 						<?php endif; ?>
 						method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
 						target="_blank">
-						<h2><?php _e( 'Join our mailing list for tips, tricks, and WordPress secrets.', 'all-in-one-seo-pack' ); ?></h2>
+						<h2><?php _e( 'Join our mailing list for tips, tricks, and WordPress secrets.', 'DH-SEO-pack' ); ?></h2>
 						<p>
-							<i><?php _e( 'Sign up today and receive a free copy of the e-book 5 SEO Tips for WordPress ($39 value).', 'all-in-one-seo-pack' ); ?></i>
+							<i><?php _e( 'Sign up today and receive a free copy of the e-book 5 SEO Tips for WordPress ($39 value).', 'DH-SEO-pack' ); ?></i>
 						</p>
 						<p>
 							<input
 									type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL"
-									placeholder="<?php _e( 'Email Address', 'all-in-one-seo-pack' ); ?>" aria-label="<?php _e( 'Enter your email address', 'all-in-one-seo-pack' ); ?>">
+									placeholder="<?php _e( 'Email Address', 'DH-SEO-pack' ); ?>" aria-label="<?php _e( 'Enter your email address', 'DH-SEO-pack' ); ?>">
 							<input
-									type="submit" value="<?php _e( 'Subscribe', 'all-in-one-seo-pack' ); ?>" name="subscribe" id="mc-embedded-subscribe"
-									class="button-primary" aria-label="<?php _e( 'Subscribe to our mailing list', 'all-in-one-seo-pack' ); ?>">
+									type="submit" value="<?php _e( 'Subscribe', 'DH-SEO-pack' ); ?>" name="subscribe" id="mc-embedded-subscribe"
+									class="button-primary" aria-label="<?php _e( 'Subscribe to our mailing list', 'DH-SEO-pack' ); ?>">
 						</p>
 					</form>
 				</div>
@@ -138,30 +138,30 @@ class aiosp_metaboxes {
 							href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/documentation/' , array( 'utm_campaign' => 'support-box', 'utm_content' => 'documentation' ) ); ?>">
 								<?php
 								/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
-								printf( __( 'Read the %s user guide', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME );
+								printf( __( 'Read the %s user guide', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME );
 								?>
 							</a>
 						</li>
 						<li>
 							<div class="aioseop_icon aioseop-icon-support"></div>
 							<a target="_blank" rel="noopener noreferrer"
-							title="<?php _e( 'DH SEO Pro Plugin Support Forum', 'all-in-one-seo-pack' ); ?>"
-							href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/support/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'support' ) ); ?>"><?php _e( 'Access our Premium Support', 'all-in-one-seo-pack' ); ?></a>
+							title="<?php _e( 'DH SEO Pro Plugin Support Forum', 'DH-SEO-pack' ); ?>"
+							href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/support/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'support' ) ); ?>"><?php _e( 'Access our Premium Support', 'DH-SEO-pack' ); ?></a>
 						</li>
 						<li>
 							<div class="aioseop_icon aioseop-icon-cog"></div>
-							<a target="_blank" rel="noopener noreferrer" title="<?php _e( 'DH SEO Pro Plugin Changelog', 'all-in-one-seo-pack' ); ?>"
-								href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/all-in-one-seo-pack-changelog/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'changelog', ) ); ?>"><?php _e( 'View the Changelog', 'all-in-one-seo-pack' ); ?></a>
+							<a target="_blank" rel="noopener noreferrer" title="<?php _e( 'DH SEO Pro Plugin Changelog', 'DH-SEO-pack' ); ?>"
+								href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/DH-SEO-pack-changelog/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'changelog', ) ); ?>"><?php _e( 'View the Changelog', 'DH-SEO-pack' ); ?></a>
 						</li>
 						<li>
 							<div class="aioseop_icon aioseop-icon-youtube"></div>
 							<a target="_blank" rel="noopener noreferrer"
-							href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/doc-type/video/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'video') ); ?>"><?php _e( 'Watch video tutorials', 'all-in-one-seo-pack' ); ?></a>
+							href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/doc-type/video/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'video') ); ?>"><?php _e( 'Watch video tutorials', 'DH-SEO-pack' ); ?></a>
 						</li>
 						<li>
 							<div class="aioseop_icon aioseop-icon-book"></div>
 							<a target="_blank" rel="noopener noreferrer"
-							href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/documentation/quick-start-guide/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'quick-start' ) ); ?>"><?php _e( 'Getting started? Read the Beginners Guide', 'all-in-one-seo-pack' ); ?></a>
+							href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/documentation/quick-start-guide/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'quick-start' ) ); ?>"><?php _e( 'Getting started? Read the Beginners Guide', 'DH-SEO-pack' ); ?></a>
 						</li>
 					</ul>
 				</div>
@@ -183,29 +183,29 @@ class aiosp_metaboxes {
 
 		echo '<ul>';
 
-		echo '<li>' . __( 'SEO for Categories, Tags and Custom Taxonomies', 'all-in-one-seo-pack' ) . '</li>';
-		echo '<li>' . __( 'Social Meta for Categories, Tags and Custom Taxonomies', 'all-in-one-seo-pack' ) . '</li>';
+		echo '<li>' . __( 'SEO for Categories, Tags and Custom Taxonomies', 'DH-SEO-pack' ) . '</li>';
+		echo '<li>' . __( 'Social Meta for Categories, Tags and Custom Taxonomies', 'DH-SEO-pack' ) . '</li>';
 
 		if ( class_exists( 'WooCommerce' ) ) {
-			echo '<li>' . __( 'Advanced support for WooCommerce', 'all-in-one-seo-pack' ) . '</li>';
+			echo '<li>' . __( 'Advanced support for WooCommerce', 'DH-SEO-pack' ) . '</li>';
 		} else {
-			echo '<li>' . __( 'Advanced support for eCommerce', 'all-in-one-seo-pack' ) . '</li>';
+			echo '<li>' . __( 'Advanced support for eCommerce', 'DH-SEO-pack' ) . '</li>';
 		}
 
-		echo '<li>' . __( 'Video SEO Module', 'all-in-one-seo-pack' ) . '</li>';
-		echo '<li>' . __( 'Image SEO Module', 'all-in-one-seo-pack' ) . '</li>';
-		echo '<li>' . __( 'Advanced Google Analytics tracking', 'all-in-one-seo-pack' ) . '</li>';
-		echo '<li>' . __( 'Support for Google Tag Manager', 'all-in-one-seo-pack' ) . '</li>';
-		// echo '<li>' . __( 'Support for Local Business Schema', 'all-in-one-seo-pack' ) . '</li>'.
-		echo '<li>' . __( 'Greater control over display settings', 'all-in-one-seo-pack' ) . '</li>';
-		echo '<li>' . __( 'Access to Video Screencasts', 'all-in-one-seo-pack' ) . '</li>';
-		echo '<li>' . __( 'Access to Premium Support', 'all-in-one-seo-pack' ) . '</li>';
-		echo '<li>' . __( 'Access to Knowledge Center', 'all-in-one-seo-pack' ) . '</li>';
+		echo '<li>' . __( 'Video SEO Module', 'DH-SEO-pack' ) . '</li>';
+		echo '<li>' . __( 'Image SEO Module', 'DH-SEO-pack' ) . '</li>';
+		echo '<li>' . __( 'Advanced Google Analytics tracking', 'DH-SEO-pack' ) . '</li>';
+		echo '<li>' . __( 'Support for Google Tag Manager', 'DH-SEO-pack' ) . '</li>';
+		// echo '<li>' . __( 'Support for Local Business Schema', 'DH-SEO-pack' ) . '</li>'.
+		echo '<li>' . __( 'Greater control over display settings', 'DH-SEO-pack' ) . '</li>';
+		echo '<li>' . __( 'Access to Video Screencasts', 'DH-SEO-pack' ) . '</li>';
+		echo '<li>' . __( 'Access to Premium Support', 'DH-SEO-pack' ) . '</li>';
+		echo '<li>' . __( 'Access to Knowledge Center', 'DH-SEO-pack' ) . '</li>';
 
 		echo '</ul>';
 
 		/* translators: %s: "DH SEO Pack Pro" */
-		$text = sprintf( esc_html__( 'Get %s Now', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
+		$text = sprintf( esc_html__( 'Get %s Now', 'DH-SEO-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 
 		$link = sprintf(
 			'<a href="%s" class="button button-primary button-hero button-pro-cta" target="_blank">%s</a>',

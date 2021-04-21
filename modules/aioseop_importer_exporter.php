@@ -19,7 +19,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 		 * All_in_One_SEO_Pack_Importer_Exporter constructor.
 		 */
 		function __construct() {
-			$this->name     = __( 'Importer & Exporter', 'all-in-one-seo-pack' ); // Human-readable name of the module.
+			$this->name     = __( 'Importer & Exporter', 'DH-SEO-pack' ); // Human-readable name of the module.
 			$this->prefix   = 'aiosp_importer_exporter_';                         // option prefix.
 			$this->file     = __FILE__;
 			$this->warnings = array();
@@ -28,21 +28,21 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 
 			$this->default_options = array(
 				'import_submit'      => array(
-					'name'    => __( 'Import', 'all-in-one-seo-pack' ),
+					'name'    => __( 'Import', 'DH-SEO-pack' ),
 					'default' => '',
 					'type'    => 'file',
 					'class'   => 'aioseop_file_upload',
 					'save'    => false,
 				),
 				'export_choices'     => array(
-					'name'            => __( 'Export Settings', 'all-in-one-seo-pack' ),
+					'name'            => __( 'Export Settings', 'DH-SEO-pack' ),
 					'type'            => 'multicheckbox',
 					'initial_options' => array(
 						1 => ''
 					),
 				),
 				'export_post_types'  => array(
-					'name'            => __( 'Export Post Types', 'all-in-one-seo-pack' ),
+					'name'            => __( 'Export Post Types', 'DH-SEO-pack' ),
 					'default'         => array(
 						'post' => 'post',
 						'page' => 'page',
@@ -55,7 +55,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 				'import_export_help' => array(
 					'type'    => 'html',
 					'label'   => 'none',
-					'default' => __( '<strong>Note:</strong> If Export Settings is checked, the General Settings, Feature Manager settings, and the following active modules will have their settings exported:', 'all-in-one-seo-pack' ) . '<br />',
+					'default' => __( '<strong>Note:</strong> If Export Settings is checked, the General Settings, Feature Manager settings, and the following active modules will have their settings exported:', 'DH-SEO-pack' ) . '<br />',
 				),
 			);
 
@@ -93,13 +93,13 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 		 * @return array
 		 */
 		function filter_submit( $submit ) {
-			$submit['Submit']['value'] = __( 'Import', 'all-in-one-seo-pack' ) . ' &raquo;';
+			$submit['Submit']['value'] = __( 'Import', 'DH-SEO-pack' ) . ' &raquo;';
 
 			return array(
 				'export_submit' => array(
 					'type'  => 'submit',
 					'class' => 'button-primary',
-					'value' => __( 'Export', 'all-in-one-seo-pack' ) . ' &raquo;',
+					'value' => __( 'Export', 'DH-SEO-pack' ) . ' &raquo;',
 				),
 			) + $submit;
 		}
@@ -145,10 +145,10 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 					}
 					$this->default_options['import_export_help']['default'] .= "\n</ul>\n";
 				} else {
-					$this->default_options['import_export_help']['default'] .= __( 'There are no other modules currently loaded!', 'all-in-one-seo-pack' );
+					$this->default_options['import_export_help']['default'] .= __( 'There are no other modules currently loaded!', 'DH-SEO-pack' );
 				}
 			}
-			$this->default_options['import_export_help']['default'] .=  __( 'You may change this by activating or deactivating modules in the Feature Manager.', 'all-in-one-seo-pack' );
+			$this->default_options['import_export_help']['default'] .=  __( 'You may change this by activating or deactivating modules in the Feature Manager.', 'DH-SEO-pack' );
 			$this->update_options();
 			if ( ! empty( $_REQUEST['export_submit'] ) ) {
 				$this->do_importer_exporter();
@@ -429,7 +429,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 									$this->warnings[] = sprintf(
 										__(
 											'<b>Warning:</b> Line not matched: <b>"%1$s"</b>, On Line: <b>%2$s</b>',
-											'all-in-one-seo-pack'
+											'DH-SEO-pack'
 										),
 										$line,
 										$line_number
@@ -479,7 +479,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 													$post_warning = sprintf(
 														__(
 															'<b>Warning:</b> This following post could not be found: <b>"%s"</b>',
-															'all-in-one-seo-pack'
+															'DH-SEO-pack'
 														),
 														$target_title
 													);
@@ -533,7 +533,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 						$settings_file = 'settings_aioseop.ini';
 						/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 						$buf = '; ' . sprintf(
-							__( 'Settings export file for %s', 'all-in-one-seo-pack' ),
+							__( 'Settings export file for %s', 'DH-SEO-pack' ),
 							AIOSEOP_PLUGIN_NAME
 						) . "\n";
 
@@ -584,7 +584,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 					throw new Exception(
 						__(
 							'<b>Security warning:</b> Your file looks compromised. Please check the file for any script-injection.',
-							'all-in-one-seo-pack'
+							'DH-SEO-pack'
 						)
 					);
 				}

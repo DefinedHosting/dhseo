@@ -3,7 +3,7 @@
  *
  * AIOSEOP Updates class.
  *
- * @author All in One SEO Team.
+ * @author DH SEO Team.
  * @copyright https://semperplugins.com
  * @version 1.0.0
  */

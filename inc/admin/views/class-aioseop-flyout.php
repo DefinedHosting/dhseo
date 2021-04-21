@@ -127,7 +127,7 @@ class AIOSEOP_Flyout {
 
 		$items = array(
 			array(
-				'title'         => sprintf( __( 'Upgrade to All in One SEO Pack Pro', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
+				'title'         => sprintf( __( 'Upgrade to DH SEO Pack Pro', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
 				'url'           => aioseop_get_utm_url( $utm_campaign, 'WordPress', $medium ) . '&utm_content=Upgrade',
 				'icon'          => 'star-solid',
 				'bgcolor'       => '#E1772F',

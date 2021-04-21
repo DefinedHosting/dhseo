@@ -82,7 +82,7 @@ class aiosp_metaboxes {
 									$maybe_native_name = $aiosp_trans->name;
 								}
 
-								/* translators: %1$s, %2$s, etc. are placeholders and shouldn't be translated. %1$s expands to the number of languages All in One SEO Pack has been translated into, %2$s to the name of the plugin, $3%s to the percentage translated of the current language, $4%s to the language name, %5$s and %6$s to anchor tags with link to the translation page at translate.wordpress.org  */
+								/* translators: %1$s, %2$s, etc. are placeholders and shouldn't be translated. %1$s expands to the number of languages DH SEO Pack has been translated into, %2$s to the name of the plugin, $3%s to the percentage translated of the current language, $4%s to the language name, %5$s and %6$s to anchor tags with link to the translation page at translate.wordpress.org  */
 								printf(
 									__( '%1$s has been translated into %2$s languages, but currently the %3$s translation is only %4$s percent complete. %5$sClick here%6$s to help get it to 100 percent.', 'all-in-one-seo-pack' ),
 									AIOSEOP_PLUGIN_NAME,
@@ -137,7 +137,7 @@ class aiosp_metaboxes {
 							<a target="_blank" rel="noopener noreferrer"
 							href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/documentation/' , array( 'utm_campaign' => 'support-box', 'utm_content' => 'documentation' ) ); ?>">
 								<?php
-								/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+								/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 								printf( __( 'Read the %s user guide', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME );
 								?>
 							</a>
@@ -145,12 +145,12 @@ class aiosp_metaboxes {
 						<li>
 							<div class="aioseop_icon aioseop-icon-support"></div>
 							<a target="_blank" rel="noopener noreferrer"
-							title="<?php _e( 'All in One SEO Pro Plugin Support Forum', 'all-in-one-seo-pack' ); ?>"
+							title="<?php _e( 'DH SEO Pro Plugin Support Forum', 'all-in-one-seo-pack' ); ?>"
 							href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/support/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'support' ) ); ?>"><?php _e( 'Access our Premium Support', 'all-in-one-seo-pack' ); ?></a>
 						</li>
 						<li>
 							<div class="aioseop_icon aioseop-icon-cog"></div>
-							<a target="_blank" rel="noopener noreferrer" title="<?php _e( 'All in One SEO Pro Plugin Changelog', 'all-in-one-seo-pack' ); ?>"
+							<a target="_blank" rel="noopener noreferrer" title="<?php _e( 'DH SEO Pro Plugin Changelog', 'all-in-one-seo-pack' ); ?>"
 								href="<?php echo aioseop_add_url_utm( 'https://semperplugins.com/all-in-one-seo-pack-changelog/', array( 'utm_campaign' => 'support-box', 'utm_content' => 'changelog', ) ); ?>"><?php _e( 'View the Changelog', 'all-in-one-seo-pack' ); ?></a>
 						</li>
 						<li>
@@ -204,7 +204,7 @@ class aiosp_metaboxes {
 
 		echo '</ul>';
 
-		/* translators: %s: "All in One SEO Pack Pro" */
+		/* translators: %s: "DH SEO Pack Pro" */
 		$text = sprintf( esc_html__( 'Get %s Now', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 
 		$link = sprintf(

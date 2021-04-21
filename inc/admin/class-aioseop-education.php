@@ -264,7 +264,7 @@ class AIOSEOP_Education {
 
 		check_ajax_referer( 'license-box', '_ajax_nonce' );
 
-		/* translators: %s: "All in One SEO Pack" */
+		/* translators: %s: "DH SEO Pack" */
 		$link_title = sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 
 		$link = sprintf(
@@ -282,11 +282,11 @@ class AIOSEOP_Education {
 		);
 
 		$license_box_content = array(
-			/* translators: %s: "All in One SEO Pack" */
+			/* translators: %s: "DH SEO Pack" */
 			'p1' => sprintf( __( "You're using %s - no license needed. Enjoy! 🙂", 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Lite' ),
 			/* translators: %s: "upgrading to Pro" */
 			'p2' => sprintf( __( 'To unlock more features consider %s', 'all-in-one-seo-pack' ), $link ),
-			/* translators: %1$s: "All in One SEO Pack" - %2$s: "30% off" */
+			/* translators: %1$s: "DH SEO Pack" - %2$s: "30% off" */
 			'p3' => sprintf( __( 'As a valued %1$s user you receive %2$s, automatically applied at checkout!', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME, $span ),
 		);
 
@@ -322,7 +322,7 @@ class AIOSEOP_Education {
 			return;
 		}
 
-		/* translators: %s: "All in One SEO Pack" */
+		/* translators: %s: "DH SEO Pack" */
 		$link_title = sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 
 		$link = sprintf(
@@ -334,7 +334,7 @@ class AIOSEOP_Education {
 		);
 
 		$message = sprintf(
-			/* translators: %1$s: "ALl in One SEO Pack" - %2$s: "upgrading to Pro" */
+			/* translators: %1$s: "DH SEO Pack" - %2$s: "upgrading to Pro" */
 			__( 'You’re using %1$s. To unlock more features consider %2$s.', 'all-in-one-seo-pack' ),
 			AIOSEOP_PLUGIN_NAME . '&nbsp;Lite',
 			$link
@@ -370,7 +370,7 @@ class AIOSEOP_Education {
 			return;
 		}
 
-		/* translators: %s: "All in One SEO Pack" */
+		/* translators: %s: "DH SEO Pack" */
 		$header = sprintf( __( 'Get %s and Unlock all the Powerful Features', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 		$p1     = sprintf(
 			'Thanks for being a loyal %1$s user. Did you know that our premium version also supports video sitemaps?
@@ -393,7 +393,7 @@ class AIOSEOP_Education {
 			)
 		);
 
-		/* translators: %s: "All in One SEO Pack" */
+		/* translators: %s: "DH SEO Pack" */
 		$link_title = sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );
 
 		$link = sprintf(
@@ -436,7 +436,7 @@ class AIOSEOP_Education {
 		// 	'<p class="aioseop-news-sitemap-upsell">%1$s<br/><a href="%2$s" title="%3$s" target="_blank">%4$s</a></p>',
 		// 	$message,
 		// 	aioseop_get_utm_url( 'news-sitemap-upsell' ),
-		// 	/* translators: %s: "All in One SEO Pack Pro" */
+		// 	/* translators: %s: "DH SEO Pack Pro" */
 		// 	sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
 		// 	$link
 		// );
@@ -482,7 +482,7 @@ class AIOSEOP_Education {
 		// printf(
 		// 	'<a class="aioseop-sitemap-prio-upsell" href="%1$s" title="%2$s" target="_blank">%3$s</a>',
 		// 	aioseop_get_utm_url( 'sitemap-prio-upsell' ),
-		// 	/* translators: %s: "All in One SEO Pack Pro" */
+		// 	/* translators: %s: "DH SEO Pack Pro" */
 		// 	sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
 		// 	__( 'Upgrade to Pro to unlock this feature.', 'all-in-one-seo-pack' )
 		// );
@@ -704,7 +704,7 @@ class AIOSEOP_Education {
 		);
 
 		printf(
-			/* translators: %1$s: "All in One SEO Pack" - %2$s: This placeholder will be replaced with star icons. - %3$s: "WordPress.org" - %4$s: "All in One SEO Pack" */
+			/* translators: %1$s: "DH SEO Pack" - %2$s: This placeholder will be replaced with star icons. - %3$s: "WordPress.org" - %4$s: "DH SEO Pack" */
 			__( 'Please rate %1$s %2$s on %3$s to help us spread the word. Thank you from the %4$s team!', 'all-in-one-seo-pack' ),
 			sprintf( '<strong>%s</strong>', AIOSEOP_PLUGIN_NAME ),
 			$link1,
@@ -831,7 +831,7 @@ class AIOSEOP_Education {
 	}
 
 	/**
-	 * Returns an unordered list of SEO plugins that are known to conflict with All in One SEO Pack.
+	 * Returns an unordered list of SEO plugins that are known to conflict with DH SEO Pack.
 	 *
 	 * @since   3.4.0
 	 *
@@ -907,7 +907,7 @@ class AIOSEOP_Education {
                 <strong>' .
 				__( 'This feature is exclusive to our premium version.', 'all-in-one-seo-pack' ) .
 				'</strong><br>' .
-				/* translators: %s: "All in One SEO Pack Pro" */
+				/* translators: %s: "DH SEO Pack Pro" */
 				sprintf( __( 'Once you upgrade to %s, you will gain access to all of our exclusive premium features, providing you with even more control over your SEO.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ) .
 				'
             </p>
@@ -928,7 +928,7 @@ class AIOSEOP_Education {
         </div>
         <div class="aioseop-taxonomies-upsell-modal-button">
             <a href="' . aioseop_get_utm_url( "taxonomies-upsell-{$page_id}" ) . '" class="button button-primary button-hero" target="_blank" rel="noopener noreferrer">' .
-			/* translators: %s: "All in One SEO Pack Pro"  */
+			/* translators: %s: "DH SEO Pack Pro"  */
 			sprintf( __( 'Upgrade to %s Now', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ) .
 			'</a>
         </div>
@@ -951,8 +951,8 @@ class AIOSEOP_Education {
 		 <div id="poststuff" class="aioseop-upsell-blurred">
 			<div id="advanced-sortables" class="meta-box-sortables">
 				<div id="aiosp_tabbed" class="postbox ">
-					<button type="button" class="handlediv" aria-expanded="true" disabled="disabled"><span class="screen-reader-text">Toggle panel: All in One SEO Pack Pro</span><span class="toggle-indicator" aria-hidden="true"></span></button>
-					<h2 class="hndle"><span>All in One SEO Pack Pro</span></h2>
+					<button type="button" class="handlediv" aria-expanded="true" disabled="disabled"><span class="screen-reader-text">Toggle panel: DH SEO Pack Pro</span><span class="toggle-indicator" aria-hidden="true"></span></button>
+					<h2 class="hndle"><span>DH SEO Pack Pro</span></h2>
 					<div class="inside">
 						<div class="aioseop_tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
 							<ul class="aioseop_header_tabs hide ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">

@@ -45,7 +45,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Performance' ) ) {
 					'default'         => '256M',
 					'type'            => 'select',
 					'initial_options' => array(
-						/* translators: This a dropdown value for the "Raise memory limit" setting. If this is selected, All in One SEO Pack will not override the PHP memory limit and use the default system value. */
+						/* translators: This a dropdown value for the "Raise memory limit" setting. If this is selected, DH SEO Pack will not override the PHP memory limit and use the default system value. */
 						0      => __( 'Use the system default', 'all-in-one-seo-pack' ),
 						'32M'  => '32MB',
 						'64M'  => '64MB',
@@ -105,7 +105,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Performance' ) ) {
 			);
 
 			$this->layout['system_status'] = array(
-				/* translators: This is the header of a table in which All in One SEO Pack displays data about the user's WordPress installation and server. */
+				/* translators: This is the header of a table in which DH SEO Pack displays data about the user's WordPress installation and server. */
 				'name'      => __( 'System Status', 'all-in-one-seo-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/performance-settings/',
 				'options'   => array_keys( $system_status ),
@@ -365,8 +365,8 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Performance' ) ) {
 			$debug_info[ $debug_key ] = null;
 			$debug_info               = array_merge( $debug_info, (array) $inactive_plugins );
 
-			/* translators: "%s" is a placeholder so it should not be translated. It will be replaced with the name of the premium version of the plugin, All in One SEO Pack Pro. */
-			$mail_text = sprintf( __( '%s Debug Info', 'all-in-one-seo-pack' ), 'All in One SEO Pack Pro' ) . "\r\n------------------\r\n\r\n";
+			/* translators: "%s" is a placeholder so it should not be translated. It will be replaced with the name of the premium version of the plugin, DH SEO Pack Pro. */
+			$mail_text = sprintf( __( '%s Debug Info', 'all-in-one-seo-pack' ), 'DH SEO Pack Pro' ) . "\r\n------------------\r\n\r\n";
 			$page_text = '';
 			if ( ! empty( $debug_info ) ) {
 				foreach ( $debug_info as $name => $value ) {
@@ -406,7 +406,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Performance' ) ) {
 								// @codingStandardsIgnoreEnd
 									global $aiosp;
 									$buf = '; ' . sprintf(
-										/* translators: %s is a placeholder so it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+										/* translators: %s is a placeholder so it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 										__( 'Settings export file for %s', 'all-in-one-seo-pack' ),
 										AIOSEOP_PLUGIN_NAME
 									) . "\n";

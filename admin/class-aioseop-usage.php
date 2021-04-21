@@ -7,7 +7,7 @@
  */
 
 /**
- * All in One SEO Usage Tracking
+ * DH SEO Usage Tracking
  *
  * @since 3.7
  */

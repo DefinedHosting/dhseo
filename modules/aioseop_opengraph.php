@@ -539,7 +539,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Opengraph' ) ) {
 						'<a href="%1$s" target="_blank" title="%2$s" class="aioseop-metabox-pro-cta">%3$s</a>',
 						aioseop_get_utm_url( 'metabox-social' ),
 						sprintf(
-							/* translators: %s: "All in One SEO Pack Pro". */
+							/* translators: %s: "DH SEO Pack Pro". */
 							__( 'Upgrade to %s', 'all-in-one-seo-pack' ),
 							AIOSEOP_PLUGIN_NAME . '&nbsp;Pro'
 						),
@@ -1034,8 +1034,8 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Opengraph' ) ) {
 		 * @since 2.3.15   Always do_shortcode on descriptions, removed for titles.
 		 *
 		 * @global object $post            Current WP_Post object.
-		 * @global object $aiosp           All in one seo plugin object.
-		 * @global array  $aioseop_options All in one seo plugin options.
+		 * @global object $aiosp           DH SEO plugin object.
+		 * @global array  $aioseop_options DH SEO plugin options.
 		 * @global object $wp_query        WP_Query global instance.
 		 */
 		function add_meta() {

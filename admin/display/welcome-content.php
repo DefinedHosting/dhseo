@@ -16,20 +16,20 @@
 			<div class="welcome-panel-column">
 				<h3>
 					<?php
-					/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+					/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 					echo esc_html( sprintf( __( 'Support %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ) );
 					?>
 				</h3>
 				<p class="message welcome-icon welcome-edit-page">
 				<?php
-					/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+					/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 					echo esc_html( sprintf( __( 'There are many ways you can help support %s.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ) );
 				?>
 					</p>
 				<p class="message aioseop-message welcome-icon welcome-edit-page">
 				<?php
-					/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the premium version of the plugin, All in One SEO Pack Pro. */
-					echo esc_html( sprintf( __( 'Upgrade to %s to access priority support and premium features.', 'all-in-one-seo-pack' ), 'All in One SEO Pack Pro' ) );
+					/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the premium version of the plugin, DH SEO Pack Pro. */
+					echo esc_html( sprintf( __( 'Upgrade to %s to access priority support and premium features.', 'all-in-one-seo-pack' ), 'DH SEO Pack Pro' ) );
 				?>
 					</p>
 				<p class="call-to-action">
@@ -40,7 +40,7 @@
 				</p>
 				<p class="message aioseop-message welcome-icon welcome-edit-page">
 				<?php
-					/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+					/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 					echo esc_html( sprintf( __( 'Help translate %s into your language.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ) );
 				?>
 					</p>
@@ -60,7 +60,7 @@
 							target="_blank"
 							class="welcome-icon welcome-add-page">
 							<?php
-							/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+							/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 							echo sprintf( __( 'Beginners Guide for %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME );
 							?>
 							</a>

@@ -209,7 +209,7 @@ class AIOSEOP_Core {
 		 * @since ?
 		 * @since 3.4 Change to file header data.
 		 *
-		 * @var string $AIOSEOP_PLUGIN_NAME Contains 'All In One SEO Pack'.
+		 * @var string $AIOSEOP_PLUGIN_NAME Contains 'DH SEO Pack'.
 		 */
 		define( 'AIOSEOP_PLUGIN_NAME', $plugin_data['Name'] );
 
@@ -675,7 +675,7 @@ class AIOSEOP_Core {
 		// --- removed by RC --- //
 		// if ( ! DHSEOPRO ) {
 		// 	$action_links['proupgrade'] = array(
-		// 		/* translators: This is an action link users can click to purchase a license for All in One SEO Pack Pro. */
+		// 		/* translators: This is an action link users can click to purchase a license for DH SEO Pack Pro. */
 		// 		'label' => __( 'Upgrade to Pro', 'all-in-one-seo-pack' ),
 		// 		'url'   => aioseop_get_utm_url( 'plugins-menu' ),
 		//
@@ -730,7 +730,7 @@ class AIOSEOP_Core {
 			$text = ' in ' . $_r->getFileName();
 		}
 
-		echo '<div class="error">The All In One SEO Pack class is already defined' . $text . ', preventing All In One SEO Pack from loading.</div>';
+		echo '<div class="error">The DH SEO Pack class is already defined' . $text . ', preventing DH SEO Pack from loading.</div>';
 	}
 
 	/**

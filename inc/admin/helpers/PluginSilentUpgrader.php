@@ -12,7 +12,7 @@ require_once ABSPATH . 'wp-admin/includes/class-plugin-upgrader.php';
  * We need to remove all calls to *Skin::feedback() method, as we can't override it in own Skins
  * without breaking support for PHP 5.3-5.5.
  *
- * @internal Please do not use this class outside of core All in One SEO development. May be removed at any time.
+ * @internal Please do not use this class outside of core DH SEO development. May be removed at any time.
  *
  * @since 1.5.6.1
  */

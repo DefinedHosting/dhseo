@@ -1,6 +1,6 @@
 <?php
 /**
- * All in One SEO Pack Main Class file
+ * DH SEO Pack Main Class file
  *
  * Main class file, to be broken up later.
  *
@@ -249,7 +249,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 
 		$this->default_options = array(
 			'license_key'                 => array(
-				/* translators: This is a setting where users can enter their license code for All in One SEO Pack Pro. */
+				/* translators: This is a setting where users can enter their license code for DH SEO Pack Pro. */
 				'name' => __( 'License Key', 'all-in-one-seo-pack' ),
 				'type' => 'text',
 			),
@@ -341,86 +341,86 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				),
 			),
 			'home_page_title_format'      => array(
-				/* translators: This is a setting where users can enter the title format for the homepage. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/* translators: This is a setting where users can enter the title format for the homepage. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Home Page Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%page_title%',
 			),
 			'page_title_format'           => array(
 
-				/* translators: This is a setting where users can enter the title format for Pages. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/* translators: This is a setting where users can enter the title format for Pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Page Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%page_title% | %site_title%',
 			),
 			'post_title_format'           => array(
-				/* translators: This is a setting where users can enter the title format for Posts. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/* translators: This is a setting where users can enter the title format for Posts. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Post Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%post_title% | %site_title%',
 			),
 			'category_title_format'       => array(
-				/* translators: This is a setting where users can enter the title format for categories. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/* translators: This is a setting where users can enter the title format for categories. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Category Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%category_title% | %site_title%',
 			),
 			'archive_title_format'        => array(
-				/*  translators: This is a setting where users can enter the title format for archive pages. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/*  translators: This is a setting where users can enter the title format for archive pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Archive Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%archive_title% | %site_title%',
 			),
 			'date_title_format'           => array(
-				/*  translators: This is a setting where users can enter the title format for date archive pages. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/*  translators: This is a setting where users can enter the title format for date archive pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Date Archive Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%date% | %site_title%',
 			),
 			'author_title_format'         => array(
-				/* translators: This is a setting where users can enter the title format for author archive pages. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/* translators: This is a setting where users can enter the title format for author archive pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Author Archive Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%author% | %site_title%',
 			),
 			'tag_title_format'            => array(
-				/* translators: This is a setting where users can enter the title format for tag archive pages. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/* translators: This is a setting where users can enter the title format for tag archive pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Tag Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%tag% | %site_title%',
 			),
 			'search_title_format'         => array(
-				/* translators: This is a setting where users can enter the title format for the search page. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/* translators: This is a setting where users can enter the title format for the search page. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Search Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%search% | %site_title%',
 			),
 			'description_format'          => array(
-				/* translators: This is a setting where users can enter the description format. The description format is the format All in One SEO Pack uses to rewrite the meta description tag. */
+				/* translators: This is a setting where users can enter the description format. The description format is the format DH SEO Pack uses to rewrite the meta description tag. */
 				'name'    => __( 'Description Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => '%description%',
 			),
 			'404_title_format'            => array(
-				/* translators: This is a setting where users can enter the title format for the 404 page. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/* translators: This is a setting where users can enter the title format for the 404 page. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( '404 Title Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => __( 'Nothing found for %request_words%', 'all-in-one-seo-pack' ),
 			),
 			'paged_format'                => array(
-				/* translators: This is a setting where users can enter the title format for paginated pages. The title format is the format All in One SEO Pack uses to rewrite the title tag. */
+				/* translators: This is a setting where users can enter the title format for paginated pages. The title format is the format DH SEO Pack uses to rewrite the title tag. */
 				'name'    => __( 'Paged Format', 'all-in-one-seo-pack' ),
 				'type'    => 'text',
 				'default' => sprintf( ' - %s %%page%%', __( 'Part', 'all-in-one-seo-pack' ) ),
 			),
 			'cpostactive'                 => array(
-				/* translators: This is a setting where users can indicate which post types they want to use All in One SEO Pack with. */
+				/* translators: This is a setting where users can indicate which post types they want to use DH SEO Pack with. */
 				'name'    => __( 'SEO on only these Content Types', 'all-in-one-seo-pack' ),
 				'type'    => 'multicheckbox',
 				'default' => array( 'post', 'page', 'product' ),
 			),
 			'taxactive'                   => array(
-				/* translators: This is a setting where users can indicate which taxonomies they want to use All in One SEO Pack with. */
+				/* translators: This is a setting where users can indicate which taxonomies they want to use DH SEO Pack with. */
 				'name'    => __( 'SEO on only these taxonomies', 'all-in-one-seo-pack' ),
 				'type'    => 'multicheckbox',
 				'default' => array( 'category', 'post_tag', 'product_cat', 'product_tag' ),
@@ -828,7 +828,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				'default' => 0,
 			),
 			'dont_truncate_descriptions'  => array(
-				/* translators: This is a setting that makes sure the plugin does not truncate the meta description tag if it is longer than what All in One SEO Pack recommends. */
+				/* translators: This is a setting that makes sure the plugin does not truncate the meta description tag if it is longer than what DH SEO Pack recommends. */
 				'name'    => __( 'Never Shorten Long Descriptions', 'all-in-one-seo-pack' ),
 				'default' => 0,
 			),
@@ -838,13 +838,13 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				'default' => 0,
 			),
 			'ex_pages'                    => array(
-				/* translators: This is a textarea setting where users can enter a list of pages that All in One SEO Pack should not affect. */
+				/* translators: This is a textarea setting where users can enter a list of pages that DH SEO Pack should not affect. */
 				'name'    => __( 'Exclude Pages', 'all-in-one-seo-pack' ),
 				'type'    => 'textarea',
 				'default' => '',
 			),
 			'do_log'                      => array(
-				/* translators: This is a setting that enables All in One SEO Pack to log important events to help with debugging. */
+				/* translators: This is a setting that enables DH SEO Pack to log important events to help with debugging. */
 				'name'    => __( 'Log important events', 'all-in-one-seo-pack' ),
 				'default' => null,
 			),
@@ -925,7 +925,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 							'<a href="%1$s" target="_blank" title="%2$s" class="aioseop-metabox-pro-cta">%3$s</a>',
 							aioseop_get_utm_url( 'metabox-main' ),
 							sprintf(
-								/* translators: %s: "All in One SEO Pack Pro". */
+								/* translators: %s: "DH SEO Pack Pro". */
 								__( 'Upgrade to %s', 'all-in-one-seo-pack' ),
 								AIOSEOP_PLUGIN_NAME . '&nbsp;Pro'
 							),
@@ -1041,7 +1041,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 							'never'   => __( 'Never', 'all-in-one-seo-pack' ),
 						),
 					),
-					/* translators: This is a setting that allows users to disable All in One SEO Pack for the current post/page. */
+					/* translators: This is a setting that allows users to disable DH SEO Pack for the current post/page. */
 					'disable'            => array( 'name' => __( 'Disable on this page/post', 'all-in-one-seo-pack' ) ),
 					/* translators: This is a setting that allows users to exclude the current post/page from the sitemap. */
 					'disable_analytics'  => array(
@@ -1093,13 +1093,13 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				),
 			),
 			'cpt'       => array(
-				/* translators: This is the name of a settings section where users can indicate which post types and taxonomies they want to use All in One SEO Pack with. */
+				/* translators: This is the name of a settings section where users can indicate which post types and taxonomies they want to use DH SEO Pack with. */
 				'name'      => __( 'Content Type Settings', 'all-in-one-seo-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/custom-post-type-settings/',
 				'options'   => array( 'taxactive', 'cpostactive' ),
 			),
 			'display'   => array(
-				/* translators: This is the name of a settings section where users can control how All in One SEO Pack appears in the WordPress Administrator Panel. */
+				/* translators: This is the name of a settings section where users can control how DH SEO Pack appears in the WordPress Administrator Panel. */
 				'name'      => __( 'Display Settings', 'all-in-one-seo-pack' ),
 				'help_link' => 'https://semperplugins.com/documentation/display-settings/',
 				'options'   => array( 'posttypecolumns' ),
@@ -4038,7 +4038,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 	/**
 	 * The is_page_included() function.
 	 *
-	 * Checks whether All in One SEO Pack is enabled for this page.
+	 * Checks whether DH SEO Pack is enabled for this page.
 	 *
 	 * @since ?
 	 * @since 3.3 Show Google Analytics if post type isn't checked in options.
@@ -4550,7 +4550,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 
 		if ( ! defined( 'AIOSEOP_UNIT_TESTING' ) && $aioseop_dup_counter > 1 ) {
 
-			/* translators: %1$s, %2$s and %3$s are placeholders and should not be translated. %1$s expands to the name of the plugin, All in One SEO Pack, %2$s to the name of a filter function and %3$s is replaced with a number. */
+			/* translators: %1$s, %2$s and %3$s are placeholders and should not be translated. %1$s expands to the name of the plugin, DH SEO Pack, %2$s to the name of a filter function and %3$s is replaced with a number. */
 			echo "\n<!-- " . sprintf( __( 'Debug Warning: %1$s meta data was included again from %2$s filter. Called %3$s times!', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME, current_filter(), $aioseop_dup_counter ) . " -->\n";
 			if ( ! empty( $old_wp_query ) ) {
 				// Change the query back after we've finished.
@@ -5132,7 +5132,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		$active = ' active';
 		foreach ( $tabs as $t ) {
 			if ( $active ) {
-				/* translators: This is the name of the main tab of the All in One SEO Pack meta box that appears on the Edit screen. */
+				/* translators: This is the name of the main tab of the DH SEO Pack meta box that appears on the Edit screen. */
 				$title = __( 'Main Settings', 'all-in-one-seo-pack' );
 			} else {
 				$title = $t['title'];
@@ -5390,7 +5390,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 	 */
 	function admin_menu() {
 		$file      = plugin_basename( __FILE__ );
-		$menu_name = 'All in One SEO';
+		$menu_name = 'DH SEO';
 
 		$this->locations['aiosp']['default_options']['nonce-aioseop-edit']['default'] = wp_create_nonce( 'edit-aioseop-nonce' );
 

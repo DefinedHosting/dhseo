@@ -23,7 +23,7 @@ function aioseop_notice_check_php_version() {
 		'screens'     => array(),
 		'class'       => 'notice-error',
 		'dismissible' => false,
-		/* translators: %1$s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+		/* translators: %1$s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 		'html'        => '
 			<p>' . sprintf( __( 'Your site is running an outdated version of PHP that is no longer supported and may cause issues with %1$s. <a href="%2$s" target="_blank" rel="noopener noreferrer">Read more</a> for additional information.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME, 'https://semperplugins.com/documentation/supported-php-version/?utm_source=WordPress&utm_medium=' . $medium . '&utm_campaign=outdated-php-notice' ) . '</p>
 			<style>

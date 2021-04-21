@@ -24,12 +24,12 @@ class AIOSP_Common_Strings {
 
 		// From aioseop-helper-filters.php.
 		__( 'This will be the license key received when the product was purchased. This is used for automatic upgrades.', 'all-in-one-seo-pack' );
-		/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+		/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 		__( 'Use these checkboxes to select which Taxonomies you want to use %s with.', 'all-in-one-seo-pack' );
 		__( 'This displays an SEO News widget on the dashboard.', 'all-in-one-seo-pack' );
-		/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+		/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 		__( 'Check this to add %s to the Toolbar for easy access to your SEO settings.', 'all-in-one-seo-pack' );
-		/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+		/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 		__( 'Check this to move the %s menu item to the top of your WordPress Dashboard menu.', 'all-in-one-seo-pack' );
 		__( 'Check this if you want to track outbound forms with Google Analytics.', 'all-in-one-seo-pack' );
 		__( 'Check this if you want to track events with Google Analytics.', 'all-in-one-seo-pack' );

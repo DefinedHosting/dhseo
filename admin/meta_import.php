@@ -45,7 +45,7 @@ if ( class_exists( 'WPSEO_Import_Hooks' ) ) {
 
 			if ( empty( $aioseop_yst_detected_notice_dismissed ) ) {
 
-				/* translators: %1$s, %2$s and %3$s are placeholders, which means these shouldn't be translated. The first two placeholders are used to add a link to anchor text and the third is replaced with the name of the plugin, All in One SEO Pack. */
+				/* translators: %1$s, %2$s and %3$s are placeholders, which means these shouldn't be translated. The first two placeholders are used to add a link to anchor text and the third is replaced with the name of the plugin, DH SEO Pack. */
 				echo '<div class="notice notice-warning row-title is-dismissible yst_notice"><p>', sprintf( esc_html__( 'The plugin Yoast SEO has been detected. Do you want to %1$simport its settings%2$s into %3$s', 'all-in-one-seo-pack' ), sprintf( '<a href="%s">', esc_url( $aiourl ) ), '</a>', AIOSEOP_PLUGIN_NAME ), '</p></div>';
 
 			}
@@ -55,7 +55,7 @@ if ( class_exists( 'WPSEO_Import_Hooks' ) ) {
 		}
 
 		public function show_deactivate_notice() {
-			echo '<div class="updated"><p>', esc_html__( 'All in One SEO has been deactivated', 'all-in-one-seo-pack' ), '</p></div>';
+			echo '<div class="updated"><p>', esc_html__( 'DH SEO has been deactivated', 'all-in-one-seo-pack' ), '</p></div>';
 		}
 	}
 } else {
@@ -105,7 +105,7 @@ function aiosp_seometa_action() {
 		return;
 	}
 
-	if ( 'All in One SEO Pack' === $_REQUEST['platform_old'] ) {
+	if ( 'DH SEO Pack' === $_REQUEST['platform_old'] ) {
 		printf( '<div class="error"><p>%s</p></div>', __( 'Sorry, you can\'t do that. Please choose a platform and then click Analyze or Convert.', 'all-in-one-seo-pack' ) );
 
 		return;
@@ -117,14 +117,14 @@ function aiosp_seometa_action() {
 
 		printf( '<h3>%s</h3>', __( 'Analysis Results', 'all-in-one-seo-pack' ) );
 
-		$response = aiosp_seometa_post_meta_analyze( $_REQUEST['platform_old'], 'All in One SEO Pack' );
+		$response = aiosp_seometa_post_meta_analyze( $_REQUEST['platform_old'], 'DH SEO Pack' );
 		if ( is_wp_error( $response ) ) {
 			printf( '<div class="error"><p>%s</p></div>', __( 'Sorry, something went wrong. Please try again', 'all-in-one-seo-pack' ) );
 
 			return;
 		}
 
-		printf( __( '<p>Analyzing records in a %1$s to %2$s conversion&hellip;', 'all-in-one-seo-pack' ), esc_html( $_POST['platform_old'] ), 'All in One SEO Pack' );
+		printf( __( '<p>Analyzing records in a %1$s to %2$s conversion&hellip;', 'all-in-one-seo-pack' ), esc_html( $_POST['platform_old'] ), 'DH SEO Pack' );
 		printf( '<p><b>%d</b> Compatible Records were identified</p>', $response->update );
 		// phpcs:ignore Squiz.Commenting.InlineComment.InvalidEndChar
 		// printf( '<p>%d Compatible Records will be ignored</p>', $response->ignore );
@@ -140,7 +140,7 @@ function aiosp_seometa_action() {
 
 	printf( '<h3>%s</h3>', __( 'Conversion Results', 'all-in-one-seo-pack' ) );
 
-	$result = aiosp_seometa_post_meta_convert( stripslashes( $_REQUEST['platform_old'] ), 'All in One SEO Pack' );
+	$result = aiosp_seometa_post_meta_convert( stripslashes( $_REQUEST['platform_old'] ), 'DH SEO Pack' );
 	if ( is_wp_error( $result ) ) {
 		printf( '<p>%s</p>', __( 'Sorry, something went wrong. Please try again', 'all-in-one-seo-pack' ) );
 
@@ -171,7 +171,7 @@ function aiosp_seometa_admin() {
 		<p><span
 				class="description">
 				<?php
-				/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+				/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 				printf( sprintf( __( 'Click "Analyze" for a list of SEO data that can be imported into %s, along with the number of records that will be imported.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ) );
 				?>
 				</span>
@@ -181,7 +181,7 @@ function aiosp_seometa_admin() {
 			<span class="description">
 				<strong><?php printf( __( 'Please Note: ', 'all-in-one-seo-pack' ) ); ?></strong>
 				<?php
-				/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+				/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 				printf(
 					sprintf(
 						__( 'Some plugins and themes do not share similar data, or they store data in a non-standard way. If we cannot import this data, it will remain unchanged in your database. Any compatible SEO data will be displayed for you to review. If a post or page already has SEO data in %s, we will not import data from another plugin/theme.', 'all-in-one-seo-pack' ),
@@ -213,7 +213,7 @@ function aiosp_seometa_admin() {
 
 			printf( '<optgroup label="%s">', __( 'Plugins', 'all-in-one-seo-pack' ) );
 			foreach ( $_aiosp_seometa_plugins as $platform => $data ) {
-				if ( 'All in One SEO Pack' !== $platform ) {
+				if ( 'DH SEO Pack' !== $platform ) {
 					printf( '<option value="%s" %s>%s</option>', $platform, selected( $platform, $platform_old, 0 ), $platform );
 				}
 			}
@@ -319,7 +319,7 @@ function aiosp_seometa_meta_key_convert( $old = '', $new = '', $delete_old = fal
  *
  * @return stdClass Results object.
  */
-function aiosp_seometa_post_meta_convert( $old_platform = '', $new_platform = 'All in One SEO Pack', $delete_old = false ) {
+function aiosp_seometa_post_meta_convert( $old_platform = '', $new_platform = 'DH SEO Pack', $delete_old = false ) {
 
 	do_action( 'pre_aiosp_seometa_post_meta_convert', $old_platform, $new_platform, $delete_old );
 
@@ -379,7 +379,7 @@ function aiosp_seometa_post_meta_convert( $old_platform = '', $new_platform = 'A
  *
  * @return stdClass
  */
-function aiosp_seometa_post_meta_analyze( $old_platform = '', $new_platform = 'All in One SEO Pack' ) {
+function aiosp_seometa_post_meta_analyze( $old_platform = '', $new_platform = 'DH SEO Pack' ) {
 	// TODO Figure out which elements to ignore.
 	do_action( 'pre_aiosp_seometa_post_meta_analyze', $old_platform, $new_platform );
 
@@ -528,7 +528,7 @@ function aiosp_seometa_import() {
 			'META Description' => '_amt_description',
 			'META Keywords'    => '_amt_keywords',
 		),
-		'All in One SEO Pack'          => array(
+		'DH SEO Pack'          => array(
 			'Custom Doctitle'  => '_aioseop_title',
 			'META Description' => '_aioseop_description',
 			'META Keywords'    => '_aioseop_keywords',

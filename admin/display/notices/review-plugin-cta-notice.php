@@ -39,7 +39,7 @@ function aioseop_notice_review_plugin_cta() {
 		'html'           => '
 			<div class="aioseo-review-plugin-cta">
 				<div class="step-1">' .
-					/* translators: %1$s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+					/* translators: %1$s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 					'<p>' . sprintf( __( 'Are you enjoying %1$s?', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ) . '</p>
 					<p>
 						<a href="#" class="aioseo-review-switch-step-3" data-step="3">' . __( 'Yes I love it', 'all-in-one-seo-pack' ) . '</a> 🙂 |
@@ -47,7 +47,7 @@ function aioseop_notice_review_plugin_cta() {
 					</p>
 				</div>
 				<div class="step-2" style="display:none;">' .
-					/* translators: %1$s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+					/* translators: %1$s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 					'<p>' . sprintf( __( 'We\'re sorry to hear you aren\'t enjoying %1$s. We would love a chance to improve. Could you take a minute and let us know what we can do better?', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ) . '</p>
 					<p>
 						<a href="' . $feedback_url . '" class="aioseo-dismiss-review-notice" target="_blank" rel="noopener noreferrer">' . __( 'Give feedback', 'all-in-one-seo-pack' ) . '</a>&nbsp;&nbsp;
@@ -56,7 +56,7 @@ function aioseop_notice_review_plugin_cta() {
 				</div>
 				<div class="step-3" style="display:none;">
 					<p>' . __( 'That\'s awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress to help us spread the word and boost our motivation?', 'all-in-one-seo-pack' ) . '</p>' .
-					/* translators: %1$s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+					/* translators: %1$s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 					'<p><strong>~ Syed Balkhi<br>' . sprintf( __( 'President of %1$s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ) . '</strong></p>
 					<p>
 						<a href="https://wordpress.org/support/plugin/all-in-one-seo-pack/reviews/?filter=5#new-post" class="aioseo-dismiss-review-notice" target="_blank" rel="noopener noreferrer">' . __( 'Ok, you deserve it', 'all-in-one-seo-pack' ) . '</a>&nbsp;&nbsp;

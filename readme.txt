@@ -1,4 +1,4 @@
-=== All in One SEO Pack ===
+=== DH SEO Pack ===
 Contributors: semperplugins, smub, benjaminprojas
 Tags: SEO, Google Search Console, XML Sitemap, meta description, meta title, noindex
 Requires at least: 4.9
@@ -13,7 +13,7 @@ The original WordPress SEO plugin, downloaded over 65,000,000 times since 2007.
 
 ###The original WordPress SEO plugin, downloaded over 65,000,000 times since 2007.
 
-Use **All in One SEO Pack** to optimize your WordPress site for SEO. It's easy and works out of the box for beginners, and has advanced features and an API for developers.
+Use **DH SEO Pack** to optimize your WordPress site for SEO. It's easy and works out of the box for beginners, and has advanced features and an API for developers.
 
 **[Upgrade to Pro Version](https://semperplugins.com/all-in-one-seo-pack-pro-version/?loc=readme_utpv)**
 
@@ -33,7 +33,7 @@ First created in 2007, see why AIOSEO is one of the all time most downloaded plu
 * Automatically notifies search engines like Google and Bing about changes to your site
 * Built-in API so other plugins/themes can access and extend functionality
 * ONLY free plugin to provide SEO Integration for e-Commerce sites, including WooCommerce
-* Nonce Security built into All in One SEO Pack
+* Nonce Security built into DH SEO Pack
 * Automatically optimizes your **titles** for Google and other search engines
 * Generates **META tags automatically**
 * Avoids the typical duplicate content found on WordPress blogs
@@ -48,12 +48,12 @@ https://www.youtube.com/watch?v=46MR4FboMaA
 
 == Changelog ==
 
-All in One SEO Pack [Changelog](https://semperplugins.com/all-in-one-seo-pack-changelog/)
+DH SEO Pack [Changelog](https://semperplugins.com/all-in-one-seo-pack-changelog/)
 
 == Frequently Asked Questions ==
 
 Please visit our complete **[Documentation](http://semperplugins.com/documentation/)** before requesting support for SEO from the
-**[All in One SEO Pack Support Forum](http://semperplugins.com/support/)**
+**[DH SEO Pack Support Forum](http://semperplugins.com/support/)**
 
 = General Settings =
 https://www.youtube.com/watch?v=uGt6CVbA5bI

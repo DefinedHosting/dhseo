@@ -34,13 +34,13 @@
 		modalOpen: false,
 
 		init: function () {
-			// All in One SEO Pack - Begin
+			// DH SEO Pack - Begin
 			$("#wp-link .link-target").append('<br><label style="padding-left: 4px;"><span>&nbsp;</span><input type="checkbox" id="aioseop-add-nofollow">' + aioseopL10n.noFollow + "</label>");
 			$("#wp-link .link-target").append('<br><label style="padding-left: 4px;"><span>&nbsp;</span><input type="checkbox" id="aioseop-add-sponsored">' + aioseopL10n.sponsored + '</label>');
 			$("#wp-link .link-target").append('<br><label style="padding-left: 4px;"><span>&nbsp;</span><input type="checkbox" id="aioseop-add-ugc">' + aioseopL10n.ugc + '</label><br>');
 			$(".wp-link-text-field").before('<div class="link-title-field"><label><span style="padding-left: 4px;">' + aioseopL10n.labelTitle + '</span><input id="wp-link-title" type="text" name="linktitle" /></label></div>');
 			$('<style type="text/css"> .has-text-field #wp-link .query-results { top: 256px !important; } #wp-link-wrap.search-panel-visible {height: 549px !important;}</style>').appendTo("head");
-			// All in One SEO Pack - End
+			// DH SEO Pack - End
 
 			inputs.wrap = $('#wp-link-wrap');
 			inputs.dialog = $('#wp-link');
@@ -48,12 +48,12 @@
 			inputs.submit = $('#wp-link-submit');
 			inputs.close = $('#wp-link-close');
 
-			// All in One SEO Pack - Begin
+			// DH SEO Pack - Begin
 			inputs.tanfl = $('#aioseop-add-nofollow');
 			inputs.tanfl_sponsored = $('#aioseop-add-sponsored');
 			inputs.tanfl_ugc = $('#aioseop-add-ugc');
 			inputs.title = $('#wp-link-title');
-			// All in One SEO Pack - End
+			// DH SEO Pack - End
 
 			// Input.
 			inputs.text = $('#wp-link-text');
@@ -220,9 +220,9 @@
 
 			correctedURL = inputs.url.val().replace(/^http:\/\//, '');
 
-			// All in One SEO Pack - Begin
+			// DH SEO Pack - Begin
 			jQuery('.has-text-field #wp-link .query-results').css('margin-top', 25);
-			// All in One SEO Pack - End
+			// DH SEO Pack - End
 		},
 
 		hasSelectedText: function (linkNode) {
@@ -278,16 +278,16 @@
 				}
 
 				if (searchStr && searchStr !== href) {
-					// All in One SEO Pack - Begin
+					// DH SEO Pack - Begin
 					inputs.url.val(searchStr);
-					// All in One SEO Pack - End
+					// DH SEO Pack - End
 					// The user has typed something in the inline dialog. Trigger a search with it.
 					inputs.search.val(searchStr);
 				} else {
 					inputs.search.val('');
 				}
 
-				// All in One SEO Pack - Begin
+				// DH SEO Pack - Begin
 				if (editor.dom.getAttrib(linkNode, 'rel').indexOf("nofollow") >= 0) {
 					inputs.tanfl.prop('checked', true);
 				} else {
@@ -304,7 +304,7 @@
 					inputs.tanfl_ugc.prop('checked', false);
 				}
 				inputs.title.val(editor.dom.getAttrib(linkNode, 'title'));
-				// All in One SEO Pack - End
+				// DH SEO Pack - End
 
 				// Always reset the search.
 				window.setTimeout(function () {
@@ -313,9 +313,9 @@
 			} else {
 				linkText = editor.selection.getContent({ format: 'text' }) || text || '';
 				this.setDefaultValues(linkText);
-				// All in One SEO Pack - Begin
+				// DH SEO Pack - Begin
 				inputs.url.val(searchStr);
-				// All in One SEO Pack - End
+				// DH SEO Pack - End
 			}
 
 			if (onlyText) {
@@ -359,7 +359,7 @@
 		getAttrs: function () {
 			wpLink.correctURL();
 
-			// All in One SEO Pack - Begin
+			// DH SEO Pack - Begin
 			var tanfl_value = '';
 			if (inputs.tanfl.prop('checked')) {
 				tanfl_value += 'nofollow ';
@@ -370,22 +370,22 @@
 			if (inputs.tanfl_ugc.prop('checked')) {
 				tanfl_value += 'ugc';
 			}
-			// All in One SEO Pack - End
+			// DH SEO Pack - End
 
 			return {
 				href: $.trim(inputs.url.val()),
 				target: inputs.openInNewTab.prop('checked') ? '_blank' : null,
-				// All in One SEO Pack - Begin
+				// DH SEO Pack - Begin
 				rel: '' !== tanfl_value ? tanfl_value : null,
 				title: '' !== inputs.title.val() ? $.trim(inputs.title.val()) : null
-				// All in One SEO Pack - End
+				// DH SEO Pack - End
 			};
 		},
 
 		buildHtml: function (attrs) {
 			var html = '<a href="' + attrs.href + '"';
 
-			// All in One SEO Pack - Begin
+			// DH SEO Pack - Begin
 			if (attrs.title) {
 				title = attrs.title.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 				html += ' title="' + title + '"';
@@ -403,7 +403,7 @@
 					html += ' rel="' + attrs.rel + '"';
 				}
 			}
-			// All in One SEO Pack - End
+			// DH SEO Pack - End
 
 			return html + '>';
 		},
@@ -528,9 +528,9 @@
 				}
 			});
 
-			// All in One SEO Pack - Begin
+			// DH SEO Pack - Begin
 			$link = editor.$('a[data-wplink-url-error="1"]').removeAttr('data-wplink-url-error');
-			// All in One SEO Pack - End
+			// DH SEO Pack - End
 
 			wpLink.close('noReset');
 			editor.focus();
@@ -551,9 +551,9 @@
 
 		updateFields: function (e, li) {
 			inputs.url.val(li.children('.item-permalink').val());
-			// All in One SEO Pack - Begin
+			// DH SEO Pack - Begin
 			inputs.title.val(li.hasClass('no-title') ? '' : li.children('.item-title').text());
-			// All in One SEO Pack - End
+			// DH SEO Pack - End
 
 			if (inputs.wrap.hasClass('has-text-field') && !inputs.text.val()) {
 				inputs.text.val(li.children('.item-title').text());
@@ -587,13 +587,13 @@
 		setDefaultValues: function (selection) {
 			inputs.url.val(this.getUrlFromSelection(selection));
 
-			// All in One SEO Pack - Begin
+			// DH SEO Pack - Begin
 			inputs.title.val('');
 			inputs.openInNewTab.prop('checked', false);
 			inputs.tanfl.prop('checked', false);
 			inputs.tanfl_sponsored.prop('checked', false);
 			inputs.tanfl_ugc.prop('checked', false);
-			// All in One SEO Pack - End
+			// DH SEO Pack - End
 
 			// Empty the search field and swap the "rivers".
 			inputs.search.val('');

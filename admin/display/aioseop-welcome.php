@@ -32,7 +32,7 @@ if ( ! class_exists( 'AIOSEOP_Welcome' ) ) {
 		 * @return void
 		 */
 		public static function registerPage() {
-			/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, All in One SEO Pack. */
+			/* translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the plugin, DH SEO Pack. */
 			$welcome_text = sprintf( __( 'Welcome to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME );
 			add_dashboard_page(
 				$welcome_text,
@@ -116,13 +116,13 @@ if ( ! class_exists( 'AIOSEOP_Welcome' ) ) {
 				</div>
 				<h1>
 					<?php
-					/* translators: %1$s and %2$s are placeholders, which means that these should not be translated. These will be replaced with the name of the plugin, All in One SEO Pack, and the current version number. */
+					/* translators: %1$s and %2$s are placeholders, which means that these should not be translated. These will be replaced with the name of the plugin, DH SEO Pack, and the current version number. */
 					printf( esc_html__( 'Welcome to %1$s %2$s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME, AIOSEOP_VERSION );
 					?>
 				</h1>
 				<div class="about-text">
 					<?php
-					/* translators: %1$s and %2$s are placeholders, which means that these should not be translated. These will be replaced with the name of the plugin, All in One SEO Pack, and the current version number. */
+					/* translators: %1$s and %2$s are placeholders, which means that these should not be translated. These will be replaced with the name of the plugin, DH SEO Pack, and the current version number. */
 					printf( esc_html__( '%1$s %2$s contains new features, bug fixes, increased security, and tons of under the hood performance improvements.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME, AIOSEOP_VERSION );
 					?>
 				</div>

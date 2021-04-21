@@ -5,7 +5,7 @@
  *
  * @link https://github.com/selectize/selectize.js
  *
- * @author All in One SEO Team.
+ * @author DH SEO Team.
  * @copyright https://semperplugins.com
  * @version 3.0
  */

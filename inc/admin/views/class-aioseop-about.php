@@ -279,7 +279,7 @@ class AIOSEOP_About {
 				<h3>
 					<?php
 					printf(
-						/* translators: %1$s: "All in One SEO Pack" */
+						/* translators: %1$s: "DH SEO Pack" */
 						__( 'Welcome to %1$s, the original SEO plugin for WordPress. At %2$s, we build software that helps you rank your website in search results and gain organic traffic.', 'all-in-one-seo-pack' ),
 						AIOSEOP_PLUGIN_NAME,
 						AIOSEOP_PLUGIN_NAME
@@ -297,7 +297,7 @@ class AIOSEOP_About {
 					<?php
 					printf(
 						wp_kses(
-							/* translators: %1$s: "All in One SEO Pack" - %2$s: hyperlink - %3$s: hyperlink - %4$s: hyperlink */
+							/* translators: %1$s: "DH SEO Pack" - %2$s: hyperlink - %3$s: hyperlink - %4$s: hyperlink */
 							__( '%1$s is brought to you by Awesome Motive, the same team that’s behind the largest WordPress resource site, <a href="%2$s" target="_blank" rel="noopener noreferrer">WPBeginner</a>, the most popular lead-generation software, <a href="%3$s" target="_blank" rel="noopener noreferrer">OptinMonster</a>, the best WordPress analytics plugin, <a href="%4$s" target="_blank" rel="noopener noreferrer">MonsterInsights</a> and many more.', 'all-in-one-seo-pack' ),
 							array(
 								'a' => array(
@@ -417,7 +417,7 @@ class AIOSEOP_About {
 
 			<p class="centered">
 				<?php
-					/* translators: %s: "All in One SEO Pack" */
+					/* translators: %s: "DH SEO Pack" */
 					printf( __( 'Get the most out of %s by upgrading to Pro and unlocking all of the powerful features.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME );
 				?>
 			</p>
@@ -489,7 +489,7 @@ class AIOSEOP_About {
 						echo '<a href="' . aioseop_get_utm_url( 'lite-vs-pro' ) . '" target="_blank" rel="noopener noreferrer">';
 
 						printf(
-							/* translators: %s: "All in One SEO Pack Pro" */
+							/* translators: %s: "DH SEO Pack Pro" */
 							sprintf( __( 'Get %s Today and Unlock all the Powerful Features', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
 							esc_html( $next_license )
 						);
@@ -501,7 +501,7 @@ class AIOSEOP_About {
 					<?php
 					echo wp_kses(
 						sprintf(
-							/* translators: %s: "All in One SEO Pack Lite" */
+							/* translators: %s: "DH SEO Pack Lite" */
 							__( 'Bonus: %s users get <span class="price-20-off">30%% off regular price</span>, automatically applied at checkout.', 'all-in-one-seo-pack' ),
 							AIOSEOP_PLUGIN_NAME . '&nbsp;Lite'
 						),

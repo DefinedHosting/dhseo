@@ -7,7 +7,7 @@ require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader-skin.php';
 /**
  * Class PluginSilentUpgraderSkin.
  *
- * @internal Please do not use this class outside of core All in One SEO development. May be removed at any time.
+ * @internal Please do not use this class outside of core DH SEO development. May be removed at any time.
  *
  * @since 1.5.6.1
  */

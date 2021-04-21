@@ -189,15 +189,15 @@ class AIOSEOP_Site_Health {
 			return $this->result(
 				'aioseo_plugin_update',
 				'critical',
-				__( 'All in One SEO needs to be updated', 'all-in-one-seo-pack' ),
-				__( "An update is available for All in One SEO. Upgrade to the latest version to receive all the latest features, bug fixes and security improvements.", 'all-in-one-seo-pack' ),
+				__( 'DH SEO needs to be updated', 'all-in-one-seo-pack' ),
+				__( "An update is available for DH SEO. Upgrade to the latest version to receive all the latest features, bug fixes and security improvements.", 'all-in-one-seo-pack' ),
 				$this->actionLink( admin_url( 'plugins.php' ), __( 'Go to Plugins', 'all-in-one-seo-pack' ) )
 			);
 		}
 		return $this->result(
 			'aioseo_plugin_update',
 			'good',
-			__( 'All in One SEO is updated to the latest version', 'all-in-one-seo-pack' ),
+			__( 'DH SEO is updated to the latest version', 'all-in-one-seo-pack' ),
 			__( "Fantastic! By updating to the latest version, you have access to all the latest features, bug fixes and security improvements.", 'all-in-one-seo-pack' )
 		);
 	}
@@ -275,7 +275,7 @@ class AIOSEOP_Site_Health {
 
 		$debugInfo['aioseo'] = array(
 			'label'       => __( 'SEO', 'all-in-one-seo-pack' ),
-			'description' => __( 'The fields below contain important SEO information from All in One SEO that may effect your site.', 'all-in-one-seo-pack' ),
+			'description' => __( 'The fields below contain important SEO information from DH SEO that may effect your site.', 'all-in-one-seo-pack' ),
 			'private'     => false,
 			'show_count'  => true,
 			'fields'      => $fields,

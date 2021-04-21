@@ -89,7 +89,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Feature_Manager' ) ) {
 					'name'           => __( 'Video Sitemap', 'all-in-one-seo-pack' ),
 					'description'    => __( 'Create and manage your Video Sitemap using this feature and submit your Video Sitemap to Google, Bing/Yahoo and Ask.com.', 'all-in-one-seo-pack' ),
 					'is_pro_feature' => true,
-					'can_activate'   => AIOSEOPPRO,
+					'can_activate'   => DHSEOPRO,
 				),
 				'schema_local_business' => array(
 					'name'           => __( 'Local Business SEO', 'all-in-one-seo-pack' ),
@@ -111,7 +111,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Feature_Manager' ) ) {
 				),
 			);
 
-			if ( AIOSEOPPRO ) {
+			if ( DHSEOPRO ) {
 				global $aioseop_options;
 
 				if ( isset( $aioseop_options['addons'] ) &&

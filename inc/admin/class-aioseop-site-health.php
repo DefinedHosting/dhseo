@@ -166,7 +166,7 @@ class AIOSEOP_Site_Health {
 		global $aioseop_version;
 
 		$shouldUpdate = false;
-		if ( ! AIOSEOPPRO ) {
+		if ( ! DHSEOPRO ) {
 			$response = wp_remote_get( 'https://api.wordpress.org/plugins/info/1.0/all-in-one-seo-pack.json' );
 			$body     = wp_remote_retrieve_body( $response );
 			if ( ! $body ) {
@@ -177,7 +177,7 @@ class AIOSEOP_Site_Health {
 			$pluginData   = json_decode( $body );
 			$shouldUpdate = version_compare( AIOSEOP_VERSION, $pluginData->version, '<' );
 		} else {
-			if ( AIOSEOPPRO ) {
+			if ( DHSEOPRO ) {
 				global $aioseop_update_checker;
 				if ( null !== $aioseop_update_checker->checkForUpdates() ) {
 					$shouldUpdate = true;

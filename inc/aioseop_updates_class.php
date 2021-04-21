@@ -47,7 +47,7 @@ class AIOSEOP_Updates {
 			$this->do_version_updates( $last_active_version );
 			do_action( 'after_doing_aioseop_updates' );
 			// If we're running Pro, let the Pro updater set the version.
-			if ( ! AIOSEOPPRO ) {
+			if ( ! DHSEOPRO ) {
 
 				// Save the current plugin version as the new last_active_version.
 				$aioseop_options['last_active_version'] = AIOSEOP_VERSION;
@@ -100,30 +100,30 @@ class AIOSEOP_Updates {
 	function do_version_updates( $old_version ) {
 		global $aioseop_options;
 		if (
-			( ! AIOSEOPPRO && version_compare( $old_version, '2.3.3', '<' ) ) ||
-			( AIOSEOPPRO && version_compare( $old_version, '2.4.3', '<' ) )
+			( ! DHSEOPRO && version_compare( $old_version, '2.3.3', '<' ) ) ||
+			( DHSEOPRO && version_compare( $old_version, '2.4.3', '<' ) )
 		) {
 			$this->bad_bots_201603();
 		}
 
 		if (
-			( ! AIOSEOPPRO && version_compare( $old_version, '2.3.4.1', '<' ) ) ||
-			( AIOSEOPPRO && version_compare( $old_version, '2.4.4.1', '<' ) )
+			( ! DHSEOPRO && version_compare( $old_version, '2.3.4.1', '<' ) ) ||
+			( DHSEOPRO && version_compare( $old_version, '2.4.4.1', '<' ) )
 		) {
 			$this->bad_bots_remove_yandex_201604();
 		}
 
 		if (
-			( ! AIOSEOPPRO && version_compare( $old_version, '2.3.9', '<' ) ) ||
-			( AIOSEOPPRO && version_compare( $old_version, '2.4.9', '<' ) )
+			( ! DHSEOPRO && version_compare( $old_version, '2.3.9', '<' ) ) ||
+			( DHSEOPRO && version_compare( $old_version, '2.4.9', '<' ) )
 		) {
 			$this->bad_bots_remove_seznambot_201608();
 			set_transient( '_aioseop_activation_redirect', true, 30 ); // Sets 30 second transient for welcome screen redirect on activation.
 		}
 
 		if (
-			( ! AIOSEOPPRO && version_compare( $old_version, '2.9', '<' ) ) ||
-			( AIOSEOPPRO && version_compare( $old_version, '2.10', '<' ) )
+			( ! DHSEOPRO && version_compare( $old_version, '2.9', '<' ) ) ||
+			( DHSEOPRO && version_compare( $old_version, '2.10', '<' ) )
 		) {
 			$this->bad_bots_remove_semrush_201810();
 		}
@@ -351,7 +351,7 @@ class AIOSEOP_Updates {
 		}
 
 		// If we're running Pro, let the Pro updater set the transient.
-		if ( ! AIOSEOPPRO ) {
+		if ( ! DHSEOPRO ) {
 
 			// We haven't checked recently. Reset the timestamp, timeout 6 hours.
 			set_site_transient(

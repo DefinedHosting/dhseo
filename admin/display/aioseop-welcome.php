@@ -17,7 +17,7 @@ if ( ! class_exists( 'AIOSEOP_Welcome' ) ) {
 		 * @return void
 		 */
 		public static function hooks() {
-			if ( AIOSEOPPRO ) {
+			if ( DHSEOPRO ) {
 				return;
 			}
 			add_action( 'admin_menu', array( 'AIOSEOP_Welcome', 'registerPage' ) );
@@ -70,7 +70,7 @@ if ( ! class_exists( 'AIOSEOP_Welcome' ) ) {
 		 */
 		public function showPage() {
 			if (
-				AIOSEOPPRO ||
+				DHSEOPRO ||
 				! is_admin() ||
 				is_network_admin() ||
 				isset( $_GET['activate-multi'] ) ||

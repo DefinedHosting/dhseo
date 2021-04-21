@@ -256,7 +256,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module_Manager' ) ) {
 				}
 			}
 			if ( $mod_enable ) {
-				if ( AIOSEOPPRO ) {
+				if ( DHSEOPRO ) {
 					return $this->do_load_module( $mod );
 				}
 

@@ -37,5 +37,6 @@ function aioseop_notice_pro_promo_woocommerce() {
 		),
 	);
 }
+// --- removed by RC --- //
 
-add_filter( 'aioseop_admin_notice-woocommerce_detected', 'aioseop_notice_pro_promo_woocommerce' );
+//add_filter( 'aioseop_admin_notice-woocommerce_detected', 'aioseop_notice_pro_promo_woocommerce' );

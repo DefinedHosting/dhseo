@@ -324,7 +324,7 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 				}
 
 				// Store notice if plan matches.
-				if ( AIOSEOPPRO ) {
+				if ( DHSEOPRO ) {
 					if (
 						'pro' === $remote_notice['type'] ||
 						in_array( $this->get_license_plan(), $remote_notice['type'], true )
@@ -351,7 +351,7 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 			global $aioseop_options;
 
 			if ( ! isset( $aioseop_options['plan'] ) || empty( $aioseop_options['plan'] ) ) {
-				return AIOSEOPPRO ? 'unlicensed' : 'lite';
+				return DHSEOPRO ? 'unlicensed' : 'lite';
 			}
 			return $aioseop_options['plan'];
 		}
@@ -1106,7 +1106,7 @@ if ( ! class_exists( 'AIOSEOP_Notices' ) ) {
 				'(#aioseo-local-business)'    => '#',
 				'(:[0-9a-zA-Z-_]+)'           => '#',
 			);
-			if ( AIOSEOPPRO ) {
+			if ( DHSEOPRO ) {
 				$replace['(#aioseo-sitemap)']       = '?page=' . DHSEO_PLUGIN_DIRNAME . '/pro/class-aioseop-pro-sitemap.php';
 				$replace['(#aioseo-video-sitemap)'] = '?page=' . DHSEO_PLUGIN_DIRNAME . '/pro/video_sitemap.php';
 				if ( aioseop_is_addon_allowed( 'image_seo' ) ) {

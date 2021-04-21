@@ -122,7 +122,7 @@ class AIOSEOP_Flyout {
 	 * @return array
 	 */
 	private static function menu_items() {
-		$medium       = ( AIOSEOPPRO ) ? 'proplugin' : 'liteplugin';
+		$medium       = ( DHSEOPRO ) ? 'proplugin' : 'liteplugin';
 		$utm_campaign = 'flyout-menu';
 
 		$items = array(
@@ -150,7 +150,7 @@ class AIOSEOP_Flyout {
 			),
 		);
 
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			array_shift( $items );
 		}
 

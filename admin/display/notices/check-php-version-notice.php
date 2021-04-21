@@ -15,7 +15,7 @@
  * @return array Notice configuration.
  */
 function aioseop_notice_check_php_version() {
-	$medium = ( AIOSEOPPRO ) ? 'proplugin' : 'liteplugin';
+	$medium = ( DHSEOPRO ) ? 'proplugin' : 'liteplugin';
 	return array(
 		'slug'        => 'check_php_version',
 		'delay_time'  => 0,

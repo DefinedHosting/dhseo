@@ -131,7 +131,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Importer_Exporter' ) ) {
 					$this->default_options['import_export_help']['default'] .= "<ul class='aioseop-importer-exporter-active-modules'>\n";
 					foreach ( $modules as $m ) {
 						if (
-							! AIOSEOPPRO ||
+							! DHSEOPRO ||
 							! isset( $aioseop_options['plan'] ) ||
 							! in_array( $aioseop_options['plan'], array( 'business', 'agency' ) )
 						) {

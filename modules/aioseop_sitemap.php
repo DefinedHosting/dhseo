@@ -771,7 +771,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 			$this->default_options['posttypes']['default']          = array_keys( $this->default_options['posttypes']['initial_options'] );
 			$this->default_options['taxonomies']['default']         = array_keys( $this->default_options['taxonomies']['initial_options'] );
 
-			if( AIOSEOPPRO ) {
+			if( DHSEOPRO ) {
 				if( isset( $post_type_titles['attachment'] ) ) {
 					unset( $post_type_titles['attachment'] );
 				}
@@ -1027,7 +1027,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 			}
 
 			if ( 
-				AIOSEOPPRO && 
+				DHSEOPRO && 
 				aioseop_is_addon_allowed( 'news_sitemap' ) &&
 				apply_filters( 'aioseo_news_sitemap_enabled', true )
 			) {
@@ -1035,7 +1035,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Sitemap' ) ) {
 				$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'Google News Sitemap', 'all-in-one-seo-pack' ) . '</a><br/><i class="aioseop-msg-small">(' . __( 'This will lead to a 404 Not Found page if no posts have been published in the last 48 hours.', 'all-in-one-seo-pack' ) . ')</i></li>';
 			}
 
-			if ( AIOSEOPPRO && ! empty( $aioseop_options['modules']['aiosp_feature_manager_options']['aiosp_feature_manager_enable_video_sitemap'] ) ) {
+			if ( DHSEOPRO && ! empty( $aioseop_options['modules']['aiosp_feature_manager_options']['aiosp_feature_manager_enable_video_sitemap'] ) ) {
 				$url = aioseop_home_url( '/video-sitemap.xml' );
 				$options[ $this->prefix . 'link' ] .= '<li><a href="' . esc_url( $url ) . '" target="_blank">' . __( 'Video Sitemap', 'all-in-one-seo-pack' ) . '</a></li>';
 			}

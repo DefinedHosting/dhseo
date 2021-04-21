@@ -6,6 +6,6 @@
  * @since ?
  */
 
-if ( AIOSEOPPRO ) {
+if ( DHSEOPRO ) {
 	require_once( DHSEO_PLUGIN_DIR . 'pro/video_sitemap.php' );
 }

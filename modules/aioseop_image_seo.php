@@ -6,6 +6,6 @@
  * @package All-in-One-SEO-Pack
  */
 
-if ( AIOSEOPPRO ) {
+if ( DHSEOPRO ) {
 	require_once( DHSEO_PLUGIN_DIR . 'pro/class-aioseop-image-seo.php' );
 }

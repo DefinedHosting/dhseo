@@ -63,7 +63,7 @@ if ( ! class_exists( 'aioseop_dashboard_widget' ) ) {
 
 			global $aioseop_options;
 
-			if ( AIOSEOPPRO && isset( $aioseop_options['aiosp_showseonews'] ) && ! $aioseop_options['aiosp_showseonews'] ) {
+			if ( DHSEOPRO && isset( $aioseop_options['aiosp_showseonews'] ) && ! $aioseop_options['aiosp_showseonews'] ) {
 				return false;
 			}
 

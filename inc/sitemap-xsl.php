@@ -155,7 +155,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 				<?php if ( aiosp_include_images() ) : ?>
 					<th>Images</th>
 				<?php endif; ?>
-				<?php if ( AIOSEOPPRO ) : ?>
+				<?php if ( DHSEOPRO ) : ?>
 					<xsl:if test="$sitemapType='video'">
 						<th>Videos</th>
 						<th>Video Thumbnails</th>
@@ -192,7 +192,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 					}
 					?>
 					<?php
-					if ( AIOSEOPPRO ) {
+					if ( DHSEOPRO ) {
 						?>
 					<xsl:if test="$sitemapType='video'">
 						<td>

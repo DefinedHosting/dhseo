@@ -471,7 +471,7 @@ if ( ! function_exists( 'aioseop_ajax_save_url' ) ) {
 			} elseif ( ! empty( $_POST['settings'] ) && ( 'news_sitemap_addl_pages' === $_POST['settings'] ) ) {
 				$module = $aioseop_modules->return_module( 'All_in_One_SEO_Pack_News_Sitemap' );
 			} else {
-				if ( AIOSEOPPRO ) {
+				if ( DHSEOPRO ) {
 					$module = $aioseop_modules->return_module( 'All_in_One_SEO_Pack_Sitemap_Pro' );
 				} else {
 					$module = $aioseop_modules->return_module( 'All_in_One_SEO_Pack_Sitemap' );
@@ -523,7 +523,7 @@ if ( ! function_exists( 'aioseop_ajax_delete_url' ) ) {
 		aioseop_load_modules();
 		$aiosp->admin_menu();
 		$module = $aioseop_modules->return_module( 'All_in_One_SEO_Pack_Sitemap' );
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			$module = $aioseop_modules->return_module( 'All_in_One_SEO_Pack_Sitemap_Pro' );
 		}
 		$_POST['location'] = null;
@@ -687,7 +687,7 @@ if ( ! function_exists( 'aioseop_ajax_save_settings' ) ) {
 		$module->add_page_hooks();
 		$output = $module->handle_settings_updates( $_POST['location'] );
 
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			$output = '<div id="aioseop_settings_header"><div id="message" class="updated fade"><p>' . $output . '</p></div></div><style>body.all-in-one-seo_page_all-in-one-seo-pack-pro-aioseop_feature_manager .aioseop_settings_left { margin-top: 45px !important; }</style>';
 		} else {
 			$output = '<div id="aioseop_settings_header"><div id="message" class="updated fade"><p>' . $output . '</p></div></div><style>body.all-in-one-seo_page_all-in-one-seo-pack-aioseop_feature_manager .aioseop_settings_left { margin-top: 45px !important; }</style>';
@@ -1451,7 +1451,7 @@ if ( ! function_exists( 'aioseop_get_admin_screens' ) ) {
 		return array(
 			'General Settings'   => 'toplevel_page_' . DHSEO_PLUGIN_DIRNAME . '/aioseop_class',
 			'Performance'        => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_performance',
-			'XML Sitemap'        => AIOSEOPPRO ? 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/class-aioseop-pro-sitemap' : 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_sitemap',
+			'XML Sitemap'        => DHSEOPRO ? 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/pro/class-aioseop-pro-sitemap' : 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_sitemap',
 			'Social Meta'        => 'all-in-one-seo_page_aiosp_opengraph',
 			'Robots Generator'   => 'all-in-one-seo_page_aiosp_robots_generator',
 			'Robots.txt'         => 'all-in-one-seo_page_' . DHSEO_PLUGIN_DIRNAME . '/modules/aioseop_robots',
@@ -1483,7 +1483,7 @@ if ( ! function_exists( 'aioseop_get_utm_url' ) ) {
 	function aioseop_get_utm_url( $medium, $source = 'WordPress', $campaign = '' ) {
 
 		if( empty( $campaign ) ) {
-			$campaign = ( AIOSEOPPRO ) ? 'proplugin' : 'liteplugin';
+			$campaign = ( DHSEOPRO ) ? 'proplugin' : 'liteplugin';
 		}
 
 		$href = 'https://semperplugins.com/all-in-one-seo-pack-pro-version/';
@@ -1519,7 +1519,7 @@ if ( ! function_exists('aioseop_add_url_utm') ) {
 
 	    $default_args = array(
 			'utm_source'   => 'WordPress',
-			'utm_medium'   => ( AIOSEOPPRO ) ? 'proplugin' : 'liteplugin'
+			'utm_medium'   => ( DHSEOPRO ) ? 'proplugin' : 'liteplugin'
         );
 	    $args = wp_parse_args( $args, $default_args );
 
@@ -1587,7 +1587,7 @@ if ( ! function_exists( 'aioseop_is_addon_allowed' ) ) {
 	function aioseop_is_addon_allowed( $addonName ) {
 		global $aioseop_options;
 		if (
-			! AIOSEOPPRO ||
+			! DHSEOPRO ||
 			! isset( $aioseop_options['addons'] ) ||
 			! is_array( $aioseop_options['addons'] ) ||
 			! in_array( $addonName, $aioseop_options['addons'], true )

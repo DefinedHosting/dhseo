@@ -20,9 +20,9 @@ function aioseop_notice_review_plugin_cta() {
 		array(
 			'wpf7528_24'   => untrailingslashit( home_url() ),
 			'wpf7528_26'   => ! empty( $aioseop_options['aiosp_license_key'] ) ? $aioseop_options['aiosp_license_key'] : null,
-			'wpf7528_27'   => AIOSEOPPRO ? 'pro' : 'lite',
+			'wpf7528_27'   => DHSEOPRO ? 'pro' : 'lite',
 			'wpf7528_28'   => AIOSEOP_VERSION,
-			'utm_source'   => AIOSEOPPRO ? 'proplugin' : 'liteplugin',
+			'utm_source'   => DHSEOPRO ? 'proplugin' : 'liteplugin',
 			'utm_medium'   => 'review-notice',
 			'utm_campaign' => 'feedback',
 			'utm_content'  => AIOSEOP_VERSION,

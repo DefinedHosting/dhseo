@@ -53,9 +53,9 @@ class AIOSEOP_Usage {
 			'email'                => get_bloginfo( 'admin_email' ),
 			// AIOSEO specific data.
 			'aioseo_version'       => AIOSEOP_VERSION,
-			'aioseo_license_key'   => AIOSEOPPRO && isset( $aioseop_options['aiosp_license_key'] ) ? $aioseop_options['aiosp_license_key'] : null,
-			'aioseo_license_type'  => AIOSEOPPRO && isset( $aioseop_options['plan'] ) ? $aioseop_options['plan'] : null,
-			'aioseo_is_pro'        => AIOSEOPPRO,
+			'aioseo_license_key'   => DHSEOPRO && isset( $aioseop_options['aiosp_license_key'] ) ? $aioseop_options['aiosp_license_key'] : null,
+			'aioseo_license_type'  => DHSEOPRO && isset( $aioseop_options['plan'] ) ? $aioseop_options['plan'] : null,
+			'aioseo_is_pro'        => DHSEOPRO,
 			'aioseo_settings'      => $aioseop_options,
 			'aioseo_usagetracking' => get_option( 'aioseop_usage_tracking_config', false ),
 		);
@@ -142,7 +142,7 @@ class AIOSEOP_Usage {
 	 */
 	private function tracking_allowed() {
 		global $aioseop_options;
-		return ! empty( $aioseop_options['aiosp_usage_tracking'] ) || AIOSEOPPRO;
+		return ! empty( $aioseop_options['aiosp_usage_tracking'] ) || DHSEOPRO;
 	}
 
 	/**

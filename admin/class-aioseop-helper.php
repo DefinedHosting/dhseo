@@ -1241,7 +1241,7 @@ class AIOSEOP_Helper {
 			$link_text = __( 'Click here for documentation on this setting.', 'all-in-one-seo-pack' );
 			$link_url  = $v1_url;
 
-			if ( ! AIOSEOPPRO &&
+			if ( ! DHSEOPRO &&
 				( 'aiosp_sitemap_priority' === $k1_slug || 'aiosp_sitemap_frequency' === $k1_slug )
 			) {
 				$link_text = sprintf( __( 'Upgrade to %s to unlock this feature.', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' );

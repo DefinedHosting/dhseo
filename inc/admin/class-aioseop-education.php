@@ -51,11 +51,11 @@ class AIOSEOP_Education {
 
 		add_action( 'wp_ajax_aioseop_deactivate_conflicting_plugins', array( 'AIOSEOP_Education', 'deactivate_conflicting_plugins' ) );
 
-		if ( !AIOSEOPPRO || ( AIOSEOPPRO && !aioseop_is_addon_allowed('news_sitemap') ) ) {
+		if ( !DHSEOPRO || ( DHSEOPRO && !aioseop_is_addon_allowed('news_sitemap') ) ) {
 			add_action( 'wp_ajax_aioseop_get_news_sitemap_upsell', array( 'AIOSEOP_Education', 'get_news_sitemap_upsell' ) );
 		}
 
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			return;
 		}
 
@@ -78,11 +78,11 @@ class AIOSEOP_Education {
 	public static function admin_enqueue_scripts() {
 		self::enqueue_deactivate_conflicting_plugins_script();
 
-		if ( !AIOSEOPPRO || ( AIOSEOPPRO && !aioseop_is_addon_allowed('news_sitemap') ) ) {
+		if ( !DHSEOPRO || ( DHSEOPRO && !aioseop_is_addon_allowed('news_sitemap') ) ) {
 			self::enqueue_news_sitemap_upsell_script();
 		}
 
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			return;
 		}
 
@@ -422,26 +422,26 @@ class AIOSEOP_Education {
 		if ( ! isset( $_GET ) ) {
 			return;
 		}
-
-		check_ajax_referer( 'news-sitemap-upsell', '_ajax_nonce' );
-
-		$message = __( 'Did you know that we also support Google News sitemaps?&nbsp;', 'all-in-one-seo-pack' );
-		$link    = __( 'Upgrade to Pro to unlock this feature.', 'all-in-one-seo-pack' );
-		if( AIOSEOPPRO && !aioseop_is_addon_allowed('news_sitemap') ) {
-			$message = __( 'Did you know that Business & Agency plan users also have access to Google News sitemaps?&nbsp;', 'all-in-one-seo-pack' );
-			$link    = __( 'Upgrade to our Business or Agency plans to unlock this feature.', 'all-in-one-seo-pack' );
-		}
-
-		printf(
-			'<p class="aioseop-news-sitemap-upsell">%1$s<br/><a href="%2$s" title="%3$s" target="_blank">%4$s</a></p>',
-			$message,
-			aioseop_get_utm_url( 'news-sitemap-upsell' ),
-			/* translators: %s: "All in One SEO Pack Pro" */
-			sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
-			$link
-		);
-
-		wp_die();
+// --- removed by RC --- //
+		// check_ajax_referer( 'news-sitemap-upsell', '_ajax_nonce' );
+		//
+		// $message = __( 'Did you know that we also support Google News sitemaps?&nbsp;', 'all-in-one-seo-pack' );
+		// $link    = __( 'Upgrade to Pro to unlock this feature.', 'all-in-one-seo-pack' );
+		// if( DHSEOPRO && !aioseop_is_addon_allowed('news_sitemap') ) {
+		// 	$message = __( 'Did you know that Business & Agency plan users also have access to Google News sitemaps?&nbsp;', 'all-in-one-seo-pack' );
+		// 	$link    = __( 'Upgrade to our Business or Agency plans to unlock this feature.', 'all-in-one-seo-pack' );
+		// }
+		//
+		// printf(
+		// 	'<p class="aioseop-news-sitemap-upsell">%1$s<br/><a href="%2$s" title="%3$s" target="_blank">%4$s</a></p>',
+		// 	$message,
+		// 	aioseop_get_utm_url( 'news-sitemap-upsell' ),
+		// 	/* translators: %s: "All in One SEO Pack Pro" */
+		// 	sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
+		// 	$link
+		// );
+		//
+		//wp_die();
 	}
 
 	/**
@@ -476,17 +476,18 @@ class AIOSEOP_Education {
 	 * @since   3.4.0
 	 */
 	public static function get_sitemap_prio_upsell() {
-		check_ajax_referer( 'aioseop-sitemap-prio-upsell', '_ajax_nonce' );
-
-		printf(
-			'<a class="aioseop-sitemap-prio-upsell" href="%1$s" title="%2$s" target="_blank">%3$s</a>',
-			aioseop_get_utm_url( 'sitemap-prio-upsell' ),
-			/* translators: %s: "All in One SEO Pack Pro" */
-			sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
-			__( 'Upgrade to Pro to unlock this feature.', 'all-in-one-seo-pack' )
-		);
-
-		die();
+		// --- removed by RC --- //
+		// check_ajax_referer( 'aioseop-sitemap-prio-upsell', '_ajax_nonce' );
+		//
+		// printf(
+		// 	'<a class="aioseop-sitemap-prio-upsell" href="%1$s" title="%2$s" target="_blank">%3$s</a>',
+		// 	aioseop_get_utm_url( 'sitemap-prio-upsell' ),
+		// 	/* translators: %s: "All in One SEO Pack Pro" */
+		// 	sprintf( __( 'Upgrade to %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME . '&nbsp;Pro' ),
+		// 	__( 'Upgrade to Pro to unlock this feature.', 'all-in-one-seo-pack' )
+		// );
+		//
+		// die();
 	}
 
 	/**

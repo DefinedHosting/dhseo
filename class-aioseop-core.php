@@ -101,7 +101,7 @@ class AIOSEOP_Core {
 		// Check for plugin version update.
 		// TODO Move to AIOSEOP_Updates::__construct().
 		add_action( 'plugins_loaded', array( $aioseop_updates, 'version_updates' ), 11 );
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			$aioseop_pro_updates = new AIOSEOP_Pro_Updates();
 			// TODO Move to AIOSEOP_Pro_Updates::__construct().
 			add_action( 'admin_init', array( $aioseop_pro_updates, 'version_updates' ), 12 );
@@ -109,7 +109,7 @@ class AIOSEOP_Core {
 
 		// Check for Pro updates.
 		// vv TODO Should this be moved to (Pro) updater class?
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			global $aioseop_update_checker;
 
 			require( DHSEO_PLUGIN_DIR . 'pro/sfwd_update_checker.php' );
@@ -223,8 +223,8 @@ class AIOSEOP_Core {
 		 */
 		define( 'AIOSEOP_VERSION', $plugin_data['Version'] );
 
-		if ( ! defined( 'AIOSEOPPRO' ) ) {
-			define( 'AIOSEOPPRO', false );
+		if ( ! defined( 'DHSEOPRO' ) ) {
+			define( 'DHSEOPRO', false );
 		}
 
 		if ( ! defined( 'DHSEO_PLUGIN_DIR' ) ) {
@@ -350,7 +350,7 @@ class AIOSEOP_Core {
 		// ---- end ---- //
 
 		// Loads pro files and other pro init stuff.
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			require_once DHSEO_PLUGIN_DIR . 'pro/class-aioseop-pro-init.php';
 		}
 	}
@@ -421,7 +421,7 @@ class AIOSEOP_Core {
 		// phpcs:ignore Squiz.Commenting.InlineComment.InvalidEndChar
 		// add_action( 'after_setup_theme', 'aioseop_load_modules' );
 
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			remove_action( 'admin_head', 'disable_all_in_one_free', 1 );
 			add_action( 'admin_head', array( $this, 'disable_all_in_one_free' ), 1 );
 		}
@@ -449,7 +449,7 @@ class AIOSEOP_Core {
 			add_action( 'wp_ajax_aioseop_install_plugin', array( 'AIOSEOP_About', 'install_plugin' ) );
 			add_action( 'wp_ajax_aioseop_activate_plugin', array( 'AIOSEOP_About', 'activate_plugin' ) );
 
-			if ( AIOSEOPPRO ) {
+			if ( DHSEOPRO ) {
 				add_action( 'wp_ajax_aioseop_ajax_facebook_debug', 'aioseop_ajax_facebook_debug' );
 			}
 		}
@@ -492,7 +492,7 @@ class AIOSEOP_Core {
 
 		delete_user_meta( get_current_user_id(), 'aioseop_yst_detected_notice_dismissed' );
 
-		if ( AIOSEOPPRO ) {
+		if ( DHSEOPRO ) {
 			global $aioseop_options;
 			global $aioseop_update_checker;
 
@@ -531,7 +531,7 @@ class AIOSEOP_Core {
 	 * @since ?
 	 */
 	public function disable_all_in_one_free() {
-		if ( AIOSEOPPRO && is_plugin_active( 'all-in-one-seo-pack/all_in_one_seo_pack.php' ) ) {
+		if ( DHSEOPRO && is_plugin_active( 'all-in-one-seo-pack/all_in_one_seo_pack.php' ) ) {
 			deactivate_plugins( 'all-in-one-seo-pack/all_in_one_seo_pack.php' );
 		}
 	}
@@ -620,7 +620,7 @@ class AIOSEOP_Core {
 	 * @return array
 	 */
 	public function plugin_row_meta( $actions, $plugin_file ) {
-		$medium       = ( AIOSEOPPRO ) ? 'proplugin' : 'liteplugin';
+		$medium       = ( DHSEOPRO ) ? 'proplugin' : 'liteplugin';
 		$action_links = array(
 			'settings' => array(
 				/* translators: This is an action link users can click to open a feature request/bug report on GitHub. */
@@ -672,15 +672,15 @@ class AIOSEOP_Core {
 		);
 
 		unset( $actions['edit'] );
-
-		if ( ! AIOSEOPPRO ) {
-			$action_links['proupgrade'] = array(
-				/* translators: This is an action link users can click to purchase a license for All in One SEO Pack Pro. */
-				'label' => __( 'Upgrade to Pro', 'all-in-one-seo-pack' ),
-				'url'   => aioseop_get_utm_url( 'plugins-menu' ),
-
-			);
-		}
+		// --- removed by RC --- //
+		// if ( ! DHSEOPRO ) {
+		// 	$action_links['proupgrade'] = array(
+		// 		/* translators: This is an action link users can click to purchase a license for All in One SEO Pack Pro. */
+		// 		'label' => __( 'Upgrade to Pro', 'all-in-one-seo-pack' ),
+		// 		'url'   => aioseop_get_utm_url( 'plugins-menu' ),
+		//
+		// 	);
+		// }
 
 		return $this->action_links( $actions, $plugin_file, $action_links, 'before' );
 	}

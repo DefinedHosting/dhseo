@@ -10,7 +10,7 @@ if ( ! class_exists( 'aioseop_google_analytics' ) ) {
 
 	require_once( DHSEO_PLUGIN_DIR . 'admin/aioseop_module_class.php' ); // Include the module base class.
 
-	if ( AIOSEOPPRO ) {
+	if ( DHSEOPRO ) {
 		require_once( DHSEO_PLUGIN_DIR . 'pro/aioseop_google_tag_manager.php' );
 	}
 

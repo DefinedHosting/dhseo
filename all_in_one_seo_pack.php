@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: DH |All-in-one SEO
+Plugin Name: Defined Hosting | All-in-one SEO
 Plugin URI: http://www.definedhosting.co.uk/plugins
 Description: Out-of-the-box SEO for WordPress. Features like XML Sitemaps, SEO for custom post types, SEO for blogs or business sites, SEO for ecommerce sites, and much more.
 Author: R. Cush
@@ -26,8 +26,9 @@ if ( ! defined( 'DHSEO_PLUGIN_DIR' ) ) {
 	 *
 	 * @var string $DHSEO_PLUGIN_DIR Plugin folder directory path. Eg. `C:\WebProjects\UW-WPDev-aioseop\src-plugins/all-in-one-seo-pack/`
 	 */
-	define( 'DHSEO_PLUGIN_DIR', dirname( __FILE__ ) );
+	define( 'DHSEO_PLUGIN_DIR', dirname( __FILE__ ).'/' );
 }
+define( 'DHSEOPRO', false );
 
 if ( ! defined( 'DHSEO_PLUGIN_FILE' ) ) {
 

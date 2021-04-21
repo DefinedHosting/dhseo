@@ -47,7 +47,7 @@ class aiosp_metaboxes {
 						echo '<p><a href="' . $url . '">' . __( 'Reset Dismissed Notices', 'all-in-one-seo-pack' ) . '</a></p>';
 					}
 					?>
-					<?php if ( ! AIOSEOPPRO ) : ?>
+					<?php if ( ! DHSEOPRO ) : ?>
 						<p>
 							<strong>
 								<?php
@@ -62,7 +62,7 @@ class aiosp_metaboxes {
 			case 'aioseop-donate':
 				?>
 				<div>
-				<?php if ( ! AIOSEOPPRO ) : ?>
+				<?php if ( ! DHSEOPRO ) : ?>
 						<div class="aioseop_metabox_text">
 								<?php self::pro_meta_content(); ?>
 						</div>
@@ -105,7 +105,7 @@ class aiosp_metaboxes {
 				?>
 				<div class="aioseop_metabox_text">
 					<form
-						<?php if ( AIOSEOPPRO ) : ?>
+						<?php if ( DHSEOPRO ) : ?>
 							action="https://semperplugins.us1.list-manage.com/subscribe/post?u=794674d3d54fdd912f961ef14&amp;id=b786958a9a"
 						<?php else : ?>
 							action="https://semperplugins.us1.list-manage.com/subscribe/post?u=794674d3d54fdd912f961ef14&amp;id=af0a96d3d9"

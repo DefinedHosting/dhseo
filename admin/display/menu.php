@@ -40,33 +40,37 @@ class AIOSEOPAdminMenus {
 	 * @since   2.3.11.5
 	 * @since   3.4.0       Added About page to admin menu.
 	 */
+
 	function add_submenu_pages() {
 		global $submenu;
 
 		$plugin_base_dir = explode( '/', plugin_basename( __FILE__ ) );
 		$menu_slug       = $plugin_base_dir[0] . '/aioseop_class.php';
 
-		add_submenu_page(
-			$menu_slug,
-			sprintf( __( 'About %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ),
-			__( 'About Us', 'all-in-one-seo-pack' ),
-			apply_filters( 'manage_aiosp', 'aiosp_manage_seo' ),
-			'aioseop-about',
-			array( 'AIOSEOP_About', 'init' ),
-			null
-		);
+		// --- removed by RC --- //
 
-		if ( AIOSEOPPRO ) {
-			return;
-		}
-
-		$url          = aioseop_get_utm_url( 'admin-menu' );
-		$upgrade_text = __( 'Upgrade to Pro', 'all-in-one-seo-pack' );
-		$submenu[ DHSEO_PLUGIN_DIRNAME . '/aioseop_class.php' ][] = array(
-			"<span class='upgrade_menu_link'>$upgrade_text</span>",
-			'manage_options',
-			$url,
-		);
+		// add_submenu_page(
+		// 	$menu_slug,
+		// 	sprintf( __( 'About %s', 'all-in-one-seo-pack' ), AIOSEOP_PLUGIN_NAME ),
+		// 	__( 'About Us', 'all-in-one-seo-pack' ),
+		// 	apply_filters( 'manage_aiosp', 'aiosp_manage_seo' ),
+		// 	'aioseop-about',
+		// 	array( 'AIOSEOP_About', 'init' ),
+		// 	null
+		// );
+		//
+		// if ( DHSEOPRO ) {
+		// 	return;
+		// }
+		//
+		//
+		// $url          = aioseop_get_utm_url( 'admin-menu' );
+		// $upgrade_text = __( 'Upgrade to Pro', 'all-in-one-seo-pack' );
+		// $submenu[ DHSEO_PLUGIN_DIRNAME . '/aioseop_class.php' ][] = array(
+		// 	"<span class='upgrade_menu_link'>$upgrade_text</span>",
+		// 	'manage_options',
+		// 	$url,
+		// );
 	}
 
 	/*

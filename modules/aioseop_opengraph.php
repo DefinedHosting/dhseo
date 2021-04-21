@@ -614,7 +614,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Opengraph' ) ) {
 				),
 			);
 
-			if ( ! AIOSEOPPRO ) {
+			if ( ! DHSEOPRO ) {
 				array_unshift( $this->locations['settings']['options'], 'upgrade' );
 			}
 
@@ -1192,7 +1192,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Opengraph' ) ) {
 					$description = $post->post_excerpt;
 
 					if ( $this->options['aiosp_opengraph_generate_descriptions'] || empty( $description ) ) {
-						if ( ! AIOSEOPPRO || ( AIOSEOPPRO && apply_filters( $this->prefix . 'generate_descriptions_from_content', true, $post ) ) ) {
+						if ( ! DHSEOPRO || ( DHSEOPRO && apply_filters( $this->prefix . 'generate_descriptions_from_content', true, $post ) ) ) {
 							$description = $post->post_content;
 						} else {
 							$description = $post->post_excerpt;
@@ -1202,7 +1202,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Opengraph' ) ) {
 				if ( empty( $type ) ) {
 					$type = 'article';
 				}
-			} elseif ( AIOSEOPPRO && ( is_category() || is_tag() || is_tax() ) ) {
+			} elseif ( DHSEOPRO && ( is_category() || is_tag() || is_tax() ) ) {
 				if ( isset( $this->options['aioseop_opengraph_settings_category'] ) ) {
 					$type = $this->options['aioseop_opengraph_settings_category'];
 				}
@@ -1259,7 +1259,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Opengraph' ) ) {
 				}
 				if ( empty( $type ) ) {
 					// Pro Issue #321 ( https://github.com/awesomemotive/aioseop-pro/issues/321 ).
-					if ( AIOSEOPPRO && ( is_category() || is_tag() || is_tax() ) ) {
+					if ( DHSEOPRO && ( is_category() || is_tag() || is_tax() ) ) {
 						$og_options        = $aioseop_options['modules'][ $this->prefix . 'options' ];
 						$current_post_type = get_post_type();
 						// check if the post type's object type is set.

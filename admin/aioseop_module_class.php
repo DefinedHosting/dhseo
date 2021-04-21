@@ -3314,7 +3314,7 @@ if ( ! class_exists( 'All_in_One_SEO_Pack_Module' ) ) {
 				) {
 					$term_id = isset( $_GET['tag_ID'] ) ? (int) $_GET['tag_ID'] : 0;
 					$term_id = $term_id ? $term_id : get_queried_object()->term_id;
-					if ( AIOSEOPPRO ) {
+					if ( DHSEOPRO ) {
 						$get_opts = AIO_ProGeneral::getprotax( $get_opts );
 						$get_opts = get_term_meta( $term_id, '_' . $prefix . $location, true );
 					}

@@ -242,7 +242,7 @@ class AIOSEOP_About {
 			'About Us' => 'about',
 		);
 
-		if ( ! AIOSEOPPRO ) {
+		if ( ! DHSEOPRO ) {
 			$views['Lite vs Pro'] = 'versus';
 		}
 

@@ -1,5 +1,5 @@
 <?php
-//include_once(__DIR__.'/inc/github-updater/github-updater.php');
+//include_once(DH_PLUGIN_DIR.'/admin/inc/github-updater/github-updater.php');
 //
 // add_action( 'admin_init', 'dh_remove_git_menu_page',999 );
 // function dh_remove_git_menu_page() {

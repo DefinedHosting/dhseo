@@ -344,7 +344,7 @@ class AIOSEOP_Core {
 		require_once( DHSEO_PLUGIN_DIR . 'inc/admin/class-aioseop-site-health.php' );
 
 		// added by DH
-		require_once DHSEO_PLUGIN_DIR . 'admin/dh-auto-update.php';
+		require_once (DHSEO_PLUGIN_DIR . 'admin/dh-auto-update.php');
 
 
 		// ---- end ---- //

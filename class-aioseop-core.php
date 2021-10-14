@@ -331,7 +331,7 @@ class AIOSEOP_Core {
 		require_once DHSEO_PLUGIN_DIR . 'public/front.php';
 		require_once DHSEO_PLUGIN_DIR . 'public/google-analytics.php';
 		require_once DHSEO_PLUGIN_DIR . 'admin/display/aioseop-welcome.php';
-		require_once DHSEO_PLUGIN_DIR . 'admin/display/dashboard_widget.php';
+		//require_once DHSEO_PLUGIN_DIR . 'admin/display/dashboard_widget.php';
 		require_once DHSEO_PLUGIN_DIR . 'admin/display/menu.php';
 		require_once DHSEO_PLUGIN_DIR . 'admin/class-aioseop-notices.php';
 		require_once DHSEO_PLUGIN_DIR . 'admin/class-aioseop-usage.php';

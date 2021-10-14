@@ -4,7 +4,7 @@ Plugin Name: Defined Hosting | All-in-one SEO
 Plugin URI: http://www.definedhosting.co.uk/plugins
 Description: Out-of-the-box SEO for WordPress. Features like XML Sitemaps, SEO for custom post types, SEO for blogs or business sites, SEO for ecommerce sites, and much more.
 Author: R. Cush
-Version: 1.0.3
+Version: 1.0.4
 Author URI: https://www.definedhosting.co.uk
 GitHub Plugin URI: DefinedHosting/dhseo
 GitHub Plugin URI: https://github.com/DefinedHosting/dhseo
